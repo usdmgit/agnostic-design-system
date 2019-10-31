@@ -4,6 +4,8 @@
   "description": "React components for AY related projects",
   "main": "index.js",
   "scripts": {
+    "start": "webpack --mode development",
+    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,9 +19,16 @@
   },
   "homepage": "https://github.com/codelittinc/ay-design-library#readme",
   "dependencies": {
-    "react": "^16.11.0"
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   },
   "devDependencies": {
-    "webpack": "^4.41.2"
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.3",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }
