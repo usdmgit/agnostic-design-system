@@ -1,8 +1,9 @@
-import * as React from "react";
+import * as React from 'react'
 
-type TextInputProps = { name: string; value?: string; }
+type TextInputProps = { name: string; value?: string }
 
-const TextInput = (props: TextInputProps) =>
-  <input type="text" name={props.name} value={props.value}/>;
+const TextInput = ({ name, value }: TextInputProps) => (
+  <input type="text" name={name} value={value} />
+)
 
-export default TextInput;
+export default TextInput
