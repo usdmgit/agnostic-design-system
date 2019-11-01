@@ -18,6 +18,15 @@ module.exports = {
         enforce: "pre",
         test: /\.js$/,
         loader: "source-map-loader"
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [
+          {loader: "style-loader"},
+          {loader: "css-loader", options: {modules: true}},
+          {loader: "sass-loader"}
+        ]
       }
     ]
   },

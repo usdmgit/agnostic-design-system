@@ -13,7 +13,7 @@ If your component have different properties that will make it look amazing you s
 
 ### Getting started
 
-1 - Clone the project.
-2 - Install all dependencies with `npm install`.
-3 - Start the dev server `npm run dev:start`
+1 - Clone the project.  
+2 - Install all dependencies with `npm install`.  
+3 - Start the dev server `npm run dev:start`  
 4 - Access http://localhost:6060/ 
