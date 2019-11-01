@@ -1,24 +1,30 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "sourceMap": true,
-    "noImplicitAny": false,
-    "module": "commonjs",
     "lib": [
-      "es2015",
-      "es2017",
-      "dom"
+      "dom",
+      "dom.iterable",
+      "esnext"
     ],
-    "removeComments": true,
-    "allowSyntheticDefaultImports": false,
-    "jsx": "react",
     "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react",
     "baseUrl": "./src",
     "outDir": "./dist",
     "paths": {
       "components/*": [
         "src/components/*"
-      ],
+      ]
     }
-  }
+  },
+  "include": [
+    "src"
+  ]
 }
+
