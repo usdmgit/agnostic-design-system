@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    container_name: ay-design-library-app
+    tty: true
+    stdin_open: true
+    build:
+      context: .
+    volumes:
+      - .:/share
+    ports:
+      - "6060:6060"

@@ -8,8 +8,16 @@ module.exports = {
       name: 'Documentation',
       sections: [
         {
+          name: 'Getting started',
+          content: 'docs/GETTING_STARTED.md'
+        },
+        {
+          name: 'Scripts',
+          content: 'docs/SCRIPTS.md'
+        },
+        {
           name: 'Installation',
-          content: 'INSTALLATION.md'
+          content: 'docs/INSTALLATION.md'
         }
       ]
     },

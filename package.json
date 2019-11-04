@@ -6,7 +6,10 @@
   "scripts": {
     "dev:start": "npx styleguidist server",
     "prod:build": "webpack --mode production",
-    "docs:build": "npx styleguidist build",
+    "docker:dev": "sh scripts/dev.sh",
+    "docs:prod:build": "npx styleguidist build",
+    "docs:docker:build": "sh scripts/buildDocs.sh",
+    "docs:docker:tag": "sh scripts/dockerTagDocs.sh",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' && stylelint 'src/**/*.{css,scss}'",
     "lint:fix": "tsc --noEmit && eslint --fix '*/**/*.{js,ts,tsx}' && stylelint --fix 'src/**/*.{css,scss}'",
     "test": "jest",
