@@ -1,25 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextInput renders without crashing 1`] = `
+exports[`Input renders without crashing 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <input
-        class="input input--status"
-        id="1"
-        type="text"
-        value="the_value"
-      />
+      <div
+        class="input-container wrapperClass"
+      >
+        <div
+          class="label"
+        >
+          <label
+            for="1"
+          >
+            the_label
+          </label>
+        </div>
+        <div>
+          <input
+            class="input input--status"
+            id="1"
+            type="text"
+            value="the_value"
+          />
+        </div>
+      </div>
     </div>
   </body>,
   "container": <div>
-    <input
-      class="input input--status"
-      id="1"
-      type="text"
-      value="the_value"
-    />
+    <div
+      class="input-container wrapperClass"
+    >
+      <div
+        class="label"
+      >
+        <label
+          for="1"
+        >
+          the_label
+        </label>
+      </div>
+      <div>
+        <input
+          class="input input--status"
+          id="1"
+          type="text"
+          value="the_value"
+        />
+      </div>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

@@ -1,0 +1,29 @@
+@import '../../stylesheets/colors.scss';
+@import '../../stylesheets/fonts.scss';
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  color: $input-fields;
+  font-family: $input-fields-font;
+  font-size: $input-fields-size;
+  font-weight: normal;
+  padding: 0.5rem 1rem;
+
+  .label {
+    color: #5E636E;
+  }
+}
+
+.input-status-message {
+  font-size: 0.75rem;
+}
+
+.input-success-message-color {
+  color: $success;
+}
+
+.input-error-message-color {
+  color: $error;
+}
+

@@ -1,15 +1,35 @@
-import React from 'react'
+import * as React from 'react'
+
 import style from './TextInput.module.scss'
 
-type TextInputProps = { name: string; value?: string }
+interface TextInputProps {
+  id: string
+  name?: string
+  onChange?: any
+  status?: string
+  statusText?: string
+  value?: any
+}
 
-const TextInput = ({ name, value }: TextInputProps) => (
-  <input
-    className={style['text-input']}
-    type="text"
-    name={name}
-    value={value}
-  />
-)
+declare const props: TextInputProps;
 
-export default TextInput
+const TextInput: React.FC<TextInputProps> = ({ ...props }) => {
+  var className = `${style['input']} ${style['input-' + props.status + '-status']}`;
+
+  return (
+    <input
+      className={className}
+      id={props.id}
+      name={props.name}
+      onChange={props.onChange}
+      type='text'
+      value={props.value}
+    />
+  )
+}
+
+TextInput.defaultProps = {
+  status: ''
+}
+
+export default TextInput;

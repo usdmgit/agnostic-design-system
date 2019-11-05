@@ -24,6 +24,7 @@ module.exports = {
     {
       name: 'UI Components',
       components: 'src/components/**/*.tsx',
+      ignore: ['src/components/TextInput/*.tsx'],
       exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand' // 'hide' | 'collapse' | 'expand'
     }

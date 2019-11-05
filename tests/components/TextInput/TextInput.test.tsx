@@ -1,22 +1,30 @@
 import React from 'react'
-import { cleanup } from '@testing-library/react'
-import renderer from 'react-test-renderer'
-import { TextInput } from '../../../src'
+import { cleanup, render } from '@testing-library/react'
+import TextInput from '../../../src/components/TextInput'
 
 afterEach(cleanup)
 
-describe('<TextInput />', () => {
+describe('TextInput', () => {
+  const id = "1";
+  const labelClass = "labelClass";
+  const onChange = () => {};
+  const value = "the_value";
+
   it('renders without crashing', () => {
-    const tree = renderer.create(<TextInput name="batman_name" />).toJSON()
-    expect(tree).toMatchSnapshot()
+    const textInput = render(<TextInput
+      id={id}
+      onChange={onChange}
+      value={value}
+    />);
+    return expect(textInput!).toMatchSnapshot()
   })
 
-  it('accepts a value', () => {
-    const inputValue = 'Bruce Wayne'
-
-    const tree = renderer
-      .create(<TextInput name="batman_name" value={inputValue} />)
-      .toJSON()
-    expect(tree).toMatchSnapshot()
+  it('displays the given value', () => {
+    const textInput = render(<TextInput 
+      id={id}
+      onChange={onChange}
+      value={value}
+    />);
+    return expect(textInput!.findByDisplayValue(value)).toBeTruthy();
   })
 })

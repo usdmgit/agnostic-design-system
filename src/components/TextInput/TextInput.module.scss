@@ -1,5 +1,23 @@
-.text-input {
-  font-size: 18px;
-  height: 40px;
-  line-height: 40px;
+@import '../../stylesheets/colors.scss';
+@import '../../stylesheets/fonts.scss';
+
+.input {
+  border: 1px solid $border;
+  box-sizing: border-box;
+  color: #5E636E;
+  font-family: $input-fields-font;
+  font-size: $input-fields-size;
+  height: 3rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  width: 22rem;
+
+  &.input-error-status {
+    border: 1px solid $error;
+  }
+  
+  &.input-success-status {
+    border: 1px solid $success;
+  }
 }
+
