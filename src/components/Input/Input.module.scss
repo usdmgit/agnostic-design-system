@@ -1,17 +1,17 @@
-@import '../../stylesheets/colors.scss';
-@import '../../stylesheets/fonts.scss';
+@import '~@codelitt/ay-css-library/src/components/brand/fonts';
+@import '~@codelitt/ay-css-library/src/components/brand/colors';
 
 .input-container {
   display: flex;
   flex-direction: column;
-  color: $input-fields;
-  font-family: $input-fields-font;
-  font-size: $input-fields-size;
+  color: $ay-grey-64-color;
+  font-family: $font-stack;
+  font-size: 1rem;
   font-weight: normal;
   padding: 0.5rem 1rem;
 
   .label {
-    color: #5E636E;
+    color: $ay-grey-64-color;
   }
 }
 
@@ -20,10 +20,10 @@
 }
 
 .input-success-message-color {
-  color: $success;
+  color: $ay-success-color;
 }
 
 .input-error-message-color {
-  color: $error;
+  color: $ay-error-color;
 }
 

@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/codelittinc/ay-design-library#readme",
   "dependencies": {
+    "@codelitt/ay-css-library": "^0.1.0",
     "identity-obj-proxy": "^3.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
