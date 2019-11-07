@@ -13,8 +13,13 @@ interface TextInputProps {
 
 declare const props: TextInputProps;
 
-const TextInput: React.FC<TextInputProps> = ({ ...props }) => {
-  var className = `${style['input']} ${style['input-' + props.status + '-status']}`;
+function getStatusClassName(status: string) {
+  let statusClass = status ? `input-${status}-status` : '';
+  return `${style.input} ${style[statusClass]}`;
+}
+
+const TextInput: React.FC<TextInputProps> = (props) => {
+  let className = getStatusClassName(props.status || '');
 
   return (
     <input

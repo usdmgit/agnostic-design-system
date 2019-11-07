@@ -5,10 +5,10 @@ import TextInput from '../../../src/components/TextInput'
 afterEach(cleanup)
 
 describe('TextInput', () => {
-  const id = "1";
-  const labelClass = "labelClass";
+  const id = '1';
+  const labelClass = 'labelClass';
   const onChange = () => {};
-  const value = "the_value";
+  const value = 'the_value';
 
   it('renders without crashing', () => {
     const textInput = render(<TextInput

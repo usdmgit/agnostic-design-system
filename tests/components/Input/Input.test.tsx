@@ -5,12 +5,13 @@ import Input from '../../../src/components/Input'
 afterEach(cleanup)
 
 describe('Input', () => {
-  const id = "1";
-  const label = "the_label";
+  const id = '1';
+  const label = 'the_label';
   const onChange = () => {};
-  const type = "text";
-  const value = "the_value";
-  const wrapperClass = "wrapperClass";
+  const type = 'text';
+  const value = 'the_value';
+  const dateValue = '2019-01-01';
+  const wrapperClass = 'wrapperClass';
 
   it('renders without crashing', () => {
     const input = render(<Input 
@@ -47,5 +48,18 @@ describe('Input', () => {
     />);
 
     return expect(input!.getByDisplayValue(value)).toHaveProperty('type', 'text');
+  })
+
+  it('renders an input with type date', () => {
+    const input = render(<Input 
+      id={id}
+      label={label}
+      onChange={onChange}
+      type='date'
+      value={dateValue}
+      wrapperClass={wrapperClass}
+    />);
+
+    return expect(input!.getByDisplayValue(dateValue)).toHaveProperty('type', 'date');
   })
 })

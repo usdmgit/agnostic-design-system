@@ -1,55 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input renders without crashing 1`] = `
+exports[`DateInput renders without crashing 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="input-container wrapperClass"
-      >
-        <div
-          class="label"
-        >
-          <label
-            for="1"
-          >
-            the_label
-          </label>
-        </div>
-        <div>
-          <input
-            class="input "
-            id="1"
-            type="text"
-            value="the_value"
-          />
-        </div>
-      </div>
+      <input
+        class="date-input  "
+        id="1"
+        type="date"
+        value="2019-01-01"
+      />
     </div>
   </body>,
   "container": <div>
-    <div
-      class="input-container wrapperClass"
-    >
-      <div
-        class="label"
-      >
-        <label
-          for="1"
-        >
-          the_label
-        </label>
-      </div>
-      <div>
-        <input
-          class="input "
-          id="1"
-          type="text"
-          value="the_value"
-        />
-      </div>
-    </div>
+    <input
+      class="date-input  "
+      id="1"
+      type="date"
+      value="2019-01-01"
+    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

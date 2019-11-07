@@ -35,3 +35,42 @@ Error
   value="This is a text value..."
 />
 ```
+
+Date Input example:
+
+Idle
+```js
+<Input
+  label="Date Input Label"
+  name="date_input"
+  placeholder="MM/DD/YYYY"
+  type="date"
+  value="2019-01-01"
+/>
+```
+
+Success
+```js
+<Input
+  label="Date Input Label"
+  name="date_input"
+  placeholder="MM/DD/YYYY"
+  status="success"
+  statusText="This is a success message"
+  type="date"
+  value="2019-01-01"
+/>
+```
+
+Error
+```js
+<Input
+  label="Date Input Label"
+  name="date_input"
+  placeholder="MM/DD/YYYY"
+  status="error"
+  statusText="This is an invalid value"
+  type="date"
+  value="2019-01-01"
+/>
+```
