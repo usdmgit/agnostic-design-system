@@ -2,17 +2,18 @@
 
 FROM node:12.13.0 as build
 
+ARG AZURE_REGISTRY_USERNAME
+ARG AZURE_REGISTRY_PASSWORD
+
 RUN apt-get update
 
 RUN mkdir -p /app
 WORKDIR /app
 
-ADD package.json /app/package.json
-ADD package-lock.json /app/package-lock.json
+ADD ./ /app
 
+RUN sh ./scripts/writeAzureRegistry.sh
 RUN npm install
-
-COPY ./ /app
 
 RUN npm run docs:prod:build
 

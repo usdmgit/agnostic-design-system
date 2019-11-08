@@ -2,15 +2,16 @@
 
 FROM node:12.13.0
 
+ARG AZURE_REGISTRY_USERNAME
+ARG AZURE_REGISTRY_PASSWORD
+
 RUN apt-get update
 
 WORKDIR /share
 
-ADD package.json /share/package.json
-ADD package-lock.json /share/package-lock.json
-
-RUN npm install
-
 ADD ./ /share
+
+RUN sh scripts/writeAzureRegistry.sh
+RUN npm install
 
 EXPOSE 6060
