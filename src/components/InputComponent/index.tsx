@@ -2,8 +2,9 @@ import * as React from 'react'
 
 import TextInput from '../TextInput'
 import DateInput from '../DateInput';
+import TextareaInput from '../TextareaInput';
 
-type Type = 'text' | 'date'
+type Type = 'text' | 'date' | 'textarea'
 type Status = 'success' | 'error'
 type iconPosition = 'left' | 'right';
 
@@ -25,7 +26,8 @@ declare const props: InputProps;
 const InputComponent: React.FC<InputProps> = (props) => {
   const components = {
     text: TextInput,
-    date: DateInput
+    date: DateInput,
+    textarea: TextareaInput
   }
 
   const InputComponent = components[props.type!];

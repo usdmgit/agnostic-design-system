@@ -4,12 +4,11 @@ import InputComponent from '../InputComponent';
 
 import style from './Input.module.scss'
 
-type Type = 'text' | 'date'
+type Type = 'text' | 'date' | 'textarea'
 type Status = 'success' | 'error'
 type iconPosition = 'left' | 'right';
 
 const TEXT_TYPE_NAME = 'text';
-const DATE_TYPE_NAME = 'date';
 const DEFAULT_ICON_POSITION = 'right';
 
 interface InputProps {

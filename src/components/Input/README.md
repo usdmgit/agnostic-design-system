@@ -74,3 +74,42 @@ Error
   value="2019-01-01"
 />
 ```
+
+Textarea Input example:
+
+Idle
+```js
+<Input
+  label="Textarea Input Label"
+  name="textarea_input"
+  placeholder="Enter some text here..."
+  type="textarea"
+  value="This is the start of a long text..."
+/>
+```
+
+Success
+```js
+<Input
+  label="Textarea Input Label"
+  name="textarea_input"
+  placeholder="Enter some text here..."
+  status="success"
+  statusText="This is a success message"
+  type="textarea"
+  value="This is the start of a long text..."
+/>
+```
+
+Error
+```js
+<Input
+  label="Textarea Input Label"
+  name="textarea_input"
+  placeholder="Enter some text here..."
+  status="error"
+  statusText="This is an invalid value"
+  type="textarea"
+  value="This is the start of a long text..."
+/>
+```
