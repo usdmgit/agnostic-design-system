@@ -1,5 +1,5 @@
 {
-  "name": "ay-design-library",
+  "name": "@codelitt/ay-design-library",
   "version": "0.0.1",
   "description": "React components for AY related projects",
   "main": "index.js",
@@ -14,7 +14,8 @@
     "lint:fix": "tsc --noEmit && eslint --fix '*/**/*.{js,ts,tsx}' && stylelint --fix 'src/**/*.{css,scss}'",
     "test": "jest",
     "test:updateSnapshot": "jest --updateSnapshot",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "release": "release-it"
   },
   "repository": {
     "type": "git",
@@ -64,6 +65,7 @@
     "prettier": "^1.18.2",
     "react-styleguidist": "^10.0.1",
     "react-test-renderer": "^16.11.0",
+    "release-it": "^12.4.3",
     "sass-loader": "^8.0.0",
     "source-map-loader": "^0.2.4",
     "style-loader": "^1.0.0",

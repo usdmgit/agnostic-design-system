@@ -25,6 +25,7 @@ The project comes with multiple `package.json` scripts created to run useful com
 - `test`: Runs all tests
 - `test:updateSnapshot`: Updates all snapshots used in tests.
 - `test:watch`: Launches the test runner in the interactive watch mode.
+- `release`: It will start an interative UI to publish the package.
 
 You can run any NPM script with: 
 ```shell
