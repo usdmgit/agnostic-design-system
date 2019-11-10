@@ -15,12 +15,12 @@
   &.date-input-error-status {
     border: 1px solid $ay-error-color;
   }
-  
+
   &.date-input-success-status {
     border: 1px solid $ay-success-color;
   }
 
-  &[type="date"]::-webkit-calendar-picker-indicator {
+  &[type='date']::-webkit-calendar-picker-indicator {
     color: rgba(0, 0, 0, 0);
     opacity: 1;
     display: block;
@@ -31,13 +31,11 @@
   }
 
   &.icon-position-left {
-    &[type="date"]::-webkit-datetime-edit{
+    &[type='date']::-webkit-datetime-edit {
       margin-left: 2.375rem;
     }
-    &[type="date"]::-webkit-calendar-picker-indicator {
+    &[type='date']::-webkit-calendar-picker-indicator {
       position: absolute;
     }
-
   }
 }
-

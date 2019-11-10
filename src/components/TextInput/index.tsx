@@ -1,14 +1,14 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import style from './TextInput.module.scss'
+import style from './TextInput.module.scss';
 
 interface TextInputProps {
-  id: string
-  name?: string
-  onChange?: any
-  status?: string
-  statusText?: string
-  value?: any
+  id: string;
+  name?: string;
+  onChange?: any;
+  status?: string;
+  statusText?: string;
+  value?: any;
 }
 
 declare const props: TextInputProps;
@@ -18,7 +18,7 @@ function getStatusClassName(status: string) {
   return `${style.input} ${style[statusClass]}`;
 }
 
-const TextInput: React.FC<TextInputProps> = (props) => {
+const TextInput: React.FC<TextInputProps> = props => {
   let className = getStatusClassName(props.status || '');
 
   return (
@@ -27,14 +27,14 @@ const TextInput: React.FC<TextInputProps> = (props) => {
       id={props.id}
       name={props.name}
       onChange={props.onChange}
-      type='text'
+      type="text"
       value={props.value}
     />
-  )
-}
+  );
+};
 
 TextInput.defaultProps = {
-  status: ''
-}
+  status: '',
+};
 
 export default TextInput;

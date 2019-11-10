@@ -1,20 +1,18 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import style from './DateInput.module.scss'
-import { string } from 'prop-types';
+import style from './DateInput.module.scss';
 
 type iconPositionType = 'left' | 'right';
 
 interface DateInputProps {
-  iconPosition?: iconPositionType
-  id: string
-  name?: string
-  onChange?: any
-  status?: string
-  statusText?: string
-  value?: any
+  iconPosition?: iconPositionType;
+  id: string;
+  name?: string;
+  onChange?: any;
+  status?: string;
+  statusText?: string;
+  value?: any;
 }
-
 
 declare const props: DateInputProps;
 
@@ -26,7 +24,7 @@ function getClassName(status: string, iconPosition: string) {
   return `${style[mainClass]} ${style[positionClass]} ${style[statusClass]}`;
 }
 
-const DateInput: React.FC<DateInputProps> = (props) => {
+const DateInput: React.FC<DateInputProps> = props => {
   const className = getClassName(props.status || '', props.iconPosition || '');
 
   return (
@@ -35,14 +33,14 @@ const DateInput: React.FC<DateInputProps> = (props) => {
       id={props.id}
       name={props.name}
       onChange={props.onChange}
-      type='date'
+      type="date"
       value={props.value}
     />
-  )
-}
+  );
+};
 
 DateInput.defaultProps = {
-  status: ''
-}
+  status: '',
+};
 
 export default DateInput;

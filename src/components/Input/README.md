@@ -1,6 +1,7 @@
 Input example:
 
 Idle
+
 ```js
 <Input
   label="Input Label"
@@ -11,6 +12,7 @@ Idle
 ```
 
 Success
+
 ```js
 <Input
   label="Input Label"
@@ -24,6 +26,7 @@ Success
 ```
 
 Error
+
 ```js
 <Input
   label="Input Label"
@@ -39,6 +42,7 @@ Error
 Date Input example:
 
 Idle
+
 ```js
 <Input
   label="Date Input Label"
@@ -50,6 +54,7 @@ Idle
 ```
 
 Success
+
 ```js
 <Input
   label="Date Input Label"
@@ -63,6 +68,7 @@ Success
 ```
 
 Error
+
 ```js
 <Input
   label="Date Input Label"
@@ -78,6 +84,7 @@ Error
 Textarea Input example:
 
 Idle
+
 ```js
 <Input
   label="Textarea Input Label"
@@ -89,6 +96,7 @@ Idle
 ```
 
 Success
+
 ```js
 <Input
   label="Textarea Input Label"
@@ -102,6 +110,7 @@ Success
 ```
 
 Error
+
 ```js
 <Input
   label="Textarea Input Label"

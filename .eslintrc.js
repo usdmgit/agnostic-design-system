@@ -18,10 +18,12 @@ module.exports = {
   rules: {
     "@typescript-eslint/explicit-function-return-type": "off",
     "react/jsx-filename-extension": [1, {"extensions": [".ts", ".tsx"]}],
+    "prefer-const": "error",
+    "no-var": "error",
     "prettier/prettier": [
       "error", {
         "singleQuote": true,
-        "semi": false
+        "semi": true
       }
     ]
   },
