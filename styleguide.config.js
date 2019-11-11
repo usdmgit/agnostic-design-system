@@ -1,25 +1,8 @@
 module.exports = {
   sections: [
     {
-      name: 'Introduction',
-      content: 'README.md'
-    },
-    {
-      name: 'Documentation',
-      sections: [
-        {
-          name: 'Getting started',
-          content: 'docs/GETTING_STARTED.md'
-        },
-        {
-          name: 'Scripts',
-          content: 'docs/SCRIPTS.md'
-        },
-        {
-          name: 'Installation',
-          content: 'docs/INSTALLATION.md'
-        }
-      ]
+      name: 'AY Design Library',
+      content: 'docs/STYLEGUIDIST.md'
     },
     {
       name: 'UI Components',
