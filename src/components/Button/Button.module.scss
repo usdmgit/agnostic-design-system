@@ -1,0 +1,30 @@
+@import '~@codelitt/ay-css-library/src/components/brand/fonts';
+@import '~@codelitt/ay-css-library/src/components/brand/colors';
+
+.button {
+  border-radius: 0.125rem;
+  border: 0;
+  font-family: $font-stack;
+  font-size: 1.25rem;
+  height: 3.5rem;
+  width: 16rem;
+}
+
+.main {
+  background-color: $ay-london-blue-color;
+  &:disabled {
+    background-color: $ay-grey-8-color;
+    color: $ay-grey-24-color;
+  }
+
+  &:not(:disabled):focus {
+    background-color: $ay-navy-blue-color;
+    color: $ay-white-color;
+  }
+
+  &:not(:disabled):hover {
+    background-color: $ay-main-blue-color;
+    color: $ay-white-color;
+  }
+}
+
