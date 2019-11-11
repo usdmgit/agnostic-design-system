@@ -1,0 +1,24 @@
+// @TODO: refactor once we get the final designs
+
+.input {
+  height: 3rem;
+
+  &[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(../../../assets/images/calendar-icon.svg) no-repeat;
+    width: 22px;
+    height: 24px;
+    border-width: thin;
+  }
+
+  &.icon-position-left {
+    &[type="date"]::-webkit-datetime-edit{
+      margin-left: 2.375rem;
+    }
+    &[type="date"]::-webkit-calendar-picker-indicator {
+      position: absolute;
+    }
+  }
+}

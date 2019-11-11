@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="input-container wrapperClass"
+        class="wrapper wrapperClass"
       >
         <div
           class="label"
@@ -17,9 +17,11 @@ Object {
             the_label
           </label>
         </div>
-        <div>
+        <div
+          class="input-container"
+        >
           <input
-            class="input "
+            class="input success-status"
             id="1"
             type="text"
             value="the_value"
@@ -30,7 +32,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="input-container wrapperClass"
+      class="wrapper wrapperClass"
     >
       <div
         class="label"
@@ -41,9 +43,11 @@ Object {
           the_label
         </label>
       </div>
-      <div>
+      <div
+        class="input-container"
+      >
         <input
-          class="input "
+          class="input success-status"
           id="1"
           type="text"
           value="the_value"

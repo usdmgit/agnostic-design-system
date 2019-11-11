@@ -1,28 +1,52 @@
 @import '~@codelitt/ay-css-library/src/components/brand/fonts';
 @import '~@codelitt/ay-css-library/src/components/brand/colors';
 
-.input-container {
+.wrapper {
   display: flex;
   flex-direction: column;
   color: $ay-grey-64-color;
   font-family: $font-stack;
   font-size: 1rem;
   font-weight: normal;
-  padding: 0.5rem 1rem;
 
-  &.label {
+  .label {
     color: $ay-grey-64-color;
+    display: block;
+    margin-bottom: 0.5rem;
   }
-}
 
-.input-status-message {
-  font-size: 0.75rem;
-}
+  input,
+  textarea {
+    border: 1px solid $ay-grey-24-color;
+    border-radius: 0.125rem;
+    box-sizing: border-box;
+    color: $ay-grey-64-color;
+    font-family: $font-stack;
+    font-size: 1rem;
+    max-width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    width: 100%;
+  
+    &.error-status {
+      border-color: $ay-error-color;
+    }
+  
+    &.success-status {
+      border-color: $ay-success-color;
+    }
+  }
 
-.input-success-message-color {
-  color: $ay-success-color;
-}
+  .status-message {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
 
-.input-error-message-color {
-  color: $ay-error-color;
+    &.status-message-success {
+      color: $ay-success-color;
+    }
+    
+    &.status-message-error {
+      color: $ay-error-color;
+    }
+  }
 }

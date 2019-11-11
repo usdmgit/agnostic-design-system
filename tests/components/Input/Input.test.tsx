@@ -1,65 +1,46 @@
-import React from 'react'
-import { cleanup, render } from '@testing-library/react'
-import Input from '../../../src/components/Input'
+import React from 'react';
+import { cleanup, render } from '@testing-library/react';
+import Input, { Type } from '../../../src/components/Input';
 
-afterEach(cleanup)
+afterEach(cleanup);
 
 describe('Input', () => {
-  const id = '1';
-  const label = 'the_label';
-  const onChange = () => {};
-  const type = 'text';
-  const value = 'the_value';
   const dateValue = '2019-01-01';
-  const wrapperClass = 'wrapperClass';
+  const value = 'the_value';
+
+  const getComponent = (type: Type = 'text', value: string = 'the_value') => (
+    render(
+      <Input
+        id='1'
+        label='the_label'
+        onChange={() => { }}
+        type={type}
+        value={value}
+        wrapperClassname='wrapperClass'
+        status='success'
+      />,
+    )
+  )
 
   it('renders without crashing', () => {
-    const input = render(<Input 
-      id={id}
-      label={label}
-      onChange={onChange}
-      type={type}
-      value={value}
-      wrapperClass={wrapperClass}
-    />);
-    expect(input!).toMatchSnapshot()
-  })
+    expect(getComponent()).toMatchSnapshot();
+  });
 
   it('displays the given value', () => {
-
-    const input = render(<Input 
-      id={id}
-      label={label}
-      onChange={onChange}
-      type={type}
-      value={value}
-      wrapperClass={wrapperClass}
-    />);
-    return expect(input!.findByDisplayValue(value)).toBeTruthy();
-  })
+    return expect(getComponent()!.findByDisplayValue(value)).toBeTruthy();
+  });
 
   it('renders with the default type=text', () => {
-    const input = render(<Input 
-      id={id}
-      label={label}
-      onChange={onChange}
-      value={value}
-      wrapperClass={wrapperClass}
-    />);
-
-    return expect(input!.getByDisplayValue(value)).toHaveProperty('type', 'text');
-  })
+    return expect(getComponent()!.getByDisplayValue(value)).toHaveProperty(
+      'type',
+      'text',
+    );
+  });
 
   it('renders an input with type date', () => {
-    const input = render(<Input 
-      id={id}
-      label={label}
-      onChange={onChange}
-      type='date'
-      value={dateValue}
-      wrapperClass={wrapperClass}
-    />);
-
-    return expect(input!.getByDisplayValue(dateValue)).toHaveProperty('type', 'date');
-  })
-})
+    return expect(getComponent('date', dateValue)!.getByDisplayValue(dateValue)).toHaveProperty(
+      'type',
+      'date',
+    );
+  });
+});

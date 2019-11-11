@@ -1,124 +1,110 @@
 Input example:
 
-Idle
-
 ```js
-<Input
-  label="Input Label"
-  name="favorite_food"
-  placeholder="Enter some data"
-  value="This is a text value..."
-/>
-```
+<div style={{padding: '10px 0'}}>
+  <Input
+    name="text_input_1"
+    placeholder="Enter your text"
+    value="This is a text value..."
+  />
+</div>
 
-Success
+<div style={{padding: '10px 0'}}>
+  <Input
+    label="This is a nice label"
+    name="text_input_2"
+    placeholder="Enter your text"
+    status="success"
+    statusText="This is a success message"
+    type="text"
+  />
+</div>
 
-```js
-<Input
-  label="Input Label"
-  name="favorite_food"
-  placeholder="Enter some data"
-  status="success"
-  statusText="This is a success message"
-  type="text"
-  value="This is a text value..."
-/>
-```
-
-Error
-
-```js
-<Input
-  label="Input Label"
-  name="favorite_food"
-  placeholder="Enter some data"
-  status="error"
-  statusText="This is an invalid value"
-  type="text"
-  value="This is a text value..."
-/>
+<div style={{padding: '10px 0'}}>
+  <Input
+    label="This is a nice label"
+    name="text_input_3"
+    placeholder="Enter your text"
+    status="error"
+    statusText="This is an invalid value"
+    type="text"
+    value="This is a text value..."
+  />
+</div>
 ```
 
 Date Input example:
 
-Idle
-
 ```js
-<Input
-  label="Date Input Label"
-  name="date_input"
-  placeholder="MM/DD/YYYY"
-  type="date"
-  value="2019-01-01"
-/>
-```
+<div style={{padding: '10px 0'}}>
+  <Input
+    label="This is a nice label"
+    name="date_input_1"
+    placeholder="YYYY/MM/DD"
+    type="date"
+    value="2019-01-01"
+  />
+</div>
+  
+<div style={{padding: '10px 0'}}>
+  <Input
+    label="This is a nice label"
+    name="date_input_2"
+    placeholder="YYYY/MM/DD"
+    status="success"
+    statusText="This is a success message"
+    type="date"
+    value="2019-01-01"
+  />
+</div>
 
-Success
-
-```js
-<Input
-  label="Date Input Label"
-  name="date_input"
-  placeholder="MM/DD/YYYY"
-  status="success"
-  statusText="This is a success message"
-  type="date"
-  value="2019-01-01"
-/>
-```
-
-Error
-
-```js
-<Input
-  label="Date Input Label"
-  name="date_input"
-  placeholder="MM/DD/YYYY"
-  status="error"
-  statusText="This is an invalid value"
-  type="date"
-  value="2019-01-01"
-/>
+<div style={{padding: '10px 0'}}>
+  <Input
+    label="This is a nice label"
+    name="date_input_2"
+    placeholder="YYYY/MM/DD"
+    status="error"
+    statusText="This is an invalid value"
+    type="date"
+    value="No Date"
+  />
+</div>
 ```
 
 Textarea Input example:
 
-Idle
-
 ```js
-<Input
-  label="Textarea Input Label"
-  name="textarea_input"
-  placeholder="Enter some text here..."
-  type="textarea"
-  value="This is the start of a long text..."
-/>
-```
+<div style={{padding: '10px 0'}}>
+  <Input
+    label="Textarea Input Label"
+    name="textarea_input"
+    placeholder="Enter some text here..."
+    type="textarea"
+    value="This is the start of a long text..."
+  />
+</div>
 
-Success
+<div style={{padding: '10px 0'}}>
+  <Input
+    label="Textarea Input Label"
+    name="textarea_input"
+    placeholder="Enter some text here..."
+    status="success"
+    statusText="This is a success message"
+    type="textarea"
+    value="This is the start of a long text..."
+  />
+</div>
 
-```js
-<Input
-  label="Textarea Input Label"
-  name="textarea_input"
-  placeholder="Enter some text here..."
-  status="success"
-  statusText="This is a success message"
-  type="textarea"
-  value="This is the start of a long text..."
-/>
-```
-
-Error
-
-```js
-<Input
-  label="Textarea Input Label"
-  name="textarea_input"
-  placeholder="Enter some text here..."
-  status="error"
-  statusText="This is an invalid value"
-  type="textarea"
-  value="This is the start of a long text..."
-/>
+<div style={{padding: '10px 0'}}>
+  <Input
+    label="Textarea Input Label"
+    name="textarea_input"
+    placeholder="Enter some text here..."
+    status="error"
+    statusText="This is an invalid value"
+    type="textarea"
+    value="This is the start of a long text..."
+  />
+</div>
 ```

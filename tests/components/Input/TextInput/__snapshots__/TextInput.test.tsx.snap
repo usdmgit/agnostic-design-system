@@ -1,24 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DateInput renders without crashing 1`] = `
+exports[`TextInput renders without crashing 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <input
-        class="date-input  "
+        class="input status-class-name"
         id="1"
-        type="date"
-        value="2019-01-01"
+        type="text"
+        value="the_value"
       />
     </div>
   </body>,
   "container": <div>
     <input
-      class="date-input  "
+      class="input status-class-name"
       id="1"
-      type="date"
-      value="2019-01-01"
+      type="text"
+      value="the_value"
     />
   </div>,
   "debug": [Function],
