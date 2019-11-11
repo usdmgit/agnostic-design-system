@@ -1,12 +1,12 @@
 {
   "name": "@codelitt/ay-design-library",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "React components for AY related projects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "dev:start": "npx styleguidist server",
-    "prod:build": "NODE_ENV=production webpack --mode production",
+    "prod:build": "rm -rf ./dist && NODE_ENV=production webpack --mode production",
     "docker:dev": "sh scripts/dev.sh",
     "docs:prod:build": "npx styleguidist build",
     "docs:docker:build": "sh scripts/buildDocs.sh",
