@@ -9,6 +9,7 @@
     "requireUpstream": false
   },
   "hooks": {
+    "after:bump": "rm -rf ./dist && npm run prod:build",
     "after:release": "npm publish"
   },
   "npm": {

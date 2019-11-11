@@ -1,6 +1,14 @@
 module.exports = {
   resolve: {
-    extensions: [".ts", ".tsx"]
+    extensions: [".ts", ".tsx"],
+  },
+
+  entry: './src/index.tsx',
+
+  output: {
+    filename: 'index.js',
+    libraryTarget: 'umd',
+    globalObject: 'this'
   },
 
   module: {
@@ -35,7 +43,25 @@ module.exports = {
           '@svgr/webpack',
           'url-loader'
         ]
-      }
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options:{
+              fallback: "file-loader",
+              name: "[name][md5:hash].[ext]",
+              outputPath: 'dist/assets/',
+              publicPath: '/dist/assets/'
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/,
+        use: ["file-loader"],
+      },
     ]
   },
 
@@ -44,7 +70,17 @@ module.exports = {
   // This is important because it allows us to avoid bundling all of our
   // dependencies, which allows browsers to cache those libraries between builds.
   externals: {
-    "react": "React",
-    "react-dom": "ReactDOM"
-  }
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'React',
+      root: 'React',
+    },
+    'react-dom': {
+      commonjs: 'react-dom',
+      commonjs2: 'react-dom',
+      amd: 'ReactDOM',
+      root: 'ReactDOM',
+    },
+  },
 };
