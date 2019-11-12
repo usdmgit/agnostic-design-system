@@ -71,6 +71,7 @@
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.18.2",
+    "react-docgen-typescript": "^1.15.1",
     "react-styleguidist": "^10.0.1",
     "react-test-renderer": "^16.11.0",
     "release-it": "^12.4.3",
