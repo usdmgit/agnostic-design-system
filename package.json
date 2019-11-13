@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "dev:start": "npx styleguidist server",
+    "start:dev": "npx styleguidist server",
     "prod:build": "rm -rf ./dist && NODE_ENV=production webpack --mode production",
     "docker:dev": "sh scripts/dev.sh",
     "docs:prod:build": "npx styleguidist build",

@@ -9,9 +9,9 @@ const propsParser = (filePath, source, resolver, handlers) => {
   ).parse(filePath, source, resolver, handlers);
 
   return result.map(component => {
-    const {props} = component;
+    const { props } = component;
     const mappedProps = Object.values(props).reduce((previous, prop) => {
-      const {name} = prop;
+      const { name } = prop;
       return {
         ...previous,
         [name]: {
@@ -34,11 +34,7 @@ module.exports = {
   propsParser,
   sections: [
     {
-      name: 'AY Design Library',
-      content: 'docs/STYLEGUIDIST.md'
-    },
-    {
-      name: 'UI Components',
+      name: 'Components',
       components: 'src/components/*/index.tsx',
       exampleMode: 'collapse', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand' // 'hide' | 'collapse' | 'expand'
