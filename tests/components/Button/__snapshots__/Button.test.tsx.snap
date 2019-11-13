@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <button
-        class="button main"
+        class="button main "
         type="button"
       >
         Button Label
@@ -15,7 +15,7 @@ Object {
   </body>,
   "container": <div>
     <button
-      class="button main"
+      class="button main "
       type="button"
     >
       Button Label

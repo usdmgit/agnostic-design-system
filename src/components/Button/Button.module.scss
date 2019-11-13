@@ -12,6 +12,7 @@
 
 .main {
   background-color: $ay-london-blue-color;
+  padding: 0.5rem 1.375rem;
   &:disabled {
     background-color: $ay-grey-8-color;
     color: $ay-grey-24-color;
@@ -26,5 +27,16 @@
     background-color: $ay-main-blue-color;
     color: $ay-white-color;
   }
-}
 
+  &.left {
+    background-image: url(../../assets/images/arrow-left.svg);
+    background-repeat: no-repeat;
+    background-position: top 1.125rem left 1.375rem;
+  }
+
+  &.right {
+    background-image: url(../../assets/images/arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: top 1.125rem right 1.375rem;
+  }
+}
