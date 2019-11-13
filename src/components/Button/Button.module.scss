@@ -5,14 +5,10 @@
   border-radius: 0.125rem;
   border: 0;
   font-family: $font-stack;
-  font-size: 1.25rem;
-  height: 3.5rem;
-  width: 16rem;
 }
 
 .main {
   background-color: $ay-london-blue-color;
-  padding: 0.5rem 1.375rem;
   &:disabled {
     background-color: $ay-grey-8-color;
     color: $ay-grey-24-color;
@@ -29,14 +25,45 @@
   }
 
   &.left-icon {
-    background-image: url(../../assets/images/arrow-left.svg);
-    background-repeat: no-repeat;
-    background-position: top 1.125rem left 1.375rem;
+    &.regular-size {
+      background-image: url(../../assets/images/left-arrow.svg);
+      background-position: top 1.125rem left 1.25rem;
+      background-repeat: no-repeat;
+    }
+    
+    &.small-size {
+      background-image: url(../../assets/images/left-arrow-small.svg);
+      background-position: top 1.15rem left 1rem;
+      background-repeat: no-repeat;
+      text-align: right;
+    }
   }
 
   &.right-icon {
-    background-image: url(../../assets/images/arrow-right.svg);
-    background-repeat: no-repeat;
+    background-image: url(../../assets/images/right-arrow.svg);
     background-position: top 1.125rem right 1.375rem;
+    background-repeat: no-repeat;
+
+    &.small-size {
+      background-image: url(../../assets/images/right-arrow-small.svg);
+      background-position: top 1.15rem right 1rem;
+      background-repeat: no-repeat;
+      text-align: left;
+    }
+  }
+
+  &.regular-size {
+    font-size: 1.25rem;
+    min-height: 3.5rem;
+    min-width: 16rem;
+    padding: 0.5rem 1.375rem;
+  }
+
+  &.small-size {
+    font-size: 1rem;
+    min-height: 3rem;
+    min-width: 11.0625rem;
+    min-width: 7.5rem;
+    padding: 0.5rem 1rem;
   }
 }

@@ -3,7 +3,7 @@ import style from './Button.module.scss';
 
 export type Type = 'main' | 'secondary' | 'ghost' | 'contextual' | 'inline';
 export type IconPosition = 'left' | 'right' | undefined;
-type Size = 'regular' | 'small';
+export type Size = 'regular' | 'small';
 
 type PropTypes = {
   disabled?: boolean;
@@ -20,13 +20,17 @@ const getIconPositionClassname = (iconPosition: IconPosition) => (
   iconPosition ? style[`${iconPosition}-icon`] : ''
 )
 
+const getButtonSize = (size: Size) => (
+  size ? style[`${size}-size`] : ''
+)
+
 const Button: React.FC<PropTypes> = (props: PropTypes) => {
   const { disabled, iconPosition, id, label, name, onClick, size, type } = props;
 
   return (
     <button
       type="button"
-      className={`${style.button} ${style[type!]} ${getIconPositionClassname(iconPosition)}`}
+      className={`${style.button} ${style[type!]} ${getIconPositionClassname(iconPosition)} ${getButtonSize(size!)}`}
       disabled={disabled}
       onClick={onClick}
     >
@@ -35,6 +39,7 @@ const Button: React.FC<PropTypes> = (props: PropTypes) => {
 };
 
 Button.defaultProps = {
+  size: 'regular',
   type: 'main',
 };
 

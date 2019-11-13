@@ -1,11 +1,11 @@
 import React from 'react';
 import { cleanup, fireEvent, render } from '@testing-library/react';
-import Button, { Type, IconPosition } from '../../../src/components/Button';
+import Button, { Type, IconPosition, Size } from '../../../src/components/Button';
 
 afterEach(cleanup);
 
 describe('Button', () => {
-  const getComponent = (type: Type = 'main', onClick: () => void, iconPosition?: IconPosition) => (
+  const getComponent = (type: Type = 'main', onClick: () => void, iconPosition?: IconPosition, size?: Size) => (
     render(
       <Button
         id='1'
@@ -15,6 +15,7 @@ describe('Button', () => {
         type={type}
         disabled={false}
         iconPosition={iconPosition}
+        size={size}
       />,
     )
   )
@@ -38,15 +39,34 @@ describe('Button', () => {
   });
 
 
-  it('renders a button with the left icon position', () => {
+  it('renders a button with a left icon', () => {
     const { getByText } = getComponent('main', () => { }, 'left');
     const node = getByText('Button Label');
-    expect(node).toHaveProperty('className', 'button main left-icon');
+    expect(node).toHaveProperty('className', 'button main left-icon regular-size');
   });
 
-  it('renders a button with the right icon position', () => {
+  it('renders a button with a right icon', () => {
     const { getByText } = getComponent('main', () => { }, 'right');
     const node = getByText('Button Label');
-    expect(node).toHaveProperty('className', 'button main right-icon');
+    expect(node).toHaveProperty('className', 'button main right-icon regular-size');
   });
+
+  it('renders a button with small size', () => {
+    const { getByText } = getComponent('main', () => { }, undefined, 'small');
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty('className', 'button main  small-size');
+  });
+
+  it('renders a button with small size and a left icon', () => {
+    const { getByText } = getComponent('main', () => { }, 'left', 'small');
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty('className', 'button main left-icon small-size');
+  });
+
+  it('renders a button with small size and a right icon', () => {
+    const { getByText } = getComponent('main', () => { }, 'right', 'small');
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty('className', 'button main right-icon small-size');
+  });
+
 });
