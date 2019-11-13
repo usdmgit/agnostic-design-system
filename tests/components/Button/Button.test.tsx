@@ -1,11 +1,11 @@
 import React from 'react';
 import { cleanup, fireEvent, render } from '@testing-library/react';
-import Button, { Type } from '../../../src/components/Button';
+import Button, { Type, IconPosition } from '../../../src/components/Button';
 
 afterEach(cleanup);
 
 describe('Button', () => {
-  const getComponent = (type: Type = 'main', onClick: (event: React.MouseEvent<HTMLButtonElement>) => void, iconPosition?: 'right' | 'left' | undefined) => (
+  const getComponent = (type: Type = 'main', onClick: () => void, iconPosition?: IconPosition) => (
     render(
       <Button
         id='1'
@@ -38,15 +38,15 @@ describe('Button', () => {
   });
 
 
-  it('renders a button with the left iconPosition', () => {
+  it('renders a button with the left icon position', () => {
     const { getByText } = getComponent('main', () => { }, 'left');
     const node = getByText('Button Label');
-    expect(node).toHaveProperty('className', 'button main left');
+    expect(node).toHaveProperty('className', 'button main left-icon');
   });
 
-  it('renders a button with the right iconPosition', () => {
+  it('renders a button with the right icon position', () => {
     const { getByText } = getComponent('main', () => { }, 'right');
     const node = getByText('Button Label');
-    expect(node).toHaveProperty('className', 'button main right');
+    expect(node).toHaveProperty('className', 'button main right-icon');
   });
 });

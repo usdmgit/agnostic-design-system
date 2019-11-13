@@ -2,7 +2,7 @@ import * as React from 'react';
 import style from './Button.module.scss';
 
 export type Type = 'main' | 'secondary' | 'ghost' | 'contextual' | 'inline';
-type IconPosition = 'left' | 'right' | undefined;
+export type IconPosition = 'left' | 'right' | undefined;
 type Size = 'regular' | 'small';
 
 type PropTypes = {
@@ -17,20 +17,21 @@ type PropTypes = {
 }
 
 const getIconPositionClassname = (iconPosition: IconPosition) => (
-  iconPosition ? style[iconPosition] : ''
+  iconPosition ? style[`${iconPosition}-icon`] : ''
 )
 
 const Button: React.FC<PropTypes> = (props: PropTypes) => {
   const { disabled, iconPosition, id, label, name, onClick, size, type } = props;
 
-  return (<button
-    type="button"
-    className={`${style.button} ${style[type!]} ${getIconPositionClassname(iconPosition)}`}
-    disabled={disabled}
-    onClick={onClick}
-  >
-    {label}
-  </button>)
+  return (
+    <button
+      type="button"
+      className={`${style.button} ${style[type!]} ${getIconPositionClassname(iconPosition)}`}
+      disabled={disabled}
+      onClick={onClick}
+    >
+      {label}
+    </button>)
 };
 
 Button.defaultProps = {
