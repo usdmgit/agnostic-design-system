@@ -188,4 +188,62 @@ describe('Button', () => {
       'button ghost right-icon small-size',
     );
   });
+
+  it('renders a contextual button', () => {
+    const { getByText } = getComponent('contextual', () => {});
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty('className', 'button contextual  regular-size');
+  });
+
+  it('renders a contextual button with a left icon', () => {
+    const { getByText } = getComponent('contextual', () => {}, 'left');
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty(
+      'className',
+      'button contextual left-icon regular-size',
+    );
+  });
+
+  it('renders a contextual button with a right icon', () => {
+    const { getByText } = getComponent('contextual', () => {}, 'right');
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty(
+      'className',
+      'button contextual right-icon regular-size',
+    );
+  });
+
+  it('renders a contextual button with small size', () => {
+    const { getByText } = getComponent(
+      'contextual',
+      () => {},
+      undefined,
+      'small',
+    );
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty('className', 'button contextual  small-size');
+  });
+
+  it('renders a contextual button with small size and a left icon', () => {
+    const { getByText } = getComponent('contextual', () => {}, 'left', 'small');
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty(
+      'className',
+      'button contextual left-icon small-size',
+    );
+  });
+
+  it('renders a contextual button with small size and a right icon', () => {
+    const { getByText } = getComponent(
+      'contextual',
+      () => {},
+      'right',
+      'small',
+    );
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty(
+      'className',
+      'button contextual right-icon small-size',
+    );
+  });
 });

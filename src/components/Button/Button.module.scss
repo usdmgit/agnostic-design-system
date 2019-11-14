@@ -197,3 +197,51 @@
     }
   }
 }
+
+.contextual {
+  border: 1px solid $ay-grey-24-color;
+  color: $ay-grey-64-color;
+
+  &:focus {
+    background-color: $ay-grey-64-color;
+    color: $ay-white-color;
+  }
+
+  &:hover {
+    background-color: $ay-grey-80-color;
+    color: $ay-white-color;
+  }
+
+  &.left-icon,
+  &.right-icon {
+    background-image: url('../../assets/images/cross-icon.svg');
+
+    &.regular-size {
+      background-repeat: no-repeat;
+      background-size: 1.5rem;
+    }
+
+    &.small-size {
+      background-repeat: no-repeat;
+      background-size: 1rem;
+    }
+  }
+
+  &.left-icon {
+    background-position: top 50% left 1rem;
+
+    &.small-size {
+      min-width: 11.125rem;
+      padding-left: 2rem;
+    }
+  }
+
+  &.right-icon {
+    background-position: top 50% right 1rem;
+    text-align: left;
+
+    &.small-size {
+      min-width: 11.125rem;
+    }
+  }
+}
