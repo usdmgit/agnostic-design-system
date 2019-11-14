@@ -14,28 +14,28 @@ type PropTypes = {
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   size?: Size;
   type?: Type;
-}
+};
 
-const getIconPositionClassname = (iconPosition: IconPosition) => (
-  iconPosition ? style[`${iconPosition}-icon`] : ''
-)
+const getIconPositionClassname = (iconPosition: IconPosition) =>
+  iconPosition ? style[`${iconPosition}-icon`] : '';
 
-const getButtonSize = (size: Size) => (
-  size ? style[`${size}-size`] : ''
-)
+const getButtonSize = (size: Size) => (size ? style[`${size}-size`] : '');
 
 const Button: React.FC<PropTypes> = (props: PropTypes) => {
-  const { disabled, iconPosition, id, label, name, onClick, size, type } = props;
+  const { disabled, iconPosition, label, onClick, size, type } = props;
 
   return (
     <button
       type="button"
-      className={`${style.button} ${style[type!]} ${getIconPositionClassname(iconPosition)} ${getButtonSize(size!)}`}
+      className={`${style.button} ${style[type!]} ${getIconPositionClassname(
+        iconPosition,
+      )} ${getButtonSize(size!)}`}
       disabled={disabled}
       onClick={onClick}
     >
       {label}
-    </button>)
+    </button>
+  );
 };
 
 Button.defaultProps = {

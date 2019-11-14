@@ -8,17 +8,17 @@ describe('TextareaInput', () => {
   const value = 'the_value';
 
   const getComponent = () => {
-    const onChange = () => { };
+    const onChange = () => {};
 
     return render(
       <TextareaInput
-        id={'1'}
+        id="1"
         onChange={onChange}
         value={value}
-        statusClassname={'status-classname'}
-      />
-    )
-  }
+        statusClassname="status-classname"
+      />,
+    );
+  };
 
   it('renders without crashing', () => {
     return expect(getComponent()!).toMatchSnapshot();

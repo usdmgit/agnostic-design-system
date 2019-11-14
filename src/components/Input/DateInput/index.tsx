@@ -19,19 +19,19 @@ const DateInput: React.FC<PropTypes> = (props: PropTypes) => (
   <input
     className={`${style.input} ${
       style[`icon-position-${props.iconPosition}`]
-      } ${props.statusClassname}`}
+    } ${props.statusClassname}`}
     id={props.id}
     name={props.name}
     onChange={e => props.onChange(e.target.value)}
     placeholder={props.placeholder}
-    type='date'
+    type="date"
     value={props.value}
   />
 );
 
 DateInput.defaultProps = {
   iconPosition: 'right',
-  statusClassname: ''
+  statusClassname: '',
 };
 
 export default DateInput;

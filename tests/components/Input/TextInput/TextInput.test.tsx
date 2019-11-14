@@ -7,12 +7,17 @@ afterEach(cleanup);
 describe('TextInput', () => {
   const id = '1';
   const statusClassname = 'status-class-name';
-  const onChange = () => { };
+  const onChange = () => {};
   const value = 'the_value';
 
   it('renders without crashing', () => {
     const textInput = render(
-      <TextInput id={id} onChange={onChange} value={value} statusClassname={statusClassname} />,
+      <TextInput
+        id={id}
+        onChange={onChange}
+        value={value}
+        statusClassname={statusClassname}
+      />,
     );
     return expect(textInput!).toMatchSnapshot();
   });

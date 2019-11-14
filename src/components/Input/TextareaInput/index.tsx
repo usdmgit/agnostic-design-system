@@ -1,15 +1,15 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import style from './TextareaInput.module.scss'
+import style from './TextareaInput.module.scss';
 
 interface PropTypes {
-  id?: string
-  name?: string
-  onChange: (value: string) => void
-  placeholder?: string
-  statusClassname?: string
-  statusText?: string
-  value?: string
+  id?: string;
+  name?: string;
+  onChange: (value: string) => void;
+  placeholder?: string;
+  statusClassname?: string;
+  statusText?: string;
+  value?: string;
 }
 
 const TextareaInput: React.FC<PropTypes> = (props: PropTypes) => (
@@ -20,10 +20,10 @@ const TextareaInput: React.FC<PropTypes> = (props: PropTypes) => (
     onChange={e => props.onChange(e.target.value)}
     value={props.value}
   />
-)
+);
 
 TextareaInput.defaultProps = {
-  statusClassname: ''
+  statusClassname: '',
 };
 
-export default TextareaInput
+export default TextareaInput;

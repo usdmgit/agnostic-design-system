@@ -2,9 +2,9 @@
 @import '~@codelitt/ay-css-library/src/components/brand/colors';
 
 .wrapper {
+  color: $ay-grey-64-color;
   display: flex;
   flex-direction: column;
-  color: $ay-grey-64-color;
   font-family: $font-stack;
   font-size: 1rem;
   font-weight: normal;
@@ -24,14 +24,14 @@
     font-family: $font-stack;
     font-size: 1rem;
     max-width: 100%;
-    padding: 0.5rem 1rem;
     outline: none;
+    padding: 0.5rem 1rem;
     width: 100%;
-  
+
     &.error-status {
       border-color: $ay-error-color;
     }
-  
+
     &.success-status {
       border-color: $ay-success-color;
     }
@@ -44,7 +44,7 @@
     &.status-message-success {
       color: $ay-success-color;
     }
-    
+
     &.status-message-error {
       color: $ay-error-color;
     }

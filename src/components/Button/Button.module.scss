@@ -2,8 +2,8 @@
 @import '~@codelitt/ay-css-library/src/components/brand/colors';
 
 .button {
-  border-radius: 0.125rem;
   border: 0;
+  border-radius: 0.125rem;
   font-family: $font-stack;
 
   &.regular-size {
@@ -23,6 +23,7 @@
 
 .main {
   background-color: $ay-london-blue-color;
+
   &:disabled {
     background-color: $ay-grey-8-color;
     color: $ay-grey-24-color;
@@ -40,27 +41,27 @@
 
   &.left-icon {
     &.regular-size {
-      background-image: url(../../assets/images/left-arrow.svg);
+      background-image: url('../../assets/images/left-arrow.svg');
       background-position: top 1.125rem left 1.25rem;
       background-repeat: no-repeat;
     }
-    
+
     &.small-size {
-      background-image: url(../../assets/images/left-arrow-small.svg);
+      background-image: url('../../assets/images/left-arrow-small.svg');
       background-position: top 1.15rem left 1rem;
       background-repeat: no-repeat;
-      text-align: right;
       min-width: 11.125rem;
+      text-align: right;
     }
   }
 
   &.right-icon {
-    background-image: url(../../assets/images/right-arrow.svg);
+    background-image: url('../../assets/images/right-arrow.svg');
     background-position: top 1.125rem right 1.375rem;
     background-repeat: no-repeat;
 
     &.small-size {
-      background-image: url(../../assets/images/right-arrow-small.svg);
+      background-image: url('../../assets/images/right-arrow-small.svg');
       background-position: top 1.15rem right 1rem;
       background-repeat: no-repeat;
       min-width: 11.125rem;
@@ -72,6 +73,7 @@
 .secondary {
   border: 1px solid $ay-london-blue-color;
   color: $ay-main-blue-color;
+
   &:disabled {
     border: 1px solid $ay-grey-16-color;
     color: $ay-grey-16-color;
@@ -87,14 +89,15 @@
     color: $ay-main-blue-color;
   }
 
-  &.left-icon, &.right-icon{
+  &.left-icon,
+  &.right-icon {
     &.regular-size {
-      background-image: url(../../assets/images/cross-icon.svg);
+      background-image: url('../../assets/images/cross-icon.svg');
       background-repeat: no-repeat;
     }
-    
+
     &.small-size {
-      background-image: url(../../assets/images/cross-icon-small.svg);
+      background-image: url('../../assets/images/cross-icon-small.svg');
       background-repeat: no-repeat;
     }
   }
@@ -103,24 +106,24 @@
     &.regular-size {
       background-position: top 1rem left 1rem;
     }
-    
+
     &.small-size {
       background-position: top 1rem left 1rem;
       min-width: 11.125rem;
       text-align: right;
-    }  
+    }
   }
 
   &.right-icon {
     &.regular-size {
       background-position: top 1rem right 1rem;
     }
-    
+
     &.small-size {
       background-position: top 1rem right 1rem;
       min-width: 11.125rem;
       text-align: left;
-    }  
+    }
   }
 
   // &.right-icon {

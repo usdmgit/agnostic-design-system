@@ -17,6 +17,7 @@
       {
         "unspecified": "bottomAlphabetical"
       }
-    ]
+    ],
+    "selector-no-qualifying-type": null 
   }
 }

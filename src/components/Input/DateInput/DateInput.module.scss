@@ -3,21 +3,22 @@
 .input {
   height: 3rem;
 
-  &[type="date"]::-webkit-calendar-picker-indicator {
-    color: rgba(0, 0, 0, 0);
-    opacity: 1;
-    display: block;
-    background: url(../../../assets/images/calendar-icon.svg) no-repeat;
-    width: 22px;
-    height: 24px;
+  &[type='date']::-webkit-calendar-picker-indicator {
+    background: url('../../../assets/images/calendar-icon.svg') no-repeat;
     border-width: thin;
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    height: 24px;
+    opacity: 1;
+    width: 22px;
   }
 
   &.icon-position-left {
-    &[type="date"]::-webkit-datetime-edit{
+    &[type='date']::-webkit-datetime-edit {
       margin-left: 2.375rem;
     }
-    &[type="date"]::-webkit-calendar-picker-indicator {
+
+    &[type='date']::-webkit-calendar-picker-indicator {
       position: absolute;
     }
   }

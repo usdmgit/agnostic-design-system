@@ -1,14 +1,14 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import style from './TextInput.module.scss'
+import style from './TextInput.module.scss';
 
 interface PropTypes {
-  id?: string
-  name?: string
-  onChange: (value: string) => void
-  placeholder?: string
-  statusClassname?: string
-  value?: string
+  id?: string;
+  name?: string;
+  onChange: (value: string) => void;
+  placeholder?: string;
+  statusClassname?: string;
+  value?: string;
 }
 
 const TextInput: React.FC<PropTypes> = (props: PropTypes) => (
@@ -18,13 +18,13 @@ const TextInput: React.FC<PropTypes> = (props: PropTypes) => (
     name={props.name}
     onChange={e => props.onChange(e.target.value)}
     placeholder={props.placeholder}
-    type='text'
+    type="text"
     value={props.value}
   />
-)
+);
 
 TextInput.defaultProps = {
-  statusClassname: ''
+  statusClassname: '',
 };
 
-export default TextInput
+export default TextInput;
