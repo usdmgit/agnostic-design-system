@@ -25,3 +25,7 @@ yarn-error.log*
 
 # IDE files
 .idea
+
+# Test coverage results
+coverage
+*junit.xml
