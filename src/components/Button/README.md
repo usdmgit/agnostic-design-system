@@ -60,3 +60,34 @@ Secondary Button example:
   <Button type="secondary" size="small" label="Small Icon Right" iconPosition="right" />
 </div>
 ```
+
+Ghost Button example:
+```js
+<div style={{ padding: '10px 0' }}>
+  <Button type="ghost" label="Ghost Button" />
+</div>
+
+<div style={{ padding: '10px 0' }}>
+  <Button type="ghost" label="Ghost Button Disabled" disabled/>
+</div>
+
+<div style={{ padding: '10px 0' }}>
+  <Button type="ghost" label="Idle Icon Left" iconPosition="left" />
+</div>
+
+<div style={{ padding: '10px 0' }}>
+  <Button type="ghost" label="Idle Icon Right" iconPosition="right" />
+</div>
+
+<div style={{ padding: '10px 0' }}>
+  <Button type="ghost" size="small" label="Small CTA" />
+</div>
+
+<div style={{ padding: '10px 0' }}>
+  <Button type="ghost" size="small" label="Small Icon Left" iconPosition="left" />
+</div>
+
+<div style={{ padding: '10px 0' }}>
+  <Button type="ghost" size="small" label="Small Icon Right" iconPosition="right" />
+</div>
+```

@@ -140,4 +140,52 @@ describe('Button', () => {
       'button secondary right-icon small-size',
     );
   });
+
+  it('renders a ghost button', () => {
+    const { getByText } = getComponent('ghost', () => {});
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty('className', 'button ghost  regular-size');
+  });
+
+  it('renders a ghost button with a left icon', () => {
+    const { getByText } = getComponent('ghost', () => {}, 'left');
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty(
+      'className',
+      'button ghost left-icon regular-size',
+    );
+  });
+
+  it('renders a ghost button with a right icon', () => {
+    const { getByText } = getComponent('ghost', () => {}, 'right');
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty(
+      'className',
+      'button ghost right-icon regular-size',
+    );
+  });
+
+  it('renders a ghost button with small size', () => {
+    const { getByText } = getComponent('ghost', () => {}, undefined, 'small');
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty('className', 'button ghost  small-size');
+  });
+
+  it('renders a ghost button with small size and a left icon', () => {
+    const { getByText } = getComponent('ghost', () => {}, 'left', 'small');
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty(
+      'className',
+      'button ghost left-icon small-size',
+    );
+  });
+
+  it('renders a ghost button with small size and a right icon', () => {
+    const { getByText } = getComponent('ghost', () => {}, 'right', 'small');
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty(
+      'className',
+      'button ghost right-icon small-size',
+    );
+  });
 });
