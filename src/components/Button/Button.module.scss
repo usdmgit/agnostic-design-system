@@ -215,14 +215,60 @@
   &.left-icon,
   &.right-icon {
     background-image: url('../../assets/images/cross-icon.svg');
+    background-repeat: no-repeat;
 
     &.regular-size {
-      background-repeat: no-repeat;
       background-size: 1.5rem;
     }
 
     &.small-size {
-      background-repeat: no-repeat;
+      background-size: 1rem;
+    }
+  }
+
+  &.left-icon {
+    background-position: top 50% left 1rem;
+
+    &.small-size {
+      min-width: 11.125rem;
+      padding-left: 2rem;
+    }
+  }
+
+  &.right-icon {
+    background-position: top 50% right 1rem;
+    text-align: left;
+
+    &.small-size {
+      min-width: 11.125rem;
+    }
+  }
+}
+
+.delete {
+  border: 1px solid $ay-error-color;
+  color: $ay-error-color;
+
+  &:focus {
+    background-color: $ay-grey-80-color;
+    color: $ay-white-color;
+  }
+
+  &:hover {
+    background-color: $ay-error-color;
+    color: $ay-white-color;
+  }
+
+  &.left-icon,
+  &.right-icon {
+    background-image: url('../../assets/images/delete-icon.svg');
+    background-repeat: no-repeat;
+
+    &.regular-size {
+      background-size: 1.5rem;
+    }
+
+    &.small-size {
       background-size: 1rem;
     }
   }

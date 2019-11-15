@@ -246,4 +246,52 @@ describe('Button', () => {
       'button contextual right-icon small-size',
     );
   });
+
+  it('renders a delete button', () => {
+    const { getByText } = getComponent('delete', () => {});
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty('className', 'button delete  regular-size');
+  });
+
+  it('renders a delete button with a left icon', () => {
+    const { getByText } = getComponent('delete', () => {}, 'left');
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty(
+      'className',
+      'button delete left-icon regular-size',
+    );
+  });
+
+  it('renders a delete button with a right icon', () => {
+    const { getByText } = getComponent('delete', () => {}, 'right');
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty(
+      'className',
+      'button delete right-icon regular-size',
+    );
+  });
+
+  it('renders a delete button with small size', () => {
+    const { getByText } = getComponent('delete', () => {}, undefined, 'small');
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty('className', 'button delete  small-size');
+  });
+
+  it('renders a delete button with small size and a left icon', () => {
+    const { getByText } = getComponent('delete', () => {}, 'left', 'small');
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty(
+      'className',
+      'button delete left-icon small-size',
+    );
+  });
+
+  it('renders a delete button with small size and a right icon', () => {
+    const { getByText } = getComponent('delete', () => {}, 'right', 'small');
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty(
+      'className',
+      'button delete right-icon small-size',
+    );
+  });
 });

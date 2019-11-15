@@ -118,3 +118,30 @@ Contextual Button example:
   <Button type="contextual" size="small" label="Small Icon Right" iconPosition="right" />
 </div>
 ```
+
+Delete Button example:
+```js
+<div style={{ padding: '10px 0' }}>
+  <Button type="delete" label="Delete Button" />
+</div>
+
+<div style={{ padding: '10px 0' }}>
+  <Button type="delete" label="Idle Icon Left" iconPosition="left" />
+</div>
+
+<div style={{ padding: '10px 0' }}>
+  <Button type="delete" label="Idle Icon Right" iconPosition="right" />
+</div>
+
+<div style={{ padding: '10px 0' }}>
+  <Button type="delete" size="small" label="Small Delete" />
+</div>
+
+<div style={{ padding: '10px 0' }}>
+  <Button type="delete" size="small" label="Small Icon Left" iconPosition="left" />
+</div>
+
+<div style={{ padding: '10px 0' }}>
+  <Button type="delete" size="small" label="Small Icon Right" iconPosition="right" />
+</div>
+```

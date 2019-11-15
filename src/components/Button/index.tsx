@@ -1,7 +1,13 @@
 import * as React from 'react';
 import style from './Button.module.scss';
 
-export type Type = 'main' | 'secondary' | 'ghost' | 'contextual' | 'inline';
+export type Type =
+  | 'main'
+  | 'secondary'
+  | 'ghost'
+  | 'contextual'
+  | 'inline'
+  | 'delete';
 export type IconPosition = 'left' | 'right' | undefined;
 export type Size = 'regular' | 'small';
 
