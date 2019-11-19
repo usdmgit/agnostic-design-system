@@ -133,3 +133,54 @@ onTextAreaChange = (newValue) => setState({ textAreaValue: newValue });
   </div>
 </div>
 ```
+
+Password Input example:
+
+```js
+initialState = { passwordValue: '' };
+onPasswordChange = (newValue) => setState({ passwordValue: newValue });
+
+<div>
+  <div style={{padding: '10px 0'}}>
+    <Input
+      id="password_input_id"
+      label="Password Input Label"
+      name="password_input"
+      placeholder="Enter your password"
+      type="password"
+      status="error"
+      statusText="This is an invalid value"
+      value={state.passwordValue}
+      onChange={onPasswordChange}
+    />
+  </div>
+
+    <div style={{padding: '10px 0'}}>
+    <Input
+      id="password_input_id_success"
+      label="Password Input Label"
+      name="password_input_success"
+      placeholder="Enter your password"
+      type="password"
+      status="success"
+      statusText="This is a success value"
+      value={state.passwordValue}
+      onChange={onPasswordChange}
+    />
+  </div>
+
+  <div style={{padding: '10px 0'}}>
+    <Input
+      id="password_input_id_error"
+      label="Password Input Label"
+      name="password_input_error"
+      placeholder="Enter your password"
+      type="password"
+      status="error"
+      statusText="This is an invalid value"
+      value={state.passwordValue}
+      onChange={onPasswordChange}
+    />
+  </div>
+</div>
+```

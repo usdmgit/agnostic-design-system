@@ -3,11 +3,12 @@ import * as React from 'react';
 import TextInput from './TextInput';
 import DateInput from './DateInput';
 import TextareaInput from './TextareaInput';
+import PasswordInput from './PasswordInput';
 
 import style from './Input.module.scss';
 
 type Status = 'success' | 'error' | undefined;
-export type Type = 'text' | 'textarea' | 'date';
+export type Type = 'text' | 'textarea' | 'date' | 'password';
 
 interface PropTypes {
   iconPosition?: 'left' | 'right';
@@ -32,6 +33,7 @@ const Input: React.FC<PropTypes> = (props: PropTypes) => {
     text: TextInput,
     textarea: TextareaInput,
     date: DateInput,
+    password: PasswordInput,
   };
 
   const Component = components[type!];
