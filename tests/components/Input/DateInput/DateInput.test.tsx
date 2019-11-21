@@ -1,8 +1,6 @@
 import React from 'react';
-import { cleanup, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import DateInput from '../../../../src/components/Input/DateInput';
-
-afterEach(cleanup);
 
 describe('DateInput', () => {
   const value = '2019-01-01';

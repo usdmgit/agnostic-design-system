@@ -1,8 +1,6 @@
 import React from 'react';
-import { cleanup, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import TextInput from '../../../../src/components/Input/TextInput';
-
-afterEach(cleanup);
 
 describe('TextInput', () => {
   const id = '1';

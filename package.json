@@ -14,10 +14,10 @@
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' && stylelint 'src/**/*.{css,scss}'",
     "lint:fix": "tsc --noEmit && eslint --fix '*/**/*.{js,ts,tsx}' && stylelint --fix 'src/**/*.{css,scss}'",
     "prettier:format": "prettier --write \"src/**/*.+(ts|tsx|json|css)\" \"src/**/*.test.ts\"",
-    "test": "jest",
-    "test:ci": "jest --reporters=jest-junit",
-    "test:updateSnapshot": "jest --updateSnapshot",
-    "test:watch": "jest --watch",
+    "test": "jest -c jest.config.js",
+    "test:ci": "jest -c jest.config.js --reporters=jest-junit",
+    "test:updateSnapshot": "jest -c jest.config.js --updateSnapshot",
+    "test:watch": "jest -c jest.config.js --watch",
     "release": "release-it"
   },
   "repository": {

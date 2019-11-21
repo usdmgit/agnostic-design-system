@@ -1,10 +1,6 @@
 import React from 'react';
-import { cleanup, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import Col from '../../../../src/components/Grid/Col';
-import '@testing-library/jest-dom';
-import '@testing-library/jest-dom/extend-expect';
-
-afterEach(cleanup);
 
 describe('Col', () => {
   it('renders without crashing', () => {

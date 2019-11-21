@@ -1,8 +1,6 @@
 import React from 'react';
-import { cleanup, fireEvent, render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import PasswordInput from '../../../../src/components/Input/PasswordInput';
-
-afterEach(cleanup);
 
 describe('PasswordInput', () => {
   const value = 'the_password';

@@ -1,8 +1,6 @@
 import React from 'react';
-import { cleanup, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import TextareaInput from '../../../../src/components/Input/TextareaInput';
-
-afterEach(cleanup);
 
 describe('TextareaInput', () => {
   const value = 'the_value';

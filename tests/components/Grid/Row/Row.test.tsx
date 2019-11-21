@@ -1,8 +1,6 @@
 import React from 'react';
-import { cleanup, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import Row from '../../../../src/components/Grid/Row';
-
-afterEach(cleanup);
 
 describe('Row', () => {
   it('renders without crashing', () => {

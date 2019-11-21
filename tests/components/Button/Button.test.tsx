@@ -1,12 +1,10 @@
 import React from 'react';
-import { cleanup, fireEvent, render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import Button, {
   Type,
   IconPosition,
   Size,
 } from '../../../src/components/Button';
-
-afterEach(cleanup);
 
 describe('Button', () => {
   const getComponent = (
