@@ -1,3 +1,5 @@
+const path = require('path');
+
 // When some property is optional, react-docgen-typescript adds an "undefined" option to the docs.
 // This custom propsParser removes these unnecessary "undefined".
 const propsParser = (filePath, source, resolver, handlers) => {
@@ -34,10 +36,21 @@ module.exports = {
   propsParser,
   sections: [
     {
+      name: 'Grid System',
+      content: 'src/components/Grid/README.md',
+      components: 'src/components/Grid/*/index.tsx',
+      exampleMode: 'collapse',
+      usageMode: 'expand'
+    },
+    {
       name: 'Components',
       components: 'src/components/*/index.tsx',
-      exampleMode: 'collapse', // 'hide' | 'collapse' | 'expand'
-      usageMode: 'expand' // 'hide' | 'collapse' | 'expand'
+      ignore: ['src/components/Grid/**/*.tsx'],
+      exampleMode: 'collapse',
+      usageMode: 'expand'
     }
+  ],
+  require: [
+    path.join(__dirname, './node_modules/@codelitt/ay-css-library/dist/main.min.css')
   ]
 };
