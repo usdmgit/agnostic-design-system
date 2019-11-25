@@ -17,9 +17,14 @@ interface PropTypes {
   name?: string;
   onChange: (value: string) => void;
   placeholder?: string;
+
+  /** 'success' | 'error' */
   status?: Status;
   statusText?: string;
+
+  /** 'text' | 'textarea' | 'date' | 'password' */
   type?: Type;
+
   value?: string;
   wrapperClassname?: string;
 }

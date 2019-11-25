@@ -13,12 +13,18 @@ export type Size = 'regular' | 'small';
 
 type PropTypes = {
   disabled?: boolean;
-  iconPosition?: IconPosition;
   id?: string;
   label?: string;
   name?: string;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+
+  /** 'left' | 'right' */
+  iconPosition?: IconPosition;
+
+  /** 'regular' | 'small' */
   size?: Size;
+
+  /** 'main' | 'secondary' | 'ghost' | 'contextual' | 'inline' | 'delete' */
   type?: Type;
 };
 

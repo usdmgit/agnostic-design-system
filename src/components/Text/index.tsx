@@ -7,10 +7,13 @@ export type Type = 'body-content' | 'title';
 type PropTypes = {
   /** Sets custom CSS class on the component. */
   customClassName?: string;
+
   /** Sets the number of visible characters.  If defined, it cuts the text at the specified length and adds ... at the end. */
   maxLength?: number;
-  /** Sets the component to display a text or a title. */
+
+  /** 'body-content' | 'title' */
   type?: Type;
+
   /** The text to display */
   value: string;
 };
