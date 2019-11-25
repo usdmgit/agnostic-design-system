@@ -13,7 +13,6 @@
 /dist
 /.out
 /storybook-static
-/styleguide
 
 # misc
 .DS_Store
