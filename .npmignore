@@ -18,5 +18,7 @@ yarn-error.log*
 /node_modules
 /tests
 /styleguide
+/.out
+/storybook-static
 docker*
 Docker*

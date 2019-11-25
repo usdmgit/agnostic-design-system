@@ -1,1 +1,4 @@
 dist/
+
+# Ignore Storybook files
+**/*.stories.tsx
