@@ -138,6 +138,7 @@
 }
 
 .ghost {
+  background-color: $ay-white-color;
   border: 0;
   color: $ay-main-blue-color;
 
@@ -180,13 +181,13 @@
 
     &.small-size {
       padding-left: 1.875rem;
-      text-align: right;
+      text-align: left;
     }
   }
 
   &.right-icon {
     background-position: top 50% right 1rem;
-    text-align: left;
+    text-align: right;
 
     &.regular-size {
       padding-right: 3rem;
@@ -289,5 +290,34 @@
     &.small-size {
       min-width: 11.125rem;
     }
+  }
+}
+
+.inline {
+  background-color: $ay-london-blue-color;
+  height: 4rem;
+  width: 100%;
+
+  &:not(:disabled) {
+    color: $ay-navy-blue-color;
+
+    &:focus {
+      background-color: $ay-navy-blue-color;
+      color: $ay-white-color;
+    }
+
+    &:hover {
+      background-color: $ay-main-blue-color;
+      color: $ay-white-color;
+    }
+  }
+
+  &.right-icon {
+    background-image: url('../../assets/images/right-arrow.svg');
+    background-position: top 50% right 1rem;
+    background-repeat: no-repeat;
+    background-size: 0.75rem;
+    padding-right: 0 1rem 0 1rem;
+    text-align: left;
   }
 }

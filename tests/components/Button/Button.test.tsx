@@ -292,4 +292,19 @@ describe('Button', () => {
       'button delete right-icon small-size',
     );
   });
+
+  it('renders a inline button', () => {
+    const { getByText } = getComponent('inline', () => {});
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty('className', 'button inline regular-size');
+  });
+
+  it('renders a inline button with a right icon', () => {
+    const { getByText } = getComponent('inline', () => {}, 'right');
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty(
+      'className',
+      'button inline right-icon regular-size',
+    );
+  });
 });

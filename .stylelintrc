@@ -18,6 +18,13 @@
         "unspecified": "bottomAlphabetical"
       }
     ],
-    "selector-no-qualifying-type": null 
-  }
+    "selector-no-qualifying-type": null,
+    'property-no-unknown': [
+      true,
+      {
+        ignoreProperties: ['view-width-small-desktop-min'],
+        ignoreSelectors: [':export', /^:import/],
+      },
+    ]
+  },
 }

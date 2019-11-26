@@ -20,7 +20,7 @@ type PropTypes = {
 };
 
 const getTextToDisplay = (props: PropTypes) =>
-  props.maxLength
+  props.maxLength && props.value.length > props.maxLength
     ? `${props.value.substr(0, props.maxLength)} ...`
     : props.value;
 

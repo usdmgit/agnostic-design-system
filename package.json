@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "dev:start": "start-storybook -p 6060",
+    "dev:start": "start-storybook -s ./src/assets/images -p 6060",
     "prod:build": "rm -rf ./dist && NODE_ENV=production webpack --mode production",
     "docker:dev": "sh scripts/dev.sh",
     "docs:prod:build": "build-storybook",

@@ -77,6 +77,19 @@ stories.add(
             onClick={action('button clicked')}
           />
         </div>
+        <div
+          style={{ padding: '10px', display: 'inline-block', width: '22rem' }}
+        >
+          <p>Inline</p>
+          <Button
+            type="inline"
+            label={buttonLabel}
+            size={buttonSize}
+            iconPosition={buttonIcon}
+            disabled={buttonDisabled}
+            onClick={action('button clicked')}
+          />
+        </div>
       </div>
     );
   },
@@ -307,5 +320,67 @@ stories.add(
   ),
   {
     order: 5,
+  },
+);
+
+stories.add(
+  'Delete',
+  () => (
+    <div>
+      <div style={{ padding: '10px 0' }}>
+        <Button type="delete" label="Delete Button" />
+      </div>
+
+      <div style={{ padding: '10px 0' }}>
+        <Button type="delete" label="Idle Icon Left" iconPosition="left" />
+      </div>
+
+      <div style={{ padding: '10px 0' }}>
+        <Button type="delete" label="Idle Icon Right" iconPosition="right" />
+      </div>
+
+      <div style={{ padding: '10px 0' }}>
+        <Button type="delete" size="small" label="Small CTA" />
+      </div>
+
+      <div style={{ padding: '10px 0' }}>
+        <Button
+          type="delete"
+          size="small"
+          label="Small Icon Left"
+          iconPosition="left"
+        />
+      </div>
+
+      <div style={{ padding: '10px 0' }}>
+        <Button
+          type="delete"
+          size="small"
+          label="Small Icon Right"
+          iconPosition="right"
+        />
+      </div>
+    </div>
+  ),
+  {
+    order: 6,
+  },
+);
+
+stories.add(
+  'Inline',
+  () => (
+    <div>
+      <div style={{ padding: '10px 0' }}>
+        <Button type="inline" label="Inline Button" />
+      </div>
+
+      <div style={{ padding: '10px 0' }}>
+        <Button type="inline" label="Idle Icon Right" iconPosition="right" />
+      </div>
+    </div>
+  ),
+  {
+    order: 7,
   },
 );
