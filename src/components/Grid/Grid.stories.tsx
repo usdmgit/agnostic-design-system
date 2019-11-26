@@ -2,31 +2,60 @@ import * as React from 'react';
 import Container from './Container';
 import Row from './Row';
 import Col from './Col';
-import {storiesOf} from "@storybook/react";
+import { storiesOf } from '@storybook/react';
 
 const stories = storiesOf('Grid System|Grid', module);
 
-const columnStyle = {background: '#c5c5c5', border: '1px solid #8c8989', fontSize: '14px'};
+const columnStyle = {
+  background: '#c5c5c5',
+  border: '1px solid #8c8989',
+  fontSize: '14px',
+};
 
 stories.add(
   'Overview',
-  () =>
+  () => (
     <Container>
       <Row>
-        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>Col 1</Col>
-        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>Col 2</Col>
-        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>Col 3</Col>
-        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>Col 4</Col>
-        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>Col 5</Col>
-        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>Col 6</Col>
-        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>Col 7</Col>
-        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>Col 8</Col>
-        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>Col 9</Col>
-        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>Col 10</Col>
-        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>Col 11</Col>
-        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>Col 12</Col>
+        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>
+          Col 1
+        </Col>
+        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>
+          Col 2
+        </Col>
+        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>
+          Col 3
+        </Col>
+        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>
+          Col 4
+        </Col>
+        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>
+          Col 5
+        </Col>
+        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>
+          Col 6
+        </Col>
+        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>
+          Col 7
+        </Col>
+        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>
+          Col 8
+        </Col>
+        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>
+          Col 9
+        </Col>
+        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>
+          Col 10
+        </Col>
+        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>
+          Col 11
+        </Col>
+        <Col xs={4} sm={4} md={3} lg={1} style={columnStyle}>
+          Col 12
+        </Col>
       </Row>
-    </Container>,
+    </Container>
+  ),
   {
     order: 1,
     inline: true,
@@ -61,6 +90,6 @@ Those columns are centered in the page with the parent \`<Container/>\`.
 * In medium screens \`md\`: each column has 25% of width (3 columns of 12 )
 * In small screens \`sm\`: each column has 50% of width (4 columns of 8)
 * In extra-small screens \`xs\`: each column has 100% of width (4 columns of 4)
-    `
-  }
+    `,
+  },
 );

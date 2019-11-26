@@ -1,16 +1,18 @@
-import {storiesOf} from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import * as React from 'react';
-import Container from "./index";
+import Container from './index';
 
 const stories = storiesOf('Grid System|Grid', module);
 
 stories.add(
   'Container',
-  () => <Container>
-    <div style={{width: '100%', height: '200px', background: '#a9b0bf'}}>
-      I'm inside a container
-    </div>
-  </Container>,
+  () => (
+    <Container>
+      <div style={{ width: '100%', height: '200px', background: '#a9b0bf' }}>
+        I'm inside a container
+      </div>
+    </Container>
+  ),
   {
     order: 2,
     title: 'Container',
@@ -36,6 +38,6 @@ import { Container, Row } from '@codelitt/ay-design-library';
   <Row>...</Row>
 </Container>
 \`\`\`
-`
-  }
+`,
+  },
 );

@@ -26,7 +26,7 @@ describe('Text', () => {
   it('renders a body-content', () => {
     const { getByText } = getComponent();
     const node = getByText(value);
-    expect(node).toHaveProperty('className', 'body-content ');
+    expect(node).toHaveProperty('className', 'body-content');
   });
 
   it('renders a body-content with a custom class name', () => {
@@ -43,7 +43,7 @@ describe('Text', () => {
   it('renders a title', () => {
     const { getByText } = getComponent('title');
     const node = getByText(value);
-    expect(node).toHaveProperty('className', 'title ');
+    expect(node).toHaveProperty('className', 'title');
   });
 
   it('truncates the text after maxLength and adds ...', () => {

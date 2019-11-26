@@ -1,24 +1,34 @@
-import {storiesOf} from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import * as React from 'react';
-import Container from "../Container";
-import Row from "./index";
-import Col from "../Col";
+import Container from '../Container';
+import Row from './index';
+import Col from '../Col';
 
 const stories = storiesOf('Grid System|Grid', module);
 
 stories.add(
   'Row',
   () => {
-    return <Container>
-      <Row style={{border: '1px solid black'}}>
-        <Col xs={2} style={{background: '#c5c5c5'}}>Column 1 Row 1</Col>
-        <Col xs={2} style={{background: '#c5c5c5'}}>Column 2 Row 1</Col>
-      </Row>
-      <Row style={{border: '1px solid black'}}>
-        <Col xs={2} style={{background: '#c5c5c5'}}>Column 1 Row 2</Col>
-        <Col xs={2} style={{background: '#c5c5c5'}}>Column 2 Row 2</Col>
-      </Row>
-    </Container>
+    return (
+      <Container>
+        <Row style={{ border: '1px solid black' }}>
+          <Col xs={2} style={{ background: '#c5c5c5' }}>
+            Column 1 Row 1
+          </Col>
+          <Col xs={2} style={{ background: '#c5c5c5' }}>
+            Column 2 Row 1
+          </Col>
+        </Row>
+        <Row style={{ border: '1px solid black' }}>
+          <Col xs={2} style={{ background: '#c5c5c5' }}>
+            Column 1 Row 2
+          </Col>
+          <Col xs={2} style={{ background: '#c5c5c5' }}>
+            Column 2 Row 2
+          </Col>
+        </Row>
+      </Container>
+    );
   },
   {
     order: 3,
@@ -38,6 +48,6 @@ import { Container, Row } from '@codelitt/ay-design-library';
   <Row>...</Row>
 </Container>
 \`\`\`
-`
-  }
+`,
+  },
 );

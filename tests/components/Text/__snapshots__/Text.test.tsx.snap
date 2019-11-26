@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <span
-        class="body-content "
+        class="body-content"
       >
         This is a text value
       </span>
@@ -14,7 +14,7 @@ Object {
   </body>,
   "container": <div>
     <span
-      class="body-content "
+      class="body-content"
     >
       This is a text value
     </span>

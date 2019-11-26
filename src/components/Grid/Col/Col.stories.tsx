@@ -1,9 +1,9 @@
-import {storiesOf} from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import * as React from 'react';
-import Container from "../Container";
-import Row from "../Row";
-import Col from "./index";
-import {select, withKnobs} from "@storybook/addon-knobs";
+import Container from '../Container';
+import Row from '../Row';
+import Col from './index';
+import { select, withKnobs } from '@storybook/addon-knobs';
 
 const stories = storiesOf('Grid System|Grid', module);
 stories.addDecorator(withKnobs);
@@ -13,32 +13,51 @@ stories.add(
   () => {
     const xsColumns = select('XS columns', [1, 2, 3, 4], 4);
     const smColumns = select('SM columns', [1, 2, 3, 4, 5, 6, 7, 8], 8);
-    const mdColumns = select('MD columns', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 6);
-    const lgColumns = select('LG columns', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 4);
-    const colStyle = {background: '#c5c5c5', border: '1px solid #8c8989'};
+    const mdColumns = select(
+      'MD columns',
+      [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      6,
+    );
+    const lgColumns = select(
+      'LG columns',
+      [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      4,
+    );
+    const colStyle = { background: '#c5c5c5', border: '1px solid #8c8989' };
 
-    return <Container>
-      <Row>
-        <Col
-          xs={xsColumns}
-          sm={smColumns}
-          md={mdColumns}
-          lg={lgColumns}
-          style={colStyle}>Column 1</Col>
-        <Col
-          xs={xsColumns}
-          sm={smColumns}
-          md={mdColumns}
-          lg={lgColumns}
-          style={colStyle}>Column 2</Col>
-        <Col
-          xs={xsColumns}
-          sm={smColumns}
-          md={mdColumns}
-          lg={lgColumns}
-          style={colStyle}>Column 3</Col>
-      </Row>
-    </Container>
+    return (
+      <Container>
+        <Row>
+          <Col
+            xs={xsColumns}
+            sm={smColumns}
+            md={mdColumns}
+            lg={lgColumns}
+            style={colStyle}
+          >
+            Column 1
+          </Col>
+          <Col
+            xs={xsColumns}
+            sm={smColumns}
+            md={mdColumns}
+            lg={lgColumns}
+            style={colStyle}
+          >
+            Column 2
+          </Col>
+          <Col
+            xs={xsColumns}
+            sm={smColumns}
+            md={mdColumns}
+            lg={lgColumns}
+            style={colStyle}
+          >
+            Column 3
+          </Col>
+        </Row>
+      </Container>
+    );
   },
   {
     order: 4,
@@ -81,6 +100,6 @@ import { Col, Container, Row } from '@codelitt/ay-design-library';
   </Row>
 </Container>
 \`\`\`
-`
-  }
+`,
+  },
 );

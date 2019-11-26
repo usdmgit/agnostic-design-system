@@ -1,4 +1,5 @@
 import * as React from 'react';
+import classnames from 'classnames';
 
 import style from './DateInput.module.scss';
 
@@ -17,9 +18,11 @@ interface PropTypes {
 // @TODO: improve component as we work with different data types and formats
 const DateInput: React.FC<PropTypes> = (props: PropTypes) => (
   <input
-    className={`${style.input} ${
-      style[`icon-position-${props.iconPosition}`]
-    } ${props.statusClassname}`}
+    className={classnames(
+      style.input,
+      style[`icon-position-${props.iconPosition}`],
+      props.statusClassname,
+    )}
     id={props.id}
     name={props.name}
     onChange={e => props.onChange(e.target.value)}

@@ -1,8 +1,8 @@
-import React, {useState} from "react";
-import {storiesOf} from "@storybook/react";
-import Input from "./index";
-import {action} from "@storybook/addon-actions";
-import {select, text, withKnobs} from "@storybook/addon-knobs";
+import React, { useState } from 'react';
+import { storiesOf } from '@storybook/react';
+import Input from './index';
+import { action } from '@storybook/addon-actions';
+import { select, text, withKnobs } from '@storybook/addon-knobs';
 
 const stories = storiesOf('Components|Input', module);
 
@@ -10,27 +10,37 @@ stories.addDecorator(withKnobs);
 
 export default {
   title: 'Input',
-  component: Input
-}
+  component: Input,
+};
 
-const InputWrapper = ({children}) => {
-  const [state, setState] = useState({inputValue: ''});
+const InputWrapper = ({ children }) => {
+  const [state, setState] = useState({ inputValue: '' });
   return children(state, setState);
 };
 
-stories.add("Live testing", () => {
+stories.add(
+  'Live testing',
+  () => {
     const inputLabel = text('Label', 'Input label');
     const inputId = text('Input id', 'input_id');
     const inputName = text('Input name', 'input_name');
     const inputValue = text('Input value', '');
     const inputPlaceholder = text('Placeholder', '');
     const inputStatusText = text('Status Text', '');
-    const inputStatus = select('Input Status', {success: 'success', error: 'error', 'clear': null}, null);
-    const inputIcon = select('Icon Position', {left: 'left', right: 'right', 'no icon': null}, null);
+    const inputStatus = select(
+      'Input Status',
+      { success: 'success', error: 'error', clear: null },
+      null,
+    );
+    const inputIcon = select(
+      'Icon Position',
+      { left: 'left', right: 'right', 'no icon': null },
+      null,
+    );
 
     return (
       <div>
-        <div style={{padding: '10px 0'}}>
+        <div style={{ padding: '10px 0' }}>
           <p>Text Input</p>
           <Input
             type="text"
@@ -42,10 +52,10 @@ stories.add("Live testing", () => {
             value={inputValue}
             name={inputName}
             placeholder={inputPlaceholder}
-            onChange={(newValue) => action(`New Text Value: ${newValue}`)}
+            onChange={newValue => action(`New Text Value: ${newValue}`)}
           />
         </div>
-        <div style={{padding: '10px 0'}}>
+        <div style={{ padding: '10px 0' }}>
           <p>Date Input</p>
           <Input
             type="date"
@@ -57,10 +67,10 @@ stories.add("Live testing", () => {
             value={inputValue}
             name={inputName}
             placeholder={inputPlaceholder}
-            onChange={(newValue) => action(`New Date Value: ${newValue}`)}
+            onChange={newValue => action(`New Date Value: ${newValue}`)}
           />
         </div>
-        <div style={{padding: '10px 0'}}>
+        <div style={{ padding: '10px 0' }}>
           <p>Textarea Input</p>
           <Input
             type="textarea"
@@ -72,10 +82,10 @@ stories.add("Live testing", () => {
             value={inputValue}
             name={inputName}
             placeholder={inputPlaceholder}
-            onChange={(newValue) => action(`New Textarea Value: ${newValue}`)}
+            onChange={newValue => action(`New Textarea Value: ${newValue}`)}
           />
         </div>
-        <div style={{padding: '10px 0'}}>
+        <div style={{ padding: '10px 0' }}>
           <p>Password Input</p>
           <Input
             type="password"
@@ -87,32 +97,34 @@ stories.add("Live testing", () => {
             value={inputValue}
             name={inputName}
             placeholder={inputPlaceholder}
-            onChange={(newValue) => action(`New Password Value: ${newValue}`)}
+            onChange={newValue => action(`New Password Value: ${newValue}`)}
           />
         </div>
       </div>
     );
   },
   {
-    order: 1
-  }
+    order: 1,
+  },
 );
 
-stories.add("Text", () => {
+stories.add(
+  'Text',
+  () => {
     return (
       <InputWrapper>
         {(state, setState) => (
           <div>
-            <div style={{padding: '10px 0'}}>
+            <div style={{ padding: '10px 0' }}>
               <Input
                 name="text_input_1"
                 placeholder="Enter your text"
                 value={state.inputValue}
-                onChange={(newValue) => setState({inputValue: newValue})}
+                onChange={newValue => setState({ inputValue: newValue })}
               />
             </div>
 
-            <div style={{padding: '10px 0'}}>
+            <div style={{ padding: '10px 0' }}>
               <Input
                 label="This is a nice label"
                 name="text_input_2"
@@ -121,11 +133,11 @@ stories.add("Text", () => {
                 statusText="This is a success message"
                 type="text"
                 value={state.inputValue}
-                onChange={(newValue) => setState({inputValue: newValue})}
+                onChange={newValue => setState({ inputValue: newValue })}
               />
             </div>
 
-            <div style={{padding: '10px 0'}}>
+            <div style={{ padding: '10px 0' }}>
               <Input
                 label="This is a nice label"
                 name="text_input_3"
@@ -134,7 +146,7 @@ stories.add("Text", () => {
                 statusText="This is an invalid value"
                 type="text"
                 value={state.inputValue}
-                onChange={(newValue) => setState({inputValue: newValue})}
+                onChange={newValue => setState({ inputValue: newValue })}
               />
             </div>
           </div>
@@ -143,27 +155,29 @@ stories.add("Text", () => {
     );
   },
   {
-    order: 2
-  }
+    order: 2,
+  },
 );
 
-stories.add("Date", () => {
+stories.add(
+  'Date',
+  () => {
     return (
       <InputWrapper>
         {(state, setState) => (
           <div>
-            <div style={{padding: '10px 0'}}>
+            <div style={{ padding: '10px 0' }}>
               <Input
                 label="This is a nice label"
                 name="date_input_1"
                 placeholder="YYYY/MM/DD"
                 type="date"
                 value={state.inputValue}
-                onChange={(newValue) => setState({inputValue: newValue})}
+                onChange={newValue => setState({ inputValue: newValue })}
               />
             </div>
 
-            <div style={{padding: '10px 0'}}>
+            <div style={{ padding: '10px 0' }}>
               <Input
                 label="This is a nice label"
                 name="date_input_2"
@@ -172,11 +186,11 @@ stories.add("Date", () => {
                 statusText="This is a success message"
                 type="date"
                 value={state.inputValue}
-                onChange={(newValue) => setState({inputValue: newValue})}
+                onChange={newValue => setState({ inputValue: newValue })}
               />
             </div>
 
-            <div style={{padding: '10px 0'}}>
+            <div style={{ padding: '10px 0' }}>
               <Input
                 label="This is a nice label"
                 name="date_input_3"
@@ -185,7 +199,7 @@ stories.add("Date", () => {
                 statusText="This is an invalid value"
                 type="date"
                 value={state.inputValue}
-                onChange={(newValue) => setState({inputValue: newValue})}
+                onChange={newValue => setState({ inputValue: newValue })}
               />
             </div>
           </div>
@@ -194,26 +208,29 @@ stories.add("Date", () => {
     );
   },
   {
-    order: 3
-  });
+    order: 3,
+  },
+);
 
-stories.add("Textarea", () => {
+stories.add(
+  'Textarea',
+  () => {
     return (
       <InputWrapper>
         {(state, setState) => (
           <div>
-            <div style={{padding: '10px 0'}}>
+            <div style={{ padding: '10px 0' }}>
               <Input
                 label="Textarea Input Label"
                 name="textarea_input"
                 placeholder="Enter some text here..."
                 type="textarea"
                 value={state.inputValue}
-                onChange={(newValue) => setState({inputValue: newValue})}
+                onChange={newValue => setState({ inputValue: newValue })}
               />
             </div>
 
-            <div style={{padding: '10px 0'}}>
+            <div style={{ padding: '10px 0' }}>
               <Input
                 label="Textarea Input Label"
                 name="textarea_input_2"
@@ -222,11 +239,11 @@ stories.add("Textarea", () => {
                 statusText="This is a success message"
                 type="textarea"
                 value={state.inputValue}
-                onChange={(newValue) => setState({inputValue: newValue})}
+                onChange={newValue => setState({ inputValue: newValue })}
               />
             </div>
 
-            <div style={{padding: '10px 0'}}>
+            <div style={{ padding: '10px 0' }}>
               <Input
                 label="Textarea Input Label"
                 name="textarea_input_3"
@@ -235,7 +252,7 @@ stories.add("Textarea", () => {
                 statusText="This is an invalid value"
                 type="textarea"
                 value={state.inputValue}
-                onChange={(newValue) => setState({inputValue: newValue})}
+                onChange={newValue => setState({ inputValue: newValue })}
               />
             </div>
           </div>
@@ -244,16 +261,18 @@ stories.add("Textarea", () => {
     );
   },
   {
-    order: 4
-  }
+    order: 4,
+  },
 );
 
-stories.add("Password", () => {
+stories.add(
+  'Password',
+  () => {
     return (
       <InputWrapper>
         {(state, setState) => (
           <div>
-            <div style={{padding: '10px 0'}}>
+            <div style={{ padding: '10px 0' }}>
               <Input
                 id="password_input_id"
                 label="Password Input Label"
@@ -262,11 +281,11 @@ stories.add("Password", () => {
                 type="password"
                 statusText="This is an invalid value"
                 value={state.inputValue}
-                onChange={(newValue) => setState({inputValue: newValue})}
+                onChange={newValue => setState({ inputValue: newValue })}
               />
             </div>
 
-            <div style={{padding: '10px 0'}}>
+            <div style={{ padding: '10px 0' }}>
               <Input
                 id="password_input_id_success"
                 label="Password Input Label"
@@ -276,11 +295,11 @@ stories.add("Password", () => {
                 status="success"
                 statusText="This is a success value"
                 value={state.inputValue}
-                onChange={(newValue) => setState({inputValue: newValue})}
+                onChange={newValue => setState({ inputValue: newValue })}
               />
             </div>
 
-            <div style={{padding: '10px 0'}}>
+            <div style={{ padding: '10px 0' }}>
               <Input
                 id="password_input_id_error"
                 label="Password Input Label"
@@ -290,7 +309,7 @@ stories.add("Password", () => {
                 status="error"
                 statusText="This is an invalid value"
                 value={state.inputValue}
-                onChange={(newValue) => setState({inputValue: newValue})}
+                onChange={newValue => setState({ inputValue: newValue })}
               />
             </div>
           </div>
@@ -299,6 +318,6 @@ stories.add("Password", () => {
     );
   },
   {
-    order: 5
-  }
+    order: 5,
+  },
 );

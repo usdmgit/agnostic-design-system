@@ -65,7 +65,7 @@ describe('Button', () => {
   it('renders a button with small size', () => {
     const { getByText } = getComponent('main', () => {}, undefined, 'small');
     const node = getByText('Button Label');
-    expect(node).toHaveProperty('className', 'button main  small-size');
+    expect(node).toHaveProperty('className', 'button main small-size');
   });
 
   it('renders a button with small size and a left icon', () => {
@@ -89,7 +89,7 @@ describe('Button', () => {
   it('renders a secondary button', () => {
     const { getByText } = getComponent('secondary', () => {});
     const node = getByText('Button Label');
-    expect(node).toHaveProperty('className', 'button secondary  regular-size');
+    expect(node).toHaveProperty('className', 'button secondary regular-size');
   });
 
   it('renders a secondary button with a left icon', () => {
@@ -118,7 +118,7 @@ describe('Button', () => {
       'small',
     );
     const node = getByText('Button Label');
-    expect(node).toHaveProperty('className', 'button secondary  small-size');
+    expect(node).toHaveProperty('className', 'button secondary small-size');
   });
 
   it('renders a secondary button with small size and a left icon', () => {
@@ -142,7 +142,7 @@ describe('Button', () => {
   it('renders a ghost button', () => {
     const { getByText } = getComponent('ghost', () => {});
     const node = getByText('Button Label');
-    expect(node).toHaveProperty('className', 'button ghost  regular-size');
+    expect(node).toHaveProperty('className', 'button ghost regular-size');
   });
 
   it('renders a ghost button with a left icon', () => {
@@ -166,7 +166,7 @@ describe('Button', () => {
   it('renders a ghost button with small size', () => {
     const { getByText } = getComponent('ghost', () => {}, undefined, 'small');
     const node = getByText('Button Label');
-    expect(node).toHaveProperty('className', 'button ghost  small-size');
+    expect(node).toHaveProperty('className', 'button ghost small-size');
   });
 
   it('renders a ghost button with small size and a left icon', () => {
@@ -190,7 +190,7 @@ describe('Button', () => {
   it('renders a contextual button', () => {
     const { getByText } = getComponent('contextual', () => {});
     const node = getByText('Button Label');
-    expect(node).toHaveProperty('className', 'button contextual  regular-size');
+    expect(node).toHaveProperty('className', 'button contextual regular-size');
   });
 
   it('renders a contextual button with a left icon', () => {
@@ -219,7 +219,7 @@ describe('Button', () => {
       'small',
     );
     const node = getByText('Button Label');
-    expect(node).toHaveProperty('className', 'button contextual  small-size');
+    expect(node).toHaveProperty('className', 'button contextual small-size');
   });
 
   it('renders a contextual button with small size and a left icon', () => {
@@ -248,7 +248,7 @@ describe('Button', () => {
   it('renders a delete button', () => {
     const { getByText } = getComponent('delete', () => {});
     const node = getByText('Button Label');
-    expect(node).toHaveProperty('className', 'button delete  regular-size');
+    expect(node).toHaveProperty('className', 'button delete regular-size');
   });
 
   it('renders a delete button with a left icon', () => {
@@ -272,7 +272,7 @@ describe('Button', () => {
   it('renders a delete button with small size', () => {
     const { getByText } = getComponent('delete', () => {}, undefined, 'small');
     const node = getByText('Button Label');
-    expect(node).toHaveProperty('className', 'button delete  small-size');
+    expect(node).toHaveProperty('className', 'button delete small-size');
   });
 
   it('renders a delete button with small size and a left icon', () => {

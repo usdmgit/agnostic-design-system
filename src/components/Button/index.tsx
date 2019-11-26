@@ -1,4 +1,6 @@
 import * as React from 'react';
+import classnames from 'classnames';
+
 import style from './Button.module.scss';
 
 export type Type =
@@ -28,20 +30,21 @@ type PropTypes = {
   type?: Type;
 };
 
-const getIconPositionClassname = (iconPosition: IconPosition) =>
-  iconPosition ? style[`${iconPosition}-icon`] : '';
-
-const getButtonSize = (size: Size) => (size ? style[`${size}-size`] : '');
-
 const Button: React.FC<PropTypes> = (props: PropTypes) => {
   const { disabled, iconPosition, label, onClick, size, type } = props;
+
+  const iconPositionClassname = style[`${iconPosition}-icon`];
+  const buttonSizeClassname = style[`${size}-size`];
 
   return (
     <button
       type="button"
-      className={`${style.button} ${style[type!]} ${getIconPositionClassname(
-        iconPosition,
-      )} ${getButtonSize(size!)}`}
+      className={classnames(
+        style.button,
+        style[type!],
+        { [iconPositionClassname]: iconPosition },
+        { [buttonSizeClassname]: size },
+      )}
       disabled={disabled}
       onClick={onClick}
     >

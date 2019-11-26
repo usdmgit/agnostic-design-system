@@ -1,4 +1,5 @@
 import * as React from 'react';
+import classnames from 'classnames';
 
 import style from './TextInput.module.scss';
 
@@ -13,7 +14,7 @@ interface PropTypes {
 
 const TextInput: React.FC<PropTypes> = (props: PropTypes) => (
   <input
-    className={`${style.input} ${props.statusClassname}`}
+    className={classnames(style.input, props.statusClassname)}
     id={props.id}
     name={props.name}
     onChange={e => props.onChange(e.target.value)}

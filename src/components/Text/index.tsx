@@ -1,4 +1,5 @@
 import * as React from 'react';
+import classnames from 'classnames';
 
 import style from './Text.module.scss';
 
@@ -26,7 +27,7 @@ const getTextToDisplay = (props: PropTypes) =>
 const Text: React.FC<PropTypes> = (props: PropTypes) => {
   const { type, customClassName } = props;
   return (
-    <span className={`${style[type!]} ${customClassName}`}>
+    <span className={classnames(style[type!], customClassName)}>
       {getTextToDisplay(props)}
     </span>
   );
