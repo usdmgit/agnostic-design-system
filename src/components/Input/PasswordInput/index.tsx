@@ -1,4 +1,5 @@
-import * as React from 'react';
+import React, { useState } from 'react';
+import classnames from 'classnames';
 
 import style from './PasswordInput.module.scss';
 
@@ -11,42 +12,32 @@ type PropTypes = {
   value?: string;
 };
 
-const toggleInputType = (elementId: string) => {
-  const passwordInput = document.getElementById(
-    `${elementId}`,
-  ) as HTMLInputElement;
-  const imageButton = document.getElementById(
-    `btn-${elementId}`,
-  ) as HTMLButtonElement;
+const PasswordInput: React.FC<PropTypes> = (props: PropTypes) => {
+  const [inputTypeIndex, setInputTypeIndex] = useState(1);
 
-  if (passwordInput.type === 'password') {
-    imageButton.className = `${style.button} ${style.text}`;
-    passwordInput.type = 'text';
-  } else {
-    imageButton.className = `${style.button} ${style.password}`;
-    passwordInput.type = 'password';
-  }
+  const types = ['text', 'password'];
+  const type = types[inputTypeIndex];
+
+  return (
+    <div className={style.container}>
+      <input
+        id={props.id}
+        className={classnames(style.input, props.statusClassname)}
+        name={props.name}
+        onChange={e => props.onChange(e.target.value)}
+        placeholder={props.placeholder}
+        type={type}
+        value={props.value}
+      />
+      <button
+        aria-label="Reveal Password"
+        className={classnames(style.button, style[type])}
+        id={`btn-${props.id!}`}
+        onClick={() => setInputTypeIndex(inputTypeIndex ? 0 : 1)}
+        type="button"
+      />
+    </div>
+  );
 };
-
-const PasswordInput: React.FC<PropTypes> = (props: PropTypes) => (
-  <div className={style.container}>
-    <input
-      id={props.id}
-      className={`${style.input} ${props.statusClassname}`}
-      name={props.name}
-      onChange={e => props.onChange(e.target.value)}
-      placeholder={props.placeholder}
-      type="password"
-      value={props.value}
-    />
-    <button
-      aria-label="Reveal Password"
-      className={`${style.button} ${style.password}`}
-      id={`btn-${props.id!}`}
-      onClick={() => toggleInputType(props.id!)}
-      type="button"
-    />
-  </div>
-);
 
 export default PasswordInput;
