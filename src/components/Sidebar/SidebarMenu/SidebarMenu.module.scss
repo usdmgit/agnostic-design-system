@@ -1,0 +1,42 @@
+@import '~@codelitt/ay-css-library/src/components/brand/colors';
+@import '~@codelitt/ay-css-library/src/components/brand/grid';
+
+$menu-width-desktop: 15rem;
+$menu-width-tablet: 4rem;
+
+body {
+  padding-left: $menu-width-desktop;
+}
+
+.menu {
+  background: $ay-grey-8-color;
+  height: 100vh;
+  left: 0;
+  outline: none;
+  position: fixed;
+  top: 0;
+  transition: width 0.15s ease;
+  width: $menu-width-desktop;
+  z-index: 5;
+
+  .list-items {
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: $view-width-desktop-min) {
+  body {
+    padding-left: $menu-width-tablet;
+  }
+
+  .menu {
+    width: $menu-width-tablet;
+
+    .list-items {
+      overflow: visible;
+    }
+  }
+}
