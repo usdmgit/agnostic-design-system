@@ -36,14 +36,16 @@
   }
 
   &:not(:disabled) {
-    color: $ay-white-color;
+    color: $ay-navy-blue-color;
 
     &:focus {
       background-color: $ay-navy-blue-color;
+      color: $ay-white-color;
     }
 
     &:hover {
       background-color: $ay-main-blue-color;
+      color: $ay-white-color;
     }
   }
 
@@ -204,12 +206,12 @@
   color: $ay-grey-64-color;
 
   &:focus {
-    background-color: $ay-grey-64-color;
+    background-color: $ay-grey-80-color;
     color: $ay-white-color;
   }
 
   &:hover {
-    background-color: $ay-grey-80-color;
+    background-color: $ay-grey-64-color;
     color: $ay-white-color;
   }
 

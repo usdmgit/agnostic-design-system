@@ -371,11 +371,11 @@ stories.add(
   'Inline',
   () => (
     <div>
-      <div style={{ padding: '10px 0' }}>
+      <div style={{ padding: '10px 0', width: '22rem', height: '4rem' }}>
         <Button type="inline" label="Inline Button" />
       </div>
 
-      <div style={{ padding: '10px 0' }}>
+      <div style={{ padding: '10px 0', width: '22rem', height: '4rem' }}>
         <Button type="inline" label="Idle Icon Right" iconPosition="right" />
       </div>
     </div>
