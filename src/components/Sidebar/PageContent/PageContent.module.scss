@@ -1,0 +1,22 @@
+@import '~@codelitt/ay-css-library/src/components/brand/grid';
+@import '../Sidebar.module';
+
+$menu-width-desktop: 15rem;
+$menu-width-tablet: 4rem;
+
+.content {
+  padding-left: $menu-width-desktop;
+}
+
+@media screen and (min-width: $view-width-tablet-min + 0.1rem) and (max-width: $view-width-desktop-min) {
+  .content {
+    padding-left: $menu-width-tablet;
+  }
+}
+
+@media screen and (max-width: $view-width-tablet-min) {
+  .content {
+    padding-left: 0;
+    padding-top: $menu-height-phones;
+  }
+}
