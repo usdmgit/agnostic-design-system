@@ -2,13 +2,13 @@ import React from 'react';
 import classnames from 'classnames';
 import styles from './SidebarItem.module.scss';
 
-type PropTypes = {
+export type PropTypes = {
   text: string;
   icon: string;
   onClick: (event: React.MouseEvent<HTMLElement>) => void;
   wrapperClassName?: string;
-  active?: boolean;
-  fixedBottom?: boolean;
+  isActive?: boolean;
+  isFixed?: boolean;
 };
 
 const SidebarItem: React.FC<PropTypes> = (props: PropTypes) => {
@@ -17,8 +17,8 @@ const SidebarItem: React.FC<PropTypes> = (props: PropTypes) => {
       className={classnames(
         styles['menu-item'],
         props.wrapperClassName,
-        { [styles['fixed-bottom']]: props.fixedBottom },
-        { [styles.active]: props.active },
+        { [styles['fixed-bottom']]: props.isFixed },
+        { [styles.active]: props.isActive },
       )}
     >
       <button

@@ -9,9 +9,69 @@ Object {
         class="menu"
       >
         <ul
+          class="mobile-header"
+        >
+          <li
+            class="menu-item active"
+          >
+            <button
+              class="menu-item-clickable"
+              type="button"
+            >
+              <img
+                alt="Menu text"
+                class="menu-item-icon"
+                src="path/to/icon.svg"
+              />
+              <span
+                class="menu-item-text"
+              >
+                Menu text
+              </span>
+            </button>
+          </li>
+        </ul>
+        <ul
           class="list-items"
         >
-          menu
+          <li
+            class="menu-item active"
+          >
+            <button
+              class="menu-item-clickable"
+              type="button"
+            >
+              <img
+                alt="Menu text"
+                class="menu-item-icon"
+                src="path/to/icon.svg"
+              />
+              <span
+                class="menu-item-text"
+              >
+                Menu text
+              </span>
+            </button>
+          </li>
+          <li
+            class="menu-item"
+          >
+            <button
+              class="menu-item-clickable"
+              type="button"
+            >
+              <img
+                alt="Menu text 2"
+                class="menu-item-icon"
+                src="path/to/icon2.svg"
+              />
+              <span
+                class="menu-item-text"
+              >
+                Menu text 2
+              </span>
+            </button>
+          </li>
         </ul>
       </nav>
     </div>
@@ -21,9 +81,69 @@ Object {
       class="menu"
     >
       <ul
+        class="mobile-header"
+      >
+        <li
+          class="menu-item active"
+        >
+          <button
+            class="menu-item-clickable"
+            type="button"
+          >
+            <img
+              alt="Menu text"
+              class="menu-item-icon"
+              src="path/to/icon.svg"
+            />
+            <span
+              class="menu-item-text"
+            >
+              Menu text
+            </span>
+          </button>
+        </li>
+      </ul>
+      <ul
         class="list-items"
       >
-        menu
+        <li
+          class="menu-item active"
+        >
+          <button
+            class="menu-item-clickable"
+            type="button"
+          >
+            <img
+              alt="Menu text"
+              class="menu-item-icon"
+              src="path/to/icon.svg"
+            />
+            <span
+              class="menu-item-text"
+            >
+              Menu text
+            </span>
+          </button>
+        </li>
+        <li
+          class="menu-item"
+        >
+          <button
+            class="menu-item-clickable"
+            type="button"
+          >
+            <img
+              alt="Menu text 2"
+              class="menu-item-icon"
+              src="path/to/icon2.svg"
+            />
+            <span
+              class="menu-item-text"
+            >
+              Menu text 2
+            </span>
+          </button>
+        </li>
       </ul>
     </nav>
   </div>,

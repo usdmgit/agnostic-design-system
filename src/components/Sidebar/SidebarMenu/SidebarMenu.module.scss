@@ -1,12 +1,6 @@
 @import '~@codelitt/ay-css-library/src/components/brand/colors';
 @import '~@codelitt/ay-css-library/src/components/brand/grid';
-
-$menu-width-desktop: 15rem;
-$menu-width-tablet: 4rem;
-
-body {
-  padding-left: $menu-width-desktop;
-}
+@import '../Sidebar.module';
 
 .menu {
   background: $ay-grey-8-color;
@@ -15,28 +9,69 @@ body {
   outline: none;
   position: fixed;
   top: 0;
-  transition: width 0.15s ease;
+  transition: all 0.15s ease;
   width: $menu-width-desktop;
-  z-index: 5;
+  z-index: 2;
 
-  .list-items {
+  .mobile-header {
+    display: none;
+  }
+
+  .list-items,
+  .mobile-header {
     list-style: none;
     margin: 0;
     overflow: hidden;
     padding: 0;
   }
+
+  .item-header {
+    display: none;
+  }
 }
 
-@media screen and (max-width: $view-width-desktop-min) {
-  body {
-    padding-left: $menu-width-tablet;
-  }
-
+@media screen and (min-width: $view-width-tablet-min + 0.05rem) and (max-width: $view-width-desktop-min) {
   .menu {
     width: $menu-width-tablet;
 
     .list-items {
       overflow: visible;
+    }
+  }
+}
+
+@media screen and (max-width: $view-width-tablet-min) {
+  .menu {
+    height: $menu-height-phones;
+    left: 0;
+    outline: none;
+    position: fixed;
+    top: 0;
+    transition: width 0.15s ease;
+    width: 100%;
+
+    .item-header {
+      display: block;
+    }
+
+    .list-items {
+      opacity: 0;
+      overflow: visible;
+      transition: visibility 0s, opacity 0.15s linear;
+      visibility: hidden;
+
+      &.open {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .mobile-header {
+      display: block;
+
+      li {
+        display: block;
+      }
     }
   }
 }

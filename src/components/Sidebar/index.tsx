@@ -1,4 +1,4 @@
 import SidebarMenu from './SidebarMenu';
-import SidebarItem from './SidebarItem';
+import PageContent from './PageContent';
 
-export { SidebarMenu, SidebarItem };
+export { SidebarMenu, PageContent };

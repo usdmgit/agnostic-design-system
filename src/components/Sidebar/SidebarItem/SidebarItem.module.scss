@@ -1,10 +1,12 @@
 @import '~@codelitt/ay-css-library/src/components/brand/colors';
 @import '~@codelitt/ay-css-library/src/components/brand/grid';
+@import '../Sidebar.module';
 
 .menu-item {
+  background-color: $ay-grey-8-color;
   color: $ay-grey-64-color;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1rem;
   height: 4.5rem;
   line-height: 4.5rem;
   transition: all 0.15s linear;
@@ -38,6 +40,10 @@
     width: 1.5rem;
   }
 
+  &.mobile-header {
+    display: none;
+  }
+
   &.fixed-bottom {
     border-top: 1px solid $ay-grey-16-color;
     bottom: 0;
@@ -56,9 +62,14 @@
     }
   }
 
-  &:hover,
   &.active {
     background-color: $ay-grey-16-color;
+    color: $ay-black-color;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $ay-white-color;
     color: $ay-black-color;
   }
 
@@ -67,7 +78,7 @@
   }
 }
 
-@media screen and (max-width: $view-width-desktop-min) {
+@media screen and (min-width: ($view-width-tablet-min + 0.05rem)) and (max-width: $view-width-desktop-min) {
   .menu-item {
     height: 3.5rem;
     position: relative;
@@ -76,6 +87,10 @@
       text-align: center;
       vertical-align: inherit;
       width: 1.5rem;
+    }
+
+    .menu-item-clickable {
+      position: relative;
     }
 
     &.fixed-bottom {
@@ -98,13 +113,13 @@
       border-radius: 4px;
       box-shadow: 0 8px 24px rgba(1, 14, 40, 0.24);
       color: $ay-white-color;
+      display: none;
       font-size: 0.75rem;
       height: 2rem;
       left: 3.5rem;
       line-height: 2rem;
-      min-width: 6rem;
       opacity: 0;
-      padding: 0.2em 0.5em;
+      padding-right: 0.75rem;
       position: absolute;
       top: 50%;
       transform: translate3d(-0.5rem, -50%, 0);
@@ -126,9 +141,116 @@
 
     &:hover {
       .menu-item-text {
+        display: table;
         opacity: 1;
         transform: translate3d(0, -50%, 0);
         transition: opacity 0.2s ease-in-out;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $view-width-tablet-min) {
+  .menu-item {
+    background-color: $ay-grey-8-color;
+    border-bottom: 1px solid $ay-grey-16-color;
+    color: $ay-grey-64-color;
+    cursor: pointer;
+    display: block;
+    font-size: 1rem;
+    height: $menu-height-phones;
+    transition: all 0.15s linear;
+
+    .menu-item-clickable {
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      height: 100%;
+      outline: 0;
+      padding: 0;
+      text-align: inherit;
+      vertical-align: super;
+      width: 100%;
+    }
+
+    .menu-item-text {
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: normal;
+      height: 100%;
+      padding-left: 0.8rem;
+      text-decoration: none;
+      width: 100%;
+    }
+
+    .menu-item-icon {
+      height: 1.5rem;
+      vertical-align: middle;
+      width: 1.5rem;
+    }
+
+    &.fixed-bottom {
+      border-bottom: 0;
+      border-left: 1px solid $ay-grey-16-color;
+      display: block;
+      position: absolute;
+      right: 0;
+      width: 11rem;
+
+      .menu-item-text {
+        height: auto;
+        padding-left: 1rem;
+        width: auto;
+      }
+
+      .menu-item-icon {
+        height: 2.5rem;
+        width: 2.5rem;
+      }
+    }
+
+    &.active {
+      background-color: inherit;
+      border-top: 0;
+      color: $ay-black-color;
+    }
+
+    &.fixed-bottom,
+    &.active {
+      display: none;
+    }
+
+    &:focus,
+    &:hover {
+      background-color: $ay-white-color;
+      color: $ay-black-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+// @TODO - add this to the grid system
+@media screen and (max-width: 26rem) {
+  .menu-item {
+    &.fixed-bottom {
+      width: 4rem;
+
+      .menu-item-text {
+        display: none;
+      }
+
+      .menu-item-icon {
+        left: 50%;
+        padding: 0;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        vertical-align: middle;
       }
     }
   }

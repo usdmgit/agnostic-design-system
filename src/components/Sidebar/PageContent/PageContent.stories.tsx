@@ -16,15 +16,16 @@ stories.add(
   'PageContent',
   () => (
     <PageContent>
-      <SidebarMenu items={[
-        {
-          active: true,
-          text: 'Menu item',
-          onClick: action('Item click'),
-          icon: GeneralToolkitIcon
-        },
-      ]} />
-
+      <SidebarMenu
+        items={[
+          {
+            isActive: true,
+            text: 'Menu item',
+            onClick: action('Item click'),
+            icon: GeneralToolkitIcon,
+          },
+        ]}
+      />
       Page content goes here
     </PageContent>
   ),

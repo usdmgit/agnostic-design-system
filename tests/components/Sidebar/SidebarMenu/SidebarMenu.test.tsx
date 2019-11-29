@@ -3,9 +3,23 @@ import { render } from '@testing-library/react';
 import SidebarMenu from '../../../../src/components/Sidebar/SidebarMenu';
 
 describe('SidebarMenu', () => {
-  const getComponent = (text = 'menu', wrapperClassName = '') => {
+  const items = [
+    {
+      isActive: true,
+      text: 'Menu text',
+      onClick: () => {},
+      icon: 'path/to/icon.svg',
+    },
+    {
+      text: 'Menu text 2',
+      onClick: () => {},
+      icon: 'path/to/icon2.svg',
+    },
+  ];
+
+  const getComponent = (wrapperClassName = '') => {
     return render(
-      <SidebarMenu wrapperClassName={wrapperClassName}>{text}</SidebarMenu>,
+      <SidebarMenu items={items} wrapperClassName={wrapperClassName} />,
     );
   };
 
@@ -16,15 +30,9 @@ describe('SidebarMenu', () => {
 
   it('accepts a custom wrapper class', () => {
     const customClass = 'test-class-name';
-    const { getByRole } = getComponent('menu', customClass);
+    const { getByRole } = getComponent(customClass);
     const node = getByRole('navigation');
 
     expect(node).toHaveProperty('className', `menu ${customClass}`);
-  });
-
-  it('renders children components', () => {
-    const text = 'Avison Young';
-    const menu = getComponent(text);
-    return expect(menu!.findByDisplayValue(text)).toBeTruthy();
   });
 });

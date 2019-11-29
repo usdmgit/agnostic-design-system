@@ -9,16 +9,16 @@ describe('SidebarItem', () => {
     text = 'item',
     icon: string = ICON,
     wrapperClassName = '',
-    active = false,
-    fixedBottom = false,
+    isActive = false,
+    isFixed = false,
     onClick = () => {},
   ) => {
     return render(
       <SidebarItem
         text={text}
         icon={icon}
-        active={active}
-        fixedBottom={fixedBottom}
+        isActive={isActive}
+        isFixed={isFixed}
         onClick={onClick}
         wrapperClassName={wrapperClassName}
       />,
