@@ -24,7 +24,6 @@ stories.add(
     const inputLabel = text('Label', 'Input label');
     const inputId = text('Input id', 'input_id');
     const inputName = text('Input name', 'input_name');
-    const inputValue = text('Input value', '');
     const inputPlaceholder = text('Placeholder', '');
     const inputStatusText = text('Status Text', '');
     const inputStatus = select(
@@ -49,10 +48,9 @@ stories.add(
             status={inputStatus}
             statusText={inputStatusText}
             iconPosition={inputIcon}
-            value={inputValue}
             name={inputName}
             placeholder={inputPlaceholder}
-            onChange={newValue => action(`New Text Value: ${newValue}`)}
+            onChange={action(`New Text Value`)}
           />
         </div>
         <div style={{ padding: '10px 0' }}>
@@ -64,10 +62,9 @@ stories.add(
             status={inputStatus}
             statusText={inputStatusText}
             iconPosition={inputIcon}
-            value={inputValue}
             name={inputName}
             placeholder={inputPlaceholder}
-            onChange={newValue => action(`New Date Value: ${newValue}`)}
+            onChange={action('New Date Value')}
           />
         </div>
         <div style={{ padding: '10px 0' }}>
@@ -79,10 +76,9 @@ stories.add(
             status={inputStatus}
             statusText={inputStatusText}
             iconPosition={inputIcon}
-            value={inputValue}
             name={inputName}
             placeholder={inputPlaceholder}
-            onChange={newValue => action(`New Textarea Value: ${newValue}`)}
+            onChange={action('New Textarea Value')}
           />
         </div>
         <div style={{ padding: '10px 0' }}>
@@ -94,10 +90,9 @@ stories.add(
             status={inputStatus}
             statusText={inputStatusText}
             iconPosition={inputIcon}
-            value={inputValue}
             name={inputName}
             placeholder={inputPlaceholder}
-            onChange={newValue => action(`New Password Value: ${newValue}`)}
+            onChange={action('New Password Value')}
           />
         </div>
       </div>

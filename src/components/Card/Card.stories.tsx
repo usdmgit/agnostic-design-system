@@ -1,10 +1,10 @@
 import * as React from 'react';
-import {storiesOf} from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import Card from './';
-import {action} from '@storybook/addon-actions';
-import {text, withKnobs} from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
+import { text, withKnobs } from '@storybook/addon-knobs';
 import NewsIcon from '../../assets/images/news.png'
-import {Container, Row, Col} from "../Grid";
+import { Container, Row, Col } from "../Grid";
 
 const stories = storiesOf('Components|Card', module);
 
@@ -83,7 +83,6 @@ Usage instructions:
 stories.add(
   'Card',
   () => (
-
     <Container>
       <Row>
         <Col xs={4} sm={4} md={4} lg={4}>
