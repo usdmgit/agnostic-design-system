@@ -1,8 +1,10 @@
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
+import {storiesOf} from '@storybook/react';
 import Card from './';
-import { action } from '@storybook/addon-actions';
-import { object, text, withKnobs } from '@storybook/addon-knobs';
+import {action} from '@storybook/addon-actions';
+import {text, withKnobs} from '@storybook/addon-knobs';
+import NewsIcon from '../../assets/images/news.png'
+import {Container, Row, Col} from "../Grid";
 
 const stories = storiesOf('Components|Card', module);
 
@@ -11,7 +13,6 @@ stories.addDecorator(withKnobs);
 stories.add(
   'Live testing',
   () => {
-    const cardImage = text('Image', '/news.png');
     const cardTitle = text('Title', 'News');
     const cardDescription = text(
       'Description',
@@ -34,20 +35,20 @@ stories.add(
     };
 
     return (
-      <div>
-        <div
-          style={{ padding: '10px', display: 'inline-block', width: '22rem' }}
-        >
-          <p>Card</p>
-          <Card
-            image={cardImage}
-            title={cardTitle}
-            description={cardDescription}
-            shortcuts={cardShortcuts}
-            primaryButton={cardButton}
-          />
-        </div>
-      </div>
+      <Container>
+        <Row>
+          <Col xs={4} sm={4} md={4} lg={4}>
+            <p>Card</p>
+            <Card
+              image={NewsIcon}
+              title={cardTitle}
+              description={cardDescription}
+              shortcuts={cardShortcuts}
+              primaryButton={cardButton}
+            />
+          </Col>
+        </Row>
+      </Container>
     );
   },
   {
@@ -82,35 +83,38 @@ Usage instructions:
 stories.add(
   'Card',
   () => (
-    <div>
-      <div style={{ padding: '10px 0', width: '22rem' }}>
-        <Card
-          image="/news.png"
-          title="News"
-          description="This is the card description text"
-          shortcuts={[
-            {
-              label: 'Shortcut 1 label',
+
+    <Container>
+      <Row>
+        <Col xs={4} sm={4} md={4} lg={4}>
+          <Card
+            image={NewsIcon}
+            title="News"
+            description="This is the card description text"
+            shortcuts={[
+              {
+                label: 'Shortcut 1 label',
+                onClick: () => {
+                  alert('Hi!');
+                },
+              },
+              {
+                label: 'Shortcut 2 label',
+                onClick: () => {
+                  alert('Hi!');
+                },
+              },
+            ]}
+            primaryButton={{
+              label: 'Open News',
               onClick: () => {
                 alert('Hi!');
               },
-            },
-            {
-              label: 'Shortcut 2 label',
-              onClick: () => {
-                alert('Hi!');
-              },
-            },
-          ]}
-          primaryButton={{
-            label: 'Open News',
-            onClick: () => {
-              alert('Hi!');
-            },
-          }}
-        />
-      </div>
-    </div>
+            }}
+          />
+          </Col>
+      </Row>
+    </Container>
   ),
   {
     order: 2,
