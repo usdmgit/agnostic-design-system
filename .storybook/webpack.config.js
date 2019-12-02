@@ -39,6 +39,20 @@ module.exports = ({config}) => {
     ]
   });
 
+  const rules = config.module.rules;
+
+  // modify storybook's file-loader rule to avoid conflicts with svgr
+  const fileLoaderRule = rules.find(rule => rule.test.test('.svg'));
+  fileLoaderRule.exclude = [/\.svg$/];
+
+  config.module.rules.push({
+    test: /\.svg$/,
+    use: [
+      '@svgr/webpack',
+      'url-loader'
+    ]
+  });
+
   config.resolve.extensions.push('.ts', '.tsx');
 
   return config;
