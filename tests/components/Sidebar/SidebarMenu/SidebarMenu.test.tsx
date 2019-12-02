@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { shallow } from 'enzyme';
 import SidebarMenu from '../../../../src/components/Sidebar/SidebarMenu';
 
 describe('SidebarMenu', () => {
@@ -34,5 +35,21 @@ describe('SidebarMenu', () => {
     const node = getByRole('navigation');
 
     expect(node).toHaveProperty('className', `menu ${customClass}`);
+  });
+
+  it('opens the menu on mobile devices', () => {
+    const sidebar = shallow(<SidebarMenu items={items} />);
+    const mobileHeader = sidebar.find('.mobile-header');
+
+    const findMenuOpen = () => sidebar.find('.open');
+
+    expect(findMenuOpen()).toHaveLength(0);
+
+    mobileHeader
+      .childAt(0)
+      .props()
+      .onClick();
+
+    expect(findMenuOpen()).toHaveLength(1);
   });
 });
