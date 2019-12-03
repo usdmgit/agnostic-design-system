@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 import Card from './';
 import { action } from '@storybook/addon-actions';
 import { text, withKnobs } from '@storybook/addon-knobs';
-import NewsIcon from '../../assets/images/news.png'
-import { Container, Row, Col } from "../Grid";
+import NewsIcon from '../../assets/images/news.png';
+import { Container, Row, Col } from '../Grid';
 
 const stories = storiesOf('Components|Card', module);
 
@@ -111,7 +111,7 @@ stories.add(
               },
             }}
           />
-          </Col>
+        </Col>
       </Row>
     </Container>
   ),

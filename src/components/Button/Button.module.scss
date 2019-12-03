@@ -4,7 +4,12 @@
 .button {
   border: 0;
   border-radius: 0.125rem;
+  cursor: pointer;
   font-family: $font-stack;
+
+  &:disabled {
+    cursor: default;
+  }
 
   &.regular-size {
     font-size: 1.25rem;
