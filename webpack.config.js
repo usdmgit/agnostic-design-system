@@ -1,6 +1,12 @@
+const path = require('path');
+
 module.exports = {
   resolve: {
     extensions: [".ts", ".tsx"],
+    alias: {
+      react: path.resolve(__dirname, './node_modules/react'),
+      'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
+    },
   },
 
   entry: './src/index.tsx',
@@ -75,16 +81,18 @@ module.exports = {
   // dependencies, which allows browsers to cache those libraries between builds.
   externals: {
     react: {
-      commonjs: 'react',
-      commonjs2: 'react',
-      amd: 'React',
       root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react',
+      umd: 'react',
     },
     'react-dom': {
-      commonjs: 'react-dom',
-      commonjs2: 'react-dom',
-      amd: 'ReactDOM',
       root: 'ReactDOM',
+      commonjs2: 'react-dom',
+      commonjs: 'react-dom',
+      amd: 'react-dom',
+      umd: 'react-dom',
     },
   },
 };
