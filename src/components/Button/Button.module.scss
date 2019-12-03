@@ -40,20 +40,6 @@
     color: $ay-grey-24-color;
   }
 
-  &:not(:disabled) {
-    color: $ay-navy-blue-color;
-
-    &:focus {
-      background-color: $ay-navy-blue-color;
-      color: $ay-white-color;
-    }
-
-    &:hover {
-      background-color: $ay-main-blue-color;
-      color: $ay-white-color;
-    }
-  }
-
   &.left-icon {
     background-image: url('../../assets/images/left-arrow.svg');
     background-repeat: no-repeat;
@@ -87,6 +73,28 @@
       text-align: left;
     }
   }
+
+  &:not(:disabled) {
+    color: $ay-navy-blue-color;
+
+    &:focus {
+      background-color: $ay-navy-blue-color;
+      color: $ay-white-color;
+    }
+
+    &:hover {
+      background-color: $ay-main-blue-color;
+      color: $ay-white-color;
+
+      &.left-icon {
+        background-image: url('../../assets/images/left-arrow-white.svg');
+      }
+
+      &.right-icon {
+        background-image: url('../../assets/images/right-arrow-white.svg');
+      }
+    }
+  }
 }
 
 .secondary {
@@ -112,7 +120,7 @@
 
   &.left-icon,
   &.right-icon {
-    background-image: url('../../assets/images/cross-icon.svg');
+    background-image: url('../../assets/images/cross.svg');
 
     &.regular-size {
       background-repeat: no-repeat;
@@ -153,21 +161,9 @@
     color: $ay-grey-16-color;
   }
 
-  &:not(:disabled) {
-    &:focus {
-      background-color: $ay-london-blue-color;
-      color: $ay-main-blue-color;
-    }
-
-    &:hover {
-      background-color: $ay-main-blue-color;
-      color: $ay-white-color;
-    }
-  }
-
   &.left-icon,
   &.right-icon {
-    background-image: url('../../assets/images/cross-icon.svg');
+    background-image: url('../../assets/images/cross.svg');
     background-repeat: no-repeat;
 
     &.regular-size {
@@ -204,6 +200,23 @@
       padding-right: 2.5rem;
     }
   }
+
+  &:not(:disabled) {
+    &:focus {
+      background-color: $ay-london-blue-color;
+      color: $ay-main-blue-color;
+    }
+
+    &:hover {
+      background-color: $ay-main-blue-color;
+      color: $ay-white-color;
+
+      &.left-icon,
+      &.right-icon {
+        background-image: url('../../assets/images/cross-white.svg');
+      }
+    }
+  }
 }
 
 .contextual {
@@ -215,14 +228,9 @@
     color: $ay-white-color;
   }
 
-  &:hover {
-    background-color: $ay-grey-64-color;
-    color: $ay-white-color;
-  }
-
   &.left-icon,
   &.right-icon {
-    background-image: url('../../assets/images/cross-icon.svg');
+    background-image: url('../../assets/images/delete-grey.svg');
     background-repeat: no-repeat;
 
     &.regular-size {
@@ -249,6 +257,16 @@
 
     &.small-size {
       min-width: 11.125rem;
+    }
+  }
+
+  &:hover {
+    background-color: $ay-grey-64-color;
+    color: $ay-white-color;
+
+    &.left-icon,
+    &.right-icon {
+      background-image: url('../../assets/images/delete-white.svg');
     }
   }
 }
@@ -262,14 +280,9 @@
     color: $ay-white-color;
   }
 
-  &:hover {
-    background-color: $ay-error-color;
-    color: $ay-white-color;
-  }
-
   &.left-icon,
   &.right-icon {
-    background-image: url('../../assets/images/delete-icon.svg');
+    background-image: url('../../assets/images/delete-red.svg');
     background-repeat: no-repeat;
 
     &.regular-size {
@@ -298,12 +311,31 @@
       min-width: 11.125rem;
     }
   }
+
+  &:hover {
+    background-color: $ay-error-color;
+    color: $ay-white-color;
+
+    &.left-icon,
+    &.right-icon {
+      background-image: url('../../assets/images/delete-white.svg');
+    }
+  }
 }
 
 .inline {
   background-color: $ay-london-blue-color;
   height: 4rem;
   width: 100%;
+
+  &.right-icon {
+    background-image: url('../../assets/images/right-arrow.svg');
+    background-position: top 50% right 1rem;
+    background-repeat: no-repeat;
+    background-size: 0.75rem;
+    padding-right: 0 1rem 0 1rem;
+    text-align: left;
+  }
 
   &:not(:disabled) {
     color: $ay-navy-blue-color;
@@ -316,15 +348,10 @@
     &:hover {
       background-color: $ay-main-blue-color;
       color: $ay-white-color;
-    }
-  }
 
-  &.right-icon {
-    background-image: url('../../assets/images/right-arrow.svg');
-    background-position: top 50% right 1rem;
-    background-repeat: no-repeat;
-    background-size: 0.75rem;
-    padding-right: 0 1rem 0 1rem;
-    text-align: left;
+      &.right-icon {
+        background-image: url('../../assets/images/right-arrow-white.svg');
+      }
+    }
   }
 }
