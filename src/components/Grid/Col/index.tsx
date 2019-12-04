@@ -37,11 +37,11 @@ interface PropTypes {
   /**
    * You can pass a custom class to the `<Col>` element
    */
-  customClassName?: string;
+  wrapperClassName?: string;
 }
 
 const Col: React.FC<PropTypes> = (props: PropTypes) => {
-  const { customClassName, xs, sm, md, lg, ...attributes } = props;
+  const { wrapperClassName, xs, sm, md, lg, ...attributes } = props;
 
   const colClasses: string[] = [];
 
@@ -67,7 +67,7 @@ const Col: React.FC<PropTypes> = (props: PropTypes) => {
   }
 
   return (
-    <div {...attributes} className={classNames(colClasses, customClassName)} />
+    <div {...attributes} className={classNames(colClasses, wrapperClassName)} />
   );
 };
 

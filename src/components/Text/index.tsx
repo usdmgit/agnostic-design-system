@@ -7,7 +7,7 @@ export type Type = 'body-content' | 'title';
 
 type PropTypes = {
   /** Sets custom CSS class on the component. */
-  customClassName?: string;
+  wrapperClassName?: string;
 
   /** Sets the number of visible characters.  If defined, it cuts the text at the specified length and adds ... at the end. */
   maxLength?: number;
@@ -25,9 +25,9 @@ const getTextToDisplay = (props: PropTypes) =>
     : props.value;
 
 const Text: React.FC<PropTypes> = (props: PropTypes) => {
-  const { type, customClassName } = props;
+  const { type, wrapperClassName } = props;
   return (
-    <span className={classnames(style[type!], customClassName)}>
+    <span className={classnames(style[type!], wrapperClassName)}>
       {getTextToDisplay(props)}
     </span>
   );
@@ -35,7 +35,7 @@ const Text: React.FC<PropTypes> = (props: PropTypes) => {
 
 Text.defaultProps = {
   type: 'body-content',
-  customClassName: '',
+  wrapperClassName: '',
 };
 
 export default Text;

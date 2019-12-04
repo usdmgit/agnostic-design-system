@@ -14,7 +14,7 @@ describe('Input', () => {
         onChange={() => {}}
         type={type}
         value={v}
-        wrapperClassname="wrapperClass"
+        wrapperClassName="wrapperClass"
         status="success"
       />,
     );

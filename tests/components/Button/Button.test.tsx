@@ -12,6 +12,7 @@ describe('Button', () => {
     onClick: () => void,
     iconPosition?: IconPosition,
     size?: Size,
+    wrapperClassName?: string,
   ) =>
     render(
       <Button
@@ -23,6 +24,7 @@ describe('Button', () => {
         disabled={false}
         iconPosition={iconPosition}
         size={size}
+        wrapperClassName={wrapperClassName}
       />,
     );
 
@@ -305,6 +307,22 @@ describe('Button', () => {
     expect(node).toHaveProperty(
       'className',
       'button inline right-icon regular-size',
+    );
+  });
+
+  it('renders a button with a custom class name', () => {
+    const wrapperClassName = 'custom-class-name';
+    const { getByText } = getComponent(
+      'main',
+      () => {},
+      undefined,
+      undefined,
+      wrapperClassName,
+    );
+    const node = getByText('Button Label');
+    expect(node).toHaveProperty(
+      'className',
+      `button main regular-size ${wrapperClassName}`,
     );
   });
 });

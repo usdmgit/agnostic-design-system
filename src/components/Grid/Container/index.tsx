@@ -5,18 +5,18 @@ interface PropTypes {
   /**
    * You can pass a custom class to the `<Container>` element
    */
-  customClassName?: string;
+  wrapperClassName?: string;
 
   children?: React.ReactNode;
 }
 
 const Container: React.FC<PropTypes> = (props: PropTypes) => {
-  const { customClassName, children, ...attributes } = props;
+  const { wrapperClassName, children, ...attributes } = props;
 
   return (
     <div
       {...attributes}
-      className={classNames('ay-container', customClassName)}
+      className={classNames('ay-container', wrapperClassName)}
     >
       {children}
     </div>

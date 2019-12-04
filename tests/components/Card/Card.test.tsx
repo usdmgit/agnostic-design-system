@@ -3,7 +3,7 @@ import { fireEvent, render } from '@testing-library/react';
 import Card from '../../../src/components/Card';
 
 describe('Card', () => {
-  const getComponent = (onClick?: () => void) =>
+  const getComponent = (onClick?: () => void, wrapperClassName?: string) =>
     render(
       <Card
         image="../images/image.jpg"
@@ -14,6 +14,7 @@ describe('Card', () => {
           { label: 'Shortcut 2 label', onClick: onClick! },
         ]}
         primaryButton={{ label: 'Button label', onClick: onClick! }}
+        wrapperClassName={wrapperClassName}
       />,
     );
 
@@ -48,5 +49,14 @@ describe('Card', () => {
   it('calls onClick prop on Button click', () => {
     const clickCount = clickOnButton('Button label');
     expect(clickCount).toBe(1);
+  });
+
+  it('renders a card with a custom class name', () => {
+    const wrapperClassName = 'custom-class-name';
+    const container = getComponent(() => {}, wrapperClassName);
+    expect(container.container.firstChild).toHaveProperty(
+      'className',
+      `card-container ${wrapperClassName}`,
+    );
   });
 });

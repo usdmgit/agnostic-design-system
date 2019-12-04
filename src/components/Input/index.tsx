@@ -26,14 +26,14 @@ interface PropTypes {
   type?: Type;
 
   value?: string;
-  wrapperClassname?: string;
+  wrapperClassName?: string;
 }
 
 const getStatusMessageClassname = (status: Status) =>
   status ? style[`status-message-${status}`] : '';
 
 const Input: React.FC<PropTypes> = (props: PropTypes) => {
-  const { wrapperClassname, type, id, label, status, statusText } = props;
+  const { wrapperClassName, type, id, label, status, statusText } = props;
   const components = {
     text: TextInput,
     textarea: TextareaInput,
@@ -44,7 +44,7 @@ const Input: React.FC<PropTypes> = (props: PropTypes) => {
   const Component = components[type!];
 
   return (
-    <div className={`${style.wrapper} ${wrapperClassname}`}>
+    <div className={`${style.wrapper} ${wrapperClassName}`}>
       {label && (
         <div className={style.label}>
           <label htmlFor={id}>{label}</label>
@@ -70,7 +70,7 @@ const Input: React.FC<PropTypes> = (props: PropTypes) => {
 Input.defaultProps = {
   iconPosition: 'right',
   type: 'text',
-  wrapperClassname: '',
+  wrapperClassName: '',
 };
 
 export default Input;

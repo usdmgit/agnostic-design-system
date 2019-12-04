@@ -37,6 +37,18 @@ src/components/Button/index.tsx
 src/components/Button/Button.module.scss
 ```
 
+All components expose a property named `wrapperClassName` which allows you to send a custom style for that component.
+
+Using the Button example:
+```
+<Button
+  type="main"
+  label="The Button Label"
+  onClick={action('button clicked')}
+  wrapperClassName={style.classToApply}
+/>
+```
+
 ### Documentation
 We are using [storybook](https://storybook.js.org/) 
 to document components and give examples of how to use them. When creating a new component, Storybook generates documentation 

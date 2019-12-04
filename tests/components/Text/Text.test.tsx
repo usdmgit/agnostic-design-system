@@ -8,14 +8,14 @@ describe('Text', () => {
   const getComponent = (
     type: Type = 'body-content',
     maxLength?: number,
-    customClassName?: string,
+    wrapperClassName?: string,
   ) =>
     render(
       <Text
         type={type}
         value={value}
         maxLength={maxLength}
-        customClassName={customClassName}
+        wrapperClassName={wrapperClassName}
       />,
     );
 
@@ -30,14 +30,17 @@ describe('Text', () => {
   });
 
   it('renders a body-content with a custom class name', () => {
-    const customClassName = 'custom-class-name';
+    const wrapperClassName = 'custom-class-name';
     const { getByText } = getComponent(
       'body-content',
       undefined,
-      customClassName,
+      wrapperClassName,
     );
     const node = getByText(value);
-    expect(node).toHaveProperty('className', `body-content ${customClassName}`);
+    expect(node).toHaveProperty(
+      'className',
+      `body-content ${wrapperClassName}`,
+    );
   });
 
   it('renders a title', () => {

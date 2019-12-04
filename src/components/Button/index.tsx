@@ -19,6 +19,7 @@ type PropTypes = {
   label?: string;
   name?: string;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  wrapperClassName?: string;
 
   /** 'left' | 'right' */
   iconPosition?: IconPosition;
@@ -44,6 +45,7 @@ const Button: React.FC<PropTypes> = (props: PropTypes) => {
         style[type!],
         { [iconPositionClassname]: iconPosition },
         { [buttonSizeClassname]: size },
+        props.wrapperClassName,
       )}
       disabled={disabled}
       onClick={onClick}

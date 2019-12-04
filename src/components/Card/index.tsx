@@ -17,7 +17,7 @@ type PropTypes = {
   description: string;
   shortcuts: Array<ButtonType>;
   primaryButton: ButtonType;
-  wrapperClassname?: string;
+  wrapperClassName?: string;
 };
 
 const getPxFromRem = (value: string) =>
@@ -65,7 +65,7 @@ const Card: React.FC<PropTypes> = (props: PropTypes) => {
 
   return (
     <div
-      className={classnames(style['card-container'], props.wrapperClassname)}
+      className={classnames(style['card-container'], props.wrapperClassName)}
     >
       <div className={style['image-container']}>
         <img src={props.image} className={style.image} alt="" />
