@@ -18,7 +18,7 @@ stories.add(
       { left: 'left', right: 'right', 'no icon': null },
       null,
     );
-    const buttonDisabled = boolean('Disabled', false);
+    const isButtonDisabled = boolean('Disabled', false);
 
     return (
       <div>
@@ -29,7 +29,7 @@ stories.add(
             label={buttonLabel}
             size={buttonSize}
             iconPosition={buttonIcon}
-            disabled={buttonDisabled}
+            isDisabled={isButtonDisabled}
             onClick={action('button clicked')}
           />
         </div>
@@ -40,7 +40,7 @@ stories.add(
             label={buttonLabel}
             size={buttonSize}
             iconPosition={buttonIcon}
-            disabled={buttonDisabled}
+            isDisabled={isButtonDisabled}
             onClick={action('button clicked')}
           />
         </div>
@@ -51,7 +51,7 @@ stories.add(
             label={buttonLabel}
             size={buttonSize}
             iconPosition={buttonIcon}
-            disabled={buttonDisabled}
+            isDisabled={isButtonDisabled}
             onClick={action('button clicked')}
           />
         </div>
@@ -62,7 +62,7 @@ stories.add(
             label={buttonLabel}
             size={buttonSize}
             iconPosition={buttonIcon}
-            disabled={buttonDisabled}
+            isDisabled={isButtonDisabled}
             onClick={action('button clicked')}
           />
         </div>
@@ -73,7 +73,7 @@ stories.add(
             label={buttonLabel}
             size={buttonSize}
             iconPosition={buttonIcon}
-            disabled={buttonDisabled}
+            isDisabled={isButtonDisabled}
             onClick={action('button clicked')}
           />
         </div>
@@ -86,7 +86,7 @@ stories.add(
             label={buttonLabel}
             size={buttonSize}
             iconPosition={buttonIcon}
-            disabled={buttonDisabled}
+            isDisabled={isButtonDisabled}
             onClick={action('button clicked')}
           />
         </div>
@@ -121,7 +121,7 @@ stories.add(
         <Button
           type="main"
           label="Main Button Disabled"
-          disabled
+          isDisabled
           onClick={action('main button clicked')}
         />
       </div>
@@ -188,7 +188,7 @@ stories.add(
       </div>
 
       <div style={{ padding: '10px 0' }}>
-        <Button type="secondary" label="Secondary Button Disabled" disabled />
+        <Button type="secondary" label="Secondary Button Disabled" isDisabled />
       </div>
 
       <div style={{ padding: '10px 0' }}>
@@ -236,7 +236,7 @@ stories.add(
       </div>
 
       <div style={{ padding: '10px 0' }}>
-        <Button type="ghost" label="Ghost Button Disabled" disabled />
+        <Button type="ghost" label="Ghost Button Disabled" isDisabled />
       </div>
 
       <div style={{ padding: '10px 0' }}>

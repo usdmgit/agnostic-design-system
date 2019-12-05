@@ -14,7 +14,7 @@ export type IconPosition = 'left' | 'right' | undefined;
 export type Size = 'regular' | 'small';
 
 type PropTypes = {
-  disabled?: boolean;
+  isDisabled?: boolean;
   id?: string;
   label?: string;
   name?: string;
@@ -32,7 +32,7 @@ type PropTypes = {
 };
 
 const Button: React.FC<PropTypes> = (props: PropTypes) => {
-  const { disabled, iconPosition, label, onClick, size, type } = props;
+  const { isDisabled, iconPosition, label, onClick, size, type } = props;
 
   const iconPositionClassname = style[`${iconPosition}-icon`];
   const buttonSizeClassname = style[`${size}-size`];
@@ -47,7 +47,7 @@ const Button: React.FC<PropTypes> = (props: PropTypes) => {
         { [buttonSizeClassname]: size },
         props.wrapperClassName,
       )}
-      disabled={disabled}
+      disabled={isDisabled}
       onClick={onClick}
     >
       {label}

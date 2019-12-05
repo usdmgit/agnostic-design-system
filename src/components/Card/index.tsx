@@ -39,11 +39,11 @@ const Card: React.FC<PropTypes> = (props: PropTypes) => {
     return () => window.removeEventListener('resize', updateWidth);
   }, []);
 
-  const renderShortcut = (shortcut: ButtonType, lastItem: boolean) => {
+  const renderShortcut = (shortcut: ButtonType, isLastItem: boolean) => {
     return (
       <div
         className={classnames(style.shortcut, {
-          [`${style['no-border']}`]: lastItem,
+          [`${style['no-border']}`]: isLastItem,
         })}
         key={shortcut.label}
       >
