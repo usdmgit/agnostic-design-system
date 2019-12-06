@@ -127,7 +127,7 @@ stories.add(
               },
             ]}
             primaryButton={{
-              label: 'Open News',
+              label: 'Open General Card',
               onClick: action('Open News button clicked')
             }}
           />
@@ -149,8 +149,8 @@ stories.add(
               },
             ]}
             primaryButton={{
-              label: 'Open News',
-              onClick: action('click')
+              label: 'Open Tenant Card',
+              onClick: action('click'),
             }}
           />
         </Col>
@@ -171,8 +171,8 @@ stories.add(
               },
             ]}
             primaryButton={{
-              label: 'Open News',
-              onClick: action('click')
+              label: 'Open Agency Card',
+              onClick: action('click'),
             }}
           />
         </Col>

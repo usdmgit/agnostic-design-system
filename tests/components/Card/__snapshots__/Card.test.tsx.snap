@@ -62,7 +62,7 @@ Object {
             class="button-container"
           >
             <button
-              class="button inline regular-size"
+              class="button inline regular-size primary-button"
               type="button"
             >
               Button label
@@ -130,7 +130,7 @@ Object {
           class="button-container"
         >
           <button
-            class="button inline regular-size"
+            class="button inline regular-size primary-button"
             type="button"
           >
             Button label

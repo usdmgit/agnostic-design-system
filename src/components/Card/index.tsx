@@ -109,6 +109,7 @@ const Card: React.FC<PropTypes> = (props: PropTypes) => {
             type="inline"
             label={primaryButton.label}
             onClick={primaryButton.onClick}
+            wrapperClassName={style['primary-button']}
           />
         </div>
       </div>
