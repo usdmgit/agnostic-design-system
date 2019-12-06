@@ -18,7 +18,8 @@
     "test:ci": "jest -c jest.config.js --reporters=jest-junit",
     "test:updateSnapshot": "jest -c jest.config.js --updateSnapshot",
     "test:watch": "jest -c jest.config.js --watch",
-    "release": "release-it"
+    "release": "release-it",
+    "heroku-postbuild": "npm run docs:prod:build"
   },
   "repository": {
     "type": "git",
