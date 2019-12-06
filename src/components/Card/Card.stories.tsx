@@ -29,16 +29,16 @@ stories.add(
     const cardShortcuts = [
       {
         label: text('Shortcut 1 label', 'Shortcut 1'),
-        onClick: () => action('button clicked'),
+        onClick: action('Shortcut 1 button clicked'),
       },
       {
         label: text('Shortcut 2 label', 'Shortcut 2'),
-        onClick: () => action('button clicked'),
+        onClick: action('Shortcut 2 button clicked'),
       },
     ];
     const cardButton = {
       label: text('Button Label', 'Button'),
-      onClick: () => action('button clicked'),
+      onClick: action('Main button clicked'),
     };
 
     return (
@@ -116,22 +116,16 @@ stories.add(
             shortcuts={[
               {
                 label: 'Shortcut 1 label',
-                onClick: () => {
-                  alert('Hi!');
-                },
+                onClick: action('Shortcut 1 button clicked'),
               },
               {
                 label: 'Shortcut 2 label',
-                onClick: () => {
-                  alert('Hi!');
-                },
+                onClick: action('Shortcut 2 button clicked'),
               },
             ]}
             primaryButton={{
               label: 'Open News',
-              onClick: () => {
-                alert('Hi!');
-              },
+              onClick: action('Open News button clicked'),
             }}
           />
         </Col>

@@ -184,23 +184,47 @@ stories.add(
   () => (
     <div>
       <div style={{ padding: '10px 0' }}>
-        <Button type="secondary" label="Secondary Button" />
+        <Button
+          type="secondary"
+          label="Secondary Button"
+          onClick={action('secondary button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0' }}>
-        <Button type="secondary" label="Secondary Button Disabled" isDisabled />
+        <Button
+          type="secondary"
+          label="Secondary Button Disabled"
+          isDisabled
+          onClick={action('secondary button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0' }}>
-        <Button type="secondary" label="Idle Icon Left" iconPosition="left" />
+        <Button
+          type="secondary"
+          label="Idle Icon Left"
+          iconPosition="left"
+          onClick={action('secondary button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0' }}>
-        <Button type="secondary" label="Idle Icon Right" iconPosition="right" />
+        <Button
+          type="secondary"
+          label="Idle Icon Right"
+          iconPosition="right"
+          onClick={action('secondary button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0' }}>
-        <Button type="secondary" size="small" label="Small CTA" />
+        <Button
+          type="secondary"
+          size="small"
+          label="Small CTA"
+          onClick={action('secondary button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0' }}>
@@ -209,6 +233,7 @@ stories.add(
           size="small"
           label="Small Icon Left"
           iconPosition="left"
+          onClick={action('secondary button clicked')}
         />
       </div>
 
@@ -218,6 +243,7 @@ stories.add(
           size="small"
           label="Small Icon Right"
           iconPosition="right"
+          onClick={action('secondary button clicked')}
         />
       </div>
     </div>
@@ -232,23 +258,47 @@ stories.add(
   () => (
     <div>
       <div style={{ padding: '10px 0' }}>
-        <Button type="ghost" label="Ghost Button" />
+        <Button
+          type="ghost"
+          label="Ghost Button"
+          onClick={action('ghost button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0' }}>
-        <Button type="ghost" label="Ghost Button Disabled" isDisabled />
+        <Button
+          type="ghost"
+          label="Ghost Button Disabled"
+          isDisabled
+          onClick={action('ghost button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0' }}>
-        <Button type="ghost" label="Idle Icon Left" iconPosition="left" />
+        <Button
+          type="ghost"
+          label="Idle Icon Left"
+          iconPosition="left"
+          onClick={action('ghost button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0' }}>
-        <Button type="ghost" label="Idle Icon Right" iconPosition="right" />
+        <Button
+          type="ghost"
+          label="Idle Icon Right"
+          iconPosition="right"
+          onClick={action('ghost button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0' }}>
-        <Button type="ghost" size="small" label="Small CTA" />
+        <Button
+          type="ghost"
+          size="small"
+          label="Small CTA"
+          onClick={action('ghost button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0' }}>
@@ -257,6 +307,7 @@ stories.add(
           size="small"
           label="Small Icon Left"
           iconPosition="left"
+          onClick={action('ghost button clicked')}
         />
       </div>
 
@@ -266,6 +317,7 @@ stories.add(
           size="small"
           label="Small Icon Right"
           iconPosition="right"
+          onClick={action('ghost button clicked')}
         />
       </div>
     </div>
@@ -280,11 +332,20 @@ stories.add(
   () => (
     <div>
       <div style={{ padding: '10px 0' }}>
-        <Button type="contextual" label="Contextual Button" />
+        <Button
+          type="contextual"
+          label="Contextual Button"
+          onClick={action('contextual button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0' }}>
-        <Button type="contextual" label="Idle Icon Left" iconPosition="left" />
+        <Button
+          type="contextual"
+          label="Idle Icon Left"
+          iconPosition="left"
+          onClick={action('contextual button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0' }}>
@@ -292,11 +353,17 @@ stories.add(
           type="contextual"
           label="Idle Icon Right"
           iconPosition="right"
+          onClick={action('contextual button clicked')}
         />
       </div>
 
       <div style={{ padding: '10px 0' }}>
-        <Button type="contextual" size="small" label="Small CTA" />
+        <Button
+          type="contextual"
+          size="small"
+          label="Small CTA"
+          onClick={action('contextual button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0' }}>
@@ -305,6 +372,7 @@ stories.add(
           size="small"
           label="Small Icon Left"
           iconPosition="left"
+          onClick={action('contextual button clicked')}
         />
       </div>
 
@@ -314,6 +382,7 @@ stories.add(
           size="small"
           label="Small Icon Right"
           iconPosition="right"
+          onClick={action('contextual button clicked')}
         />
       </div>
     </div>
@@ -328,19 +397,38 @@ stories.add(
   () => (
     <div>
       <div style={{ padding: '10px 0' }}>
-        <Button type="delete" label="Delete Button" />
+        <Button
+          type="delete"
+          label="Delete Button"
+          onClick={action('delete button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0' }}>
-        <Button type="delete" label="Idle Icon Left" iconPosition="left" />
+        <Button
+          type="delete"
+          label="Idle Icon Left"
+          iconPosition="left"
+          onClick={action('delete button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0' }}>
-        <Button type="delete" label="Idle Icon Right" iconPosition="right" />
+        <Button
+          type="delete"
+          label="Idle Icon Right"
+          iconPosition="right"
+          onClick={action('delete button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0' }}>
-        <Button type="delete" size="small" label="Small CTA" />
+        <Button
+          type="delete"
+          size="small"
+          label="Small CTA"
+          onClick={action('delete button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0' }}>
@@ -349,6 +437,7 @@ stories.add(
           size="small"
           label="Small Icon Left"
           iconPosition="left"
+          onClick={action('delete button clicked')}
         />
       </div>
 
@@ -358,6 +447,7 @@ stories.add(
           size="small"
           label="Small Icon Right"
           iconPosition="right"
+          onClick={action('delete button clicked')}
         />
       </div>
     </div>
@@ -372,11 +462,20 @@ stories.add(
   () => (
     <div>
       <div style={{ padding: '10px 0', width: '22rem', height: '4rem' }}>
-        <Button type="inline" label="Inline Button" />
+        <Button
+          type="inline"
+          label="Inline Button"
+          onClick={action('inline button clicked')}
+        />
       </div>
 
       <div style={{ padding: '10px 0', width: '22rem', height: '4rem' }}>
-        <Button type="inline" label="Idle Icon Right" iconPosition="right" />
+        <Button
+          type="inline"
+          label="Idle Icon Right"
+          iconPosition="right"
+          onClick={action('inline button clicked')}
+        />
       </div>
     </div>
   ),
