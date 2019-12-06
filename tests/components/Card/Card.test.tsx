@@ -3,7 +3,11 @@ import { fireEvent, render } from '@testing-library/react';
 import Card from '../../../src/components/Card';
 
 describe('Card', () => {
-  const getComponent = (onClick?: () => void, wrapperClassName?: string) =>
+  const getComponent = (
+    onClick?: () => void,
+    type?: 'general' | 'tenant' | 'agency',
+    wrapperClassName?: string,
+  ) =>
     render(
       <Card
         image="../images/image.jpg"
@@ -15,6 +19,7 @@ describe('Card', () => {
         ]}
         primaryButton={{ label: 'Button label', onClick: onClick! }}
         wrapperClassName={wrapperClassName}
+        type={type}
       />,
     );
 
@@ -53,10 +58,19 @@ describe('Card', () => {
 
   it('renders a card with a custom class name', () => {
     const wrapperClassName = 'custom-class-name';
-    const container = getComponent(() => {}, wrapperClassName);
+    const container = getComponent(() => {}, undefined, wrapperClassName);
     expect(container.container.firstChild).toHaveProperty(
       'className',
       `card-container ${wrapperClassName}`,
+    );
+  });
+
+  it('renders a card with a specific type', () => {
+    const { getByAltText } = getComponent(() => {}, 'tenant');
+    const image = getByAltText('card-icon');
+    expect(image.parentNode).toHaveProperty(
+      'className',
+      'image-container tenant',
     );
   });
 });

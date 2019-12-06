@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import Card from './';
 import { action } from '@storybook/addon-actions';
-import { text, withKnobs } from '@storybook/addon-knobs';
+import { select, text, withKnobs } from '@storybook/addon-knobs';
 import NewsIcon from '../../assets/images/news.png';
 import { Container, Row, Col } from '../Grid';
 
@@ -14,6 +14,13 @@ stories.add(
   'Live testing',
   () => {
     const cardTitle = text('Title', 'News');
+
+    const cardType = select(
+      'Card type',
+      ['general', 'tenant', 'agency'],
+      'general',
+    );
+
     const cardDescription = text(
       'Description',
       'Ea qui proident velit cupidatat ut. Ea dolor anim anim id voluptate voluptate incididunt aliqua eu labore.',
@@ -45,6 +52,7 @@ stories.add(
               description={cardDescription}
               shortcuts={cardShortcuts}
               primaryButton={cardButton}
+              type={cardType}
             />
           </Col>
         </Row>
@@ -60,7 +68,21 @@ The component's width is 100%, and it adapts to the width of the element that co
 
 The description text can have a maximum of 150 characters on desktop.  For breakpoints defined for mobile devices (<960 px) the maximum will be 70 characters.
 
-When a user hovers over a card on desktop, the card will highlight and “float” above the page.
+When a user hovers over a card on desktop, the card will highlight and “float” above the page.  Depending on the card type you select, the image background color will be different:
+
+<ul>
+    <li>
+      General: #C3D6FE
+    </li>
+    <li>
+      Toolkit: #D2EFE5
+    </li>
+    <li>
+      Agency: #FDDBD9
+    </li>
+</ul>
+
+The default value for the Card type is \`general\`.
 
 Usage instructions:
 
@@ -75,6 +97,7 @@ Usage instructions:
         {label: 'Shortcut 2 label', onClick: () => { alert('Hi!')}
       ]
       button={label: 'Button label', onClick: () => { alert('Hi!')}
+      type='general' | 'toolkit' | 'leasing'
     />
     `,
   },

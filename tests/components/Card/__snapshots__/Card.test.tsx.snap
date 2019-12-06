@@ -9,10 +9,10 @@ Object {
         class="card-container"
       >
         <div
-          class="image-container"
+          class="image-container general"
         >
           <img
-            alt=""
+            alt="card-icon "
             class="image"
             src="../images/image.jpg"
           />
@@ -73,10 +73,10 @@ Object {
       class="card-container"
     >
       <div
-        class="image-container"
+        class="image-container general"
       >
         <img
-          alt=""
+          alt="card-icon "
           class="image"
           src="../images/image.jpg"
         />

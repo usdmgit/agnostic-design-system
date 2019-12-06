@@ -57,6 +57,22 @@
   .button-container {
     width: 100%;
   }
+
+  &:hover {
+    .image-container {
+      &.general {
+        background-color: $ay-london-blue-color;
+      }
+
+      &.tenant {
+        background-color: $ay-frozen-grass-color;
+      }
+
+      &.agency {
+        background-color: $ay-pepa-pig-red-color;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: $view-width-small-desktop-min) {

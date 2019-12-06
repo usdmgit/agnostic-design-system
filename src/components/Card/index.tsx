@@ -12,11 +12,12 @@ type ButtonType = {
 };
 
 type PropTypes = {
-  image: string;
-  title: string;
   description: string;
-  shortcuts: Array<ButtonType>;
+  image: string;
   primaryButton: ButtonType;
+  shortcuts: Array<ButtonType>;
+  title: string;
+  type?: 'general' | 'tenant' | 'agency';
   wrapperClassName?: string;
 };
 
@@ -30,6 +31,15 @@ const maxCharactersSmallScreen = 70;
 const maxCharactersBigScreen = 150;
 
 const Card: React.FC<PropTypes> = (props: PropTypes) => {
+  const {
+    description,
+    image,
+    primaryButton,
+    shortcuts,
+    title,
+    type,
+    wrapperClassName,
+  } = props;
   const [width, setWidth] = useState(window.innerWidth);
 
   useLayoutEffect(() => {
@@ -64,30 +74,31 @@ const Card: React.FC<PropTypes> = (props: PropTypes) => {
       : maxCharactersBigScreen;
 
   return (
-    <div
-      className={classnames(style['card-container'], props.wrapperClassName)}
-    >
-      <div className={style['image-container']}>
-        <img src={props.image} className={style.image} alt="" />
+    <div className={classnames(style['card-container'], wrapperClassName)}>
+      <div className={classnames(style['image-container'], style[type!])}>
+        <img src={image} className={style.image} alt="card-icon " />
       </div>
       <div className={style.title}>
-        <Text type="title" value={props.title} />
+        <Text type="title" value={title} />
       </div>
       <div className={style.description}>
-        <Text value={props.description} maxLength={cardWith} />
+        <Text value={description} maxLength={cardWith} />
       </div>
-      {props.shortcuts.map((shortcut, index) =>
-        renderShortcut(shortcut, index === props.shortcuts.length - 1),
+      {shortcuts.map((shortcut, index) =>
+        renderShortcut(shortcut, index === shortcuts.length - 1),
       )}
       <div className={style['button-container']}>
         <Button
           type="inline"
-          label={props.primaryButton.label}
-          onClick={props.primaryButton.onClick}
+          label={primaryButton.label}
+          onClick={primaryButton.onClick}
         />
       </div>
     </div>
   );
 };
 
+Card.defaultProps = {
+  type: 'general',
+};
 export default Card;
