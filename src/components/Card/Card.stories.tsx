@@ -4,6 +4,8 @@ import Card from './';
 import { action } from '@storybook/addon-actions';
 import { select, text, withKnobs } from '@storybook/addon-knobs';
 import NewsIcon from '../../assets/images/news.png';
+import AgencyIcon from '../../assets/images/agency.svg';
+import TenantIcon from '../../assets/images/tenant.svg';
 import { Container, Row, Col } from '../Grid';
 
 const stories = storiesOf('Components|Card', module);
@@ -111,7 +113,8 @@ stories.add(
         <Col xs={4} sm={4} md={4} lg={4}>
           <Card
             image={NewsIcon}
-            title="News"
+            type="general"
+            title="General Card"
             description="This is the card description text"
             shortcuts={[
               {
@@ -125,7 +128,51 @@ stories.add(
             ]}
             primaryButton={{
               label: 'Open News',
-              onClick: action('Open News button clicked'),
+              onClick: action('Open News button clicked')
+            }}
+          />
+        </Col>
+        <Col xs={4} sm={4} md={4} lg={4}>
+          <Card
+            image={TenantIcon}
+            type="tenant"
+            title="Tenant card with a big title more than one line"
+            description="This is the card description text"
+            shortcuts={[
+              {
+                label: 'Shortcut 1 label',
+                onClick: action('click')
+              },
+              {
+                label: 'Shortcut 2 label',
+                onClick: action('click')
+              },
+            ]}
+            primaryButton={{
+              label: 'Open News',
+              onClick: action('click')
+            }}
+          />
+        </Col>
+        <Col xs={4} sm={4} md={4} lg={4}>
+          <Card
+            image={AgencyIcon}
+            type="agency"
+            title="Agency card"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+            shortcuts={[
+              {
+                label: 'Shortcut 1 label',
+                onClick: action('click')
+              },
+              {
+                label: 'Shortcut 2 label',
+                onClick: action('click')
+              },
+            ]}
+            primaryButton={{
+              label: 'Open News',
+              onClick: action('click')
             }}
           />
         </Col>

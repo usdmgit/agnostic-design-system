@@ -49,13 +49,17 @@ const Card: React.FC<PropTypes> = (props: PropTypes) => {
     return () => window.removeEventListener('resize', updateWidth);
   }, []);
 
-  const renderShortcut = (shortcut: ButtonType, isLastItem: boolean) => {
+  const renderShortcut = (
+    shortcut: ButtonType,
+    index: number,
+    isLastItem: boolean,
+  ) => {
     return (
       <div
         className={classnames(style.shortcut, {
           [`${style['no-border']}`]: isLastItem,
         })}
-        key={shortcut.label}
+        key={`${index}-${shortcut.label}`}
       >
         <Button
           iconPosition="left"
@@ -75,24 +79,38 @@ const Card: React.FC<PropTypes> = (props: PropTypes) => {
 
   return (
     <div className={classnames(style['card-container'], wrapperClassName)}>
-      <div className={classnames(style['image-container'], style[type!])}>
-        <img src={image} className={style.image} alt="card-icon " />
+      <div>
+        <div className={classnames(style['image-container'], style[type!])}>
+          <img src={image} className={style.image} alt="card-icon " />
+        </div>
+
+        <div className={style.title}>
+          <Text
+            type="title"
+            value={title}
+            wrapperClassName={style['card-title']}
+          />
+        </div>
+        <div className={style.description}>
+          <Text
+            value={description}
+            maxLength={cardWith}
+            wrapperClassName={style['card-description']}
+          />
+        </div>
       </div>
-      <div className={style.title}>
-        <Text type="title" value={title} />
-      </div>
-      <div className={style.description}>
-        <Text value={description} maxLength={cardWith} />
-      </div>
-      {shortcuts.map((shortcut, index) =>
-        renderShortcut(shortcut, index === shortcuts.length - 1),
-      )}
-      <div className={style['button-container']}>
-        <Button
-          type="inline"
-          label={primaryButton.label}
-          onClick={primaryButton.onClick}
-        />
+
+      <div>
+        {shortcuts.map((shortcut, index) =>
+          renderShortcut(shortcut, index, index === shortcuts.length - 1),
+        )}
+        <div className={style['button-container']}>
+          <Button
+            type="inline"
+            label={primaryButton.label}
+            onClick={primaryButton.onClick}
+          />
+        </div>
       </div>
     </div>
   );

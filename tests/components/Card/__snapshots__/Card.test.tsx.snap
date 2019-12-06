@@ -8,6 +8,75 @@ Object {
       <div
         class="card-container"
       >
+        <div>
+          <div
+            class="image-container general"
+          >
+            <img
+              alt="card-icon "
+              class="image"
+              src="../images/image.jpg"
+            />
+          </div>
+          <div
+            class="title"
+          >
+            <span
+              class="title card-title"
+            >
+              Card Title
+            </span>
+          </div>
+          <div
+            class="description"
+          >
+            <span
+              class="body-content card-description"
+            >
+              Ea qui proident velit cupidatat ut. Ea dolor anim anim id voluptate voluptate incididunt aliqua eu labore.
+            </span>
+          </div>
+        </div>
+        <div>
+          <div
+            class="shortcut"
+          >
+            <button
+              class="button ghost left-icon small-size"
+              type="button"
+            >
+              Shortcut 1 label
+            </button>
+          </div>
+          <div
+            class="shortcut no-border"
+          >
+            <button
+              class="button ghost left-icon small-size"
+              type="button"
+            >
+              Shortcut 2 label
+            </button>
+          </div>
+          <div
+            class="button-container"
+          >
+            <button
+              class="button inline regular-size"
+              type="button"
+            >
+              Button label
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="card-container"
+    >
+      <div>
         <div
           class="image-container general"
         >
@@ -21,7 +90,7 @@ Object {
           class="title"
         >
           <span
-            class="title"
+            class="title card-title"
           >
             Card Title
           </span>
@@ -30,11 +99,13 @@ Object {
           class="description"
         >
           <span
-            class="body-content"
+            class="body-content card-description"
           >
             Ea qui proident velit cupidatat ut. Ea dolor anim anim id voluptate voluptate incididunt aliqua eu labore.
           </span>
         </div>
+      </div>
+      <div>
         <div
           class="shortcut"
         >
@@ -65,69 +136,6 @@ Object {
             Button label
           </button>
         </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="card-container"
-    >
-      <div
-        class="image-container general"
-      >
-        <img
-          alt="card-icon "
-          class="image"
-          src="../images/image.jpg"
-        />
-      </div>
-      <div
-        class="title"
-      >
-        <span
-          class="title"
-        >
-          Card Title
-        </span>
-      </div>
-      <div
-        class="description"
-      >
-        <span
-          class="body-content"
-        >
-          Ea qui proident velit cupidatat ut. Ea dolor anim anim id voluptate voluptate incididunt aliqua eu labore.
-        </span>
-      </div>
-      <div
-        class="shortcut"
-      >
-        <button
-          class="button ghost left-icon small-size"
-          type="button"
-        >
-          Shortcut 1 label
-        </button>
-      </div>
-      <div
-        class="shortcut no-border"
-      >
-        <button
-          class="button ghost left-icon small-size"
-          type="button"
-        >
-          Shortcut 2 label
-        </button>
-      </div>
-      <div
-        class="button-container"
-      >
-        <button
-          class="button inline regular-size"
-          type="button"
-        >
-          Button label
-        </button>
       </div>
     </div>
   </div>,
