@@ -54,4 +54,9 @@ describe('Text', () => {
     const truncatedText = 'Thi ...';
     expect(text.getByText(truncatedText)).toBeTruthy();
   });
+
+  it('renders a heading', () => {
+    const { container } = getComponent('heading');
+    expect(container.querySelector('h1')).toBeTruthy();
+  });
 });

@@ -12,7 +12,8 @@ stories.add(
   'Live testing',
   () => (
     <Text
-      type={select('Text type', ['body-content', 'title'], 'title')}
+      type={select('Text type', ['body-content', 'title', 'heading'], 'title')}
+      headingSize={select('Heading size', [1, 2, 3, 4, 5], 1)}
       maxLength={number('Max length', null)}
       value={text('Content', 'Ea qui proident velit cupidatat ut')}
     />
@@ -28,6 +29,10 @@ Usage instructions:
     `,
   },
 );
+
+stories.add('Heading', () => <Text type="heading" value="Heading 1" />, {
+  order: 4,
+});
 
 stories.add(
   'Title',

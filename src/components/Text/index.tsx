@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import style from './Text.module.scss';
 
-export type Type = 'body-content' | 'title';
+export type Type = 'body-content' | 'title' | 'heading';
 
 type PropTypes = {
   /** Sets custom CSS class on the component. */
@@ -17,6 +17,8 @@ type PropTypes = {
 
   /** The text to display */
   value: string;
+
+  headingSize?: 1 | 2 | 3 | 4 | 5;
 };
 
 const getTextToDisplay = (props: PropTypes) =>
@@ -24,16 +26,24 @@ const getTextToDisplay = (props: PropTypes) =>
     ? `${props.value.substr(0, props.maxLength)} ...`
     : props.value;
 
+const getTextType = (props: PropTypes) => {
+  return props.type === 'heading' ? `h${props.headingSize}` : 'span';
+};
+
 const Text: React.FC<PropTypes> = (props: PropTypes) => {
   const { type, wrapperClassName } = props;
-  return (
-    <span className={classnames(style[type!], wrapperClassName)}>
-      {getTextToDisplay(props)}
-    </span>
+  const TextType = getTextType(props);
+  const styles = classnames(style[type!], wrapperClassName);
+
+  return React.createElement(
+    TextType,
+    { className: styles },
+    getTextToDisplay(props),
   );
 };
 
 Text.defaultProps = {
+  headingSize: 1,
   type: 'body-content',
   wrapperClassName: '',
 };
