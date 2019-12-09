@@ -1,6 +1,6 @@
 {
   "name": "@codelitt/ay-design-library",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "React components for AY related projects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
