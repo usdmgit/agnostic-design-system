@@ -128,7 +128,7 @@ stories.add(
             ]}
             primaryButton={{
               label: 'Open General Card',
-              onClick: action('Open News button clicked')
+              onClick: action('Open News button clicked'),
             }}
           />
         </Col>
@@ -141,11 +141,11 @@ stories.add(
             shortcuts={[
               {
                 label: 'Shortcut 1 label',
-                onClick: action('click')
+                onClick: action('click'),
               },
               {
                 label: 'Shortcut 2 label',
-                onClick: action('click')
+                onClick: action('click'),
               },
             ]}
             primaryButton={{
@@ -163,11 +163,11 @@ stories.add(
             shortcuts={[
               {
                 label: 'Shortcut 1 label',
-                onClick: action('click')
+                onClick: action('click'),
               },
               {
                 label: 'Shortcut 2 label',
-                onClick: action('click')
+                onClick: action('click'),
               },
             ]}
             primaryButton={{

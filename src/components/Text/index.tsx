@@ -3,7 +3,15 @@ import classnames from 'classnames';
 
 import style from './Text.module.scss';
 
-export type Type = 'body-content' | 'title' | 'heading';
+export type Type =
+  | 'body-content-big'
+  | 'body-content'
+  | 'caption'
+  | 'heading'
+  | 'label-button'
+  | 'label-cta'
+  | 'label-link'
+  | 'title';
 
 type PropTypes = {
   /** Sets custom CSS class on the component. */
@@ -19,6 +27,12 @@ type PropTypes = {
   value: string;
 
   headingSize?: 1 | 2 | 3 | 4 | 5;
+
+  /** Adds bold styling to the text.  Only works for body-content and caption */
+  isBold?: boolean;
+
+  /** Applies a small font size to the text.  Only works for label-button */
+  isSmall?: boolean;
 };
 
 const getTextToDisplay = (props: PropTypes) =>
@@ -31,9 +45,14 @@ const getTextType = (props: PropTypes) => {
 };
 
 const Text: React.FC<PropTypes> = (props: PropTypes) => {
-  const { type, wrapperClassName } = props;
+  const { isBold, isSmall, type, wrapperClassName } = props;
   const TextType = getTextType(props);
-  const styles = classnames(style[type!], wrapperClassName);
+  const styles = classnames(
+    style[type!],
+    { [style.bold]: isBold },
+    { [style.small]: isSmall },
+    wrapperClassName,
+  );
 
   return React.createElement(
     TextType,
