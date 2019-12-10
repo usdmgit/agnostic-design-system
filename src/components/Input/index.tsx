@@ -17,6 +17,7 @@ interface PropTypes {
   name?: string;
   onChange: (value: string) => void;
   placeholder?: string;
+  isReadOnly?: boolean;
 
   /** 'success' | 'error' */
   status?: Status;

@@ -6,7 +6,7 @@ describe('Input', () => {
   const dateValue = '2019-01-01';
   const value = 'the_value';
 
-  const getComponent = (v: string, type: Type = 'text') =>
+  const getComponent = (v: string, type: Type = 'text', isReadOnly = false) =>
     render(
       <Input
         id="1"
@@ -14,6 +14,7 @@ describe('Input', () => {
         onChange={() => {}}
         type={type}
         value={v}
+        isReadOnly={isReadOnly}
         wrapperClassName="wrapperClass"
         status="success"
       />,
@@ -32,6 +33,12 @@ describe('Input', () => {
       'type',
       'text',
     );
+  });
+
+  it('renders with readonly attribute', () => {
+    const input = getComponent(value, 'text', true);
+
+    return expect(input.getByDisplayValue(value)).toHaveProperty('readOnly');
   });
 
   it('renders an input with type date', () => {

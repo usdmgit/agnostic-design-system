@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import Input from './index';
 import { action } from '@storybook/addon-actions';
-import { select, text, withKnobs } from '@storybook/addon-knobs';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
+import Input from './index';
 
 const stories = storiesOf('Components|Input', module);
 
@@ -24,6 +24,7 @@ stories.add(
     const inputLabel = text('Label', 'Input label');
     const inputId = text('Input id', 'input_id');
     const inputName = text('Input name', 'input_name');
+    const isReadOnly = boolean('Readonly?', false);
     const inputPlaceholder = text('Placeholder', '');
     const inputStatusText = text('Status Text', '');
     const inputStatus = select(
@@ -48,6 +49,7 @@ stories.add(
             status={inputStatus}
             statusText={inputStatusText}
             iconPosition={inputIcon}
+            isReadOnly={isReadOnly}
             name={inputName}
             placeholder={inputPlaceholder}
             onChange={action(`New Text Value`)}
@@ -62,6 +64,7 @@ stories.add(
             status={inputStatus}
             statusText={inputStatusText}
             iconPosition={inputIcon}
+            isReadOnly={isReadOnly}
             name={inputName}
             placeholder={inputPlaceholder}
             onChange={action('New Date Value')}
@@ -75,6 +78,7 @@ stories.add(
             label={inputLabel}
             status={inputStatus}
             statusText={inputStatusText}
+            isReadOnly={isReadOnly}
             iconPosition={inputIcon}
             name={inputName}
             placeholder={inputPlaceholder}
@@ -90,6 +94,7 @@ stories.add(
             status={inputStatus}
             statusText={inputStatusText}
             iconPosition={inputIcon}
+            isReadOnly={isReadOnly}
             name={inputName}
             placeholder={inputPlaceholder}
             onChange={action('New Password Value')}
@@ -142,6 +147,16 @@ stories.add(
                 type="text"
                 value={state.inputValue}
                 onChange={newValue => setState({ inputValue: newValue })}
+              />
+            </div>
+
+            <div style={{ padding: '10px 0' }}>
+              <Input
+                name="readonly_input"
+                placeholder="readonly input"
+                value={state.inputValue}
+                isReadOnly
+                onChange={() => {}}
               />
             </div>
           </div>
@@ -197,6 +212,18 @@ stories.add(
                 onChange={newValue => setState({ inputValue: newValue })}
               />
             </div>
+
+            <div style={{ padding: '10px 0' }}>
+              <Input
+                label="Readonly input"
+                name="readonly_input"
+                placeholder="YYYY/MM/DD"
+                type="date"
+                isReadOnly
+                value={state.inputValue}
+                onChange={() => {}}
+              />
+            </div>
           </div>
         )}
       </InputWrapper>
@@ -248,6 +275,18 @@ stories.add(
                 type="textarea"
                 value={state.inputValue}
                 onChange={newValue => setState({ inputValue: newValue })}
+              />
+            </div>
+
+            <div style={{ padding: '10px 0' }}>
+              <Input
+                label="Readonly textarea"
+                name="textarea_readonly"
+                placeholder="Readonly Text area placeholder"
+                type="textarea"
+                value={state.inputValue}
+                isReadOnly
+                onChange={() => {}}
               />
             </div>
           </div>
@@ -305,6 +344,18 @@ stories.add(
                 statusText="This is an invalid value"
                 value={state.inputValue}
                 onChange={newValue => setState({ inputValue: newValue })}
+              />
+            </div>
+
+            <div style={{ padding: '10px 0' }}>
+              <Input
+                id="password_input_readonly"
+                label="Password Input Readonly"
+                placeholder="Enter your password"
+                type="password"
+                value={state.inputValue}
+                isReadOnly
+                onChange={() => {}}
               />
             </div>
           </div>

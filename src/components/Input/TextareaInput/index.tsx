@@ -11,6 +11,7 @@ interface PropTypes {
   statusClassname?: string;
   statusText?: string;
   value?: string;
+  isReadOnly?: boolean;
 }
 
 const TextareaInput: React.FC<PropTypes> = (props: PropTypes) => (
@@ -20,6 +21,7 @@ const TextareaInput: React.FC<PropTypes> = (props: PropTypes) => (
     name={props.name}
     onChange={e => props.onChange(e.target.value)}
     value={props.value}
+    readOnly={props.isReadOnly}
   />
 );
 

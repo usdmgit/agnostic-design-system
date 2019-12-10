@@ -13,6 +13,7 @@ interface PropTypes {
   statusClassname?: string;
   statusText?: string;
   value?: string;
+  isReadOnly?: boolean;
 }
 
 // @TODO: improve component as we work with different data types and formats
@@ -29,6 +30,7 @@ const DateInput: React.FC<PropTypes> = (props: PropTypes) => (
     placeholder={props.placeholder}
     type="date"
     value={props.value}
+    readOnly={props.isReadOnly}
   />
 );
 

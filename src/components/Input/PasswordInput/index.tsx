@@ -10,6 +10,7 @@ type PropTypes = {
   placeholder?: string;
   statusClassname?: string;
   value?: string;
+  isReadOnly?: boolean;
 };
 
 const PasswordInput: React.FC<PropTypes> = (props: PropTypes) => {
@@ -28,6 +29,7 @@ const PasswordInput: React.FC<PropTypes> = (props: PropTypes) => {
         placeholder={props.placeholder}
         type={type}
         value={props.value}
+        readOnly={props.isReadOnly}
       />
       <button
         aria-label="Reveal Password"

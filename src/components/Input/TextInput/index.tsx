@@ -10,6 +10,7 @@ interface PropTypes {
   placeholder?: string;
   statusClassname?: string;
   value?: string;
+  isReadOnly?: boolean;
 }
 
 const TextInput: React.FC<PropTypes> = (props: PropTypes) => (
@@ -19,6 +20,7 @@ const TextInput: React.FC<PropTypes> = (props: PropTypes) => (
     name={props.name}
     onChange={e => props.onChange(e.target.value)}
     placeholder={props.placeholder}
+    readOnly={props.isReadOnly}
     type="text"
     value={props.value}
   />
