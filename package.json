@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/codelittinc/ay-design-library#readme",
   "dependencies": {
-    "@codelitt/ay-css-library": "^0.1.4",
+    "@codelitt/ay-css-library": "^0.1.5",
     "classnames": "^2.2.6",
     "identity-obj-proxy": "^3.0.0",
     "react": "^16.12.0",
