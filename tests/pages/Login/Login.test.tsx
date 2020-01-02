@@ -4,7 +4,7 @@ import { createMemoryHistory, createLocation } from 'history';
 import Login from '../../../src/pages/Login';
 
 describe('Login', () => {
-  const getComponent = () => {
+  const getComponent = (callback: () => void) => {
     const history = createMemoryHistory();
     const path = `/route/:id`;
 
@@ -18,11 +18,19 @@ describe('Login', () => {
     const location = createLocation(match.url);
 
     return render(
-      <Login history={history} location={location} match={match} />,
+      <Login
+        routeProps={{
+          history: { ...history },
+          location: { ...location },
+          match: { ...match },
+        }}
+        callback={callback}
+      />,
     );
   };
   it('renders without crashing', () => {
-    const login = getComponent();
+    const callback = () => {};
+    const login = getComponent(callback);
     expect(login).toMatchSnapshot();
   });
 });

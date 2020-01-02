@@ -10,15 +10,21 @@ import Row from '../../components/Grid/Row';
 import Text from '../../components/Text';
 
 import LogoImg from '../../assets/images/logo-90x48.png';
-import { authContext } from './contexts/AuthContext';
 
-type RouteProps = RouteComponentProps;
+type UserAuth = {
+  id: number;
+  email: string;
+};
 
-const Login: React.FC<RouteProps> = (props: RouteProps) => {
+interface LoginProps {
+  routeProps: RouteComponentProps;
+  callback: (user: UserAuth) => void;
+}
+
+const Login: React.FC<LoginProps> = (props: LoginProps) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({ email: '', password: '' });
-  const auth = React.useContext(authContext);
 
   const validateLoginForm = (): boolean => {
     const user = 'user@ay.com';
@@ -34,7 +40,6 @@ const Login: React.FC<RouteProps> = (props: RouteProps) => {
       return false;
     }
 
-    auth.setAuth({ id: 1, email });
     return true;
   };
 
@@ -60,9 +65,10 @@ const Login: React.FC<RouteProps> = (props: RouteProps) => {
   };
 
   const login = () => {
-    const path = props.location.state.from.pathname;
+    const path = props.routeProps.location.state.from.pathname;
     if (validateLoginForm()) {
-      props.history.push(path);
+      props.callback({ id: 1, email });
+      props.routeProps.history.push(path);
     }
   };
 
