@@ -1,0 +1,276 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login renders without crashing 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="login-background"
+      >
+        <div
+          class="ay-container"
+        >
+          <div
+            class="ay-row logo-container"
+          >
+            <div
+              class="ay-col-xs-4"
+            >
+              <img
+                alt="Avison Young"
+                class="logo"
+                src=""
+              />
+            </div>
+          </div>
+          <div
+            class="ay-row login-form"
+          >
+            <div
+              class="ay-col-xs-4"
+            >
+              <div
+                class="ay-container"
+              >
+                <div
+                  class="ay-row header"
+                >
+                  <div
+                    class="ay-col-xs-4"
+                  >
+                    <h5
+                      class="heading header-text"
+                    >
+                      Nice to see you
+                    </h5>
+                    <span
+                      class="body-content header-text"
+                    >
+                      Please, enter your credentials
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="ay-row"
+                >
+                  <div
+                    class="ay-col-xs-4"
+                  >
+                    <form>
+                      <div
+                        class="wrapper login-input"
+                      >
+                        <div
+                          class="input-container"
+                        >
+                          <input
+                            class="input undefined-status"
+                            placeholder="Email"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="wrapper login-input"
+                      >
+                        <div
+                          class="input-container"
+                        >
+                          <div
+                            class="container"
+                          >
+                            <input
+                              class="input undefined-status"
+                              placeholder="Password"
+                              type="password"
+                              value=""
+                            />
+                            <button
+                              aria-label="Reveal Password"
+                              class="button password"
+                              id="btn-undefined"
+                              type="button"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        class="button main right-icon small-size sign-me-in-button"
+                        disabled=""
+                        type="button"
+                      >
+                        Sign me in
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="login-background"
+    >
+      <div
+        class="ay-container"
+      >
+        <div
+          class="ay-row logo-container"
+        >
+          <div
+            class="ay-col-xs-4"
+          >
+            <img
+              alt="Avison Young"
+              class="logo"
+              src=""
+            />
+          </div>
+        </div>
+        <div
+          class="ay-row login-form"
+        >
+          <div
+            class="ay-col-xs-4"
+          >
+            <div
+              class="ay-container"
+            >
+              <div
+                class="ay-row header"
+              >
+                <div
+                  class="ay-col-xs-4"
+                >
+                  <h5
+                    class="heading header-text"
+                  >
+                    Nice to see you
+                  </h5>
+                  <span
+                    class="body-content header-text"
+                  >
+                    Please, enter your credentials
+                  </span>
+                </div>
+              </div>
+              <div
+                class="ay-row"
+              >
+                <div
+                  class="ay-col-xs-4"
+                >
+                  <form>
+                    <div
+                      class="wrapper login-input"
+                    >
+                      <div
+                        class="input-container"
+                      >
+                        <input
+                          class="input undefined-status"
+                          placeholder="Email"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="wrapper login-input"
+                    >
+                      <div
+                        class="input-container"
+                      >
+                        <div
+                          class="container"
+                        >
+                          <input
+                            class="input undefined-status"
+                            placeholder="Password"
+                            type="password"
+                            value=""
+                          />
+                          <button
+                            aria-label="Reveal Password"
+                            class="button password"
+                            id="btn-undefined"
+                            type="button"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="button main right-icon small-size sign-me-in-button"
+                      disabled=""
+                      type="button"
+                    >
+                      Sign me in
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

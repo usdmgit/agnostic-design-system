@@ -1,0 +1,95 @@
+@import '~@codelitt/ay-css-library/src/components/brand/colors';
+
+.login-background {
+  background-image: url('../../assets/images/login-footer.png'), url('../../assets/images/login-bg.png');
+  background-position: bottom center, bottom center;
+  background-repeat: repeat-x, no-repeat;
+  height: 100vh;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+
+  .header-text {
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.logo-container {
+  margin: 0;
+  padding-top: 2rem;
+  text-align: center;
+
+  .logo {
+    height: 48px;
+    width: 90px;
+  }
+}
+
+.login-form {
+  .login-input {
+    margin-bottom: 1rem;
+  }
+
+  .sign-me-in-button {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .login-form {
+    margin-left: 5.75rem;
+    margin-top: 16.5rem;
+    width: 22rem;
+  }
+
+  .header {
+    .header-text {
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .login-form {
+    margin-left: 6rem;
+    margin-top: 13rem;
+    width: 24rem;
+  }
+
+  .header-text {
+    align-content: center;
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .login-background {
+    background-position: bottom center, bottom right -100px;
+    background-size: 45rem;
+  }
+
+  .login-form {
+    align-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 6rem;
+  }
+
+  .header-text {
+    align-content: center;
+    display: block;
+    width: 100%;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 1000px $ay-white-color inset;
+}
