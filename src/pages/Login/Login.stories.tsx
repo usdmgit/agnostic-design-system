@@ -58,15 +58,20 @@ stories.add(
 
     Usage instructions:
     
-        import { Login } from '@codelitt/ay-design-library';
+        import { Login as LoginComponent, UserAuth } from '@codelitt/ay-design-library';
+
+        const onValidate = (user: UserAuth) => {
+          // handle the user after it's validated.  In this case, it's being set in a context
+          auth.setAuth({ id: user.id, email: user.email });
+        };
     
-        <Login
+        <LoginComponent
         routeProps={{
           history: { ...history },
           location: { ...location },
           match: { ...match },
         }}
-        callback={callback}
+        callback={onValidate}
       />
         `,
   },

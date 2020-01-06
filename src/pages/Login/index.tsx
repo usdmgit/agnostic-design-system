@@ -11,7 +11,7 @@ import Text from '../../components/Text';
 
 import LogoImg from '../../assets/images/logo-90x48.png';
 
-type UserAuth = {
+export type UserAuth = {
   id: number;
   email: string;
 };
