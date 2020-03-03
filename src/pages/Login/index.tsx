@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { RouteComponentProps } from 'react-router';
+import userClient from '../../clients/userClient';
+import { User } from '../../clients/userClient/models';
 
 import styles from './Login.module.scss';
 import Button from '../../components/Button';
@@ -11,37 +13,17 @@ import Text from '../../components/Text';
 
 import LogoImg from '../../assets/images/logo-90x48.png';
 
-export type UserAuth = {
-  id: number;
-  email: string;
-};
+export { User } from '../../clients/userClient/models';
 
 interface LoginProps {
   routeProps: RouteComponentProps;
-  callback: (user: UserAuth) => void;
+  callback: (user: User) => void;
 }
 
 const Login: React.FC<LoginProps> = (props: LoginProps) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({ email: '', password: '' });
-
-  const validateLoginForm = (): boolean => {
-    const user = 'user@ay.com';
-    const pass = '1234';
-
-    if (user !== email) {
-      setErrors({ ...errors, email: 'Email address is incorrect.' });
-      return false;
-    }
-
-    if (pass !== password) {
-      setErrors({ ...errors, password: 'Password is incorrect.' });
-      return false;
-    }
-
-    return true;
-  };
 
   const isEmail = (emailAddress: string) => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -64,11 +46,14 @@ const Login: React.FC<LoginProps> = (props: LoginProps) => {
     return !email || !isValidEmail() || !password;
   };
 
-  const login = () => {
+  const login = async () => {
     const path = props.routeProps.location.state.from.pathname;
-    if (validateLoginForm()) {
-      props.callback({ id: 1, email });
+    const user = await userClient.login(email, password);
+    if (user) {
+      props.callback(user);
       props.routeProps.history.push(path);
+    } else {
+      setErrors({ ...errors, email: 'User or password is incorrect' });
     }
   };
 

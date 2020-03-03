@@ -3,6 +3,15 @@ import { render } from '@testing-library/react';
 import { createMemoryHistory, createLocation } from 'history';
 import Login from '../../../src/pages/Login';
 
+jest.mock('../../../src/clients/userClient', () => {
+  return {
+    signIn: (email: string, password: string) => ({
+      email,
+      token: password,
+    }),
+  };
+});
+
 describe('Login', () => {
   const getComponent = (callback: () => void) => {
     const history = createMemoryHistory();

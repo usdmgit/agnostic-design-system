@@ -1,0 +1,11 @@
+export interface User {
+  id: number;
+  email?: string;
+  firstName?: string;
+  lastName?: string;
+  token?: string;
+  password?: string;
+  lastLoginAt?: number;
+  jobTitle?: string;
+  companyName?: string;
+}
