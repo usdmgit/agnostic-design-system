@@ -1,3 +1,39 @@
-.input {
-  height: 3rem;
+@import '~@codelitt/ay-css-library/src/components/brand/fonts';
+@import '~@codelitt/ay-css-library/src/components/brand/colors';
+
+.container {
+  position: relative;
+
+  .icon {
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+    height: 1rem;
+    position: absolute;
+    top: 0.7rem;
+    width: 1rem;
+
+    &-position-right {
+      right: 1rem;
+    }
+
+    &-position-left {
+      left: 1rem;
+    }
+  }
+
+  .input {
+    font-size: 1rem;
+    height: 3rem;
+    max-width: 100%;
+
+    &-right {
+      padding: 0.5rem 1rem;
+    }
+
+    &-left {
+      padding: 0.5rem 3rem;
+    }
+  }
 }

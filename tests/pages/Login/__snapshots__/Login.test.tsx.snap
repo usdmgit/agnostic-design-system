@@ -64,12 +64,16 @@ Object {
                         <div
                           class="input-container"
                         >
-                          <input
-                            class="input undefined-status"
-                            placeholder="Email"
-                            type="text"
-                            value=""
-                          />
+                          <div
+                            class="container"
+                          >
+                            <input
+                              class="input-right undefined-status"
+                              placeholder="Email"
+                              type="text"
+                              value=""
+                            />
+                          </div>
                         </div>
                       </div>
                       <div
@@ -173,12 +177,16 @@ Object {
                       <div
                         class="input-container"
                       >
-                        <input
-                          class="input undefined-status"
-                          placeholder="Email"
-                          type="text"
-                          value=""
-                        />
+                        <div
+                          class="container"
+                        >
+                          <input
+                            class="input-right undefined-status"
+                            placeholder="Email"
+                            type="text"
+                            value=""
+                          />
+                        </div>
                       </div>
                     </div>
                     <div

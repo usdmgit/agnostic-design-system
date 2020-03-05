@@ -1,0 +1,27 @@
+@import '~@codelitt/ay-css-library/src/components/brand/colors';
+@import '~@codelitt/ay-css-library/src/components/brand/grid';
+
+.items,
+.item {
+  display: flex;
+
+  &-left,
+  &-right {
+    margin-right: 2.5rem;
+  }
+}
+
+.navbar {
+  align-items: center;
+  background: $ay-white-color;
+  display: flex;
+  flex-direction: row;
+  height: 5rem;
+  justify-content: space-between;
+  left: 0;
+  max-width: 100%;
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}

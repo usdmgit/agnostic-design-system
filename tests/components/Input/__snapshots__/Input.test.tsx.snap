@@ -20,12 +20,16 @@ Object {
         <div
           class="input-container"
         >
-          <input
-            class="input success-status"
-            id="1"
-            type="text"
-            value="the_value"
-          />
+          <div
+            class="container"
+          >
+            <input
+              class="input-right success-status"
+              id="1"
+              type="text"
+              value="the_value"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -46,12 +50,16 @@ Object {
       <div
         class="input-container"
       >
-        <input
-          class="input success-status"
-          id="1"
-          type="text"
-          value="the_value"
-        />
+        <div
+          class="container"
+        >
+          <input
+            class="input-right success-status"
+            id="1"
+            type="text"
+            value="the_value"
+          />
+        </div>
       </div>
     </div>
   </div>,

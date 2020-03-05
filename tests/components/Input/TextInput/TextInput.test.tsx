@@ -22,7 +22,9 @@ describe('TextInput', () => {
 
   it('displays the given value', () => {
     const textInput = render(
-      <TextInput id={id} onChange={onChange} value={value} />,
+      <div className="container">
+        <TextInput id={id} onChange={onChange} value={value} />
+      </div>,
     );
     return expect(textInput!.findByDisplayValue(value)).toBeTruthy();
   });

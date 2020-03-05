@@ -1,31 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextInput renders without crashing 1`] = `
+exports[`Navbar renders without crashing 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="container"
+        class="navbar"
       >
-        <input
-          class="input-right status-class-name"
-          id="1"
-          type="text"
-          value="the_value"
+        <div
+          class="items"
+        />
+        <div
+          class="items"
         />
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="container"
+      class="navbar"
     >
-      <input
-        class="input-right status-class-name"
-        id="1"
-        type="text"
-        value="the_value"
+      <div
+        class="items"
+      />
+      <div
+        class="items"
       />
     </div>
   </div>,

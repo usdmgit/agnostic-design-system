@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import Input from './index';
+import Search from '../../assets/images/search.svg';
 
 const stories = storiesOf('Components|Input', module);
 
@@ -35,7 +36,7 @@ stories.add(
     const inputIcon = select(
       'Icon Position',
       { left: 'left', right: 'right', 'no icon': null },
-      null,
+      'right',
     );
 
     return (
@@ -100,6 +101,22 @@ stories.add(
             onChange={action('New Password Value')}
           />
         </div>
+        <div style={{ padding: '10px 0' }}>
+          <p>Input with Icon</p>
+          <Input
+            type="text"
+            label={inputLabel}
+            status={inputStatus}
+            statusText={inputStatusText}
+            isReadOnly={isReadOnly}
+            name={inputName}
+            placeholder={inputPlaceholder}
+            onChange={action(`New Search Value`)}
+            icon={Search}
+            iconAlt={'Search'}
+            iconPosition={inputIcon}
+          />
+        </div>
       </div>
     );
   },
@@ -157,6 +174,19 @@ stories.add(
                 value={state.inputValue}
                 isReadOnly
                 onChange={() => {}}
+              />
+            </div>
+
+            <div style={{ padding: '10px 0' }}>
+              <p>Input with Icon</p>
+              <Input
+                type="text"
+                name={'searchHeader'}
+                placeholder={'Type here'}
+                onChange={action(`New Search Value`)}
+                icon={Search}
+                iconAlt={'Search'}
+                iconPosition={'left'}
               />
             </div>
           </div>

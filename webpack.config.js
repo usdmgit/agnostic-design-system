@@ -6,6 +6,8 @@ module.exports = {
     alias: {
       react: path.resolve(__dirname, './node_modules/react'),
       'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
+      '@components': path.resolve(__dirname, './src/components/'),
+      '@images': path.resolve(__dirname, './src/assets/images/'),
     },
   },
 
@@ -18,15 +20,12 @@ module.exports = {
   },
 
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.ts(x?)$/,
-        exclude: [/node_modules/,  /(stories)\.(js|jsx)$/],
-        use: [
-          {
-            loader: "ts-loader"
-          }
-        ]
+        exclude: [/node_modules/, /(stories)\.(js|jsx)$/],
+        use: [{
+          loader: "ts-loader"
+        }]
       },
       {
         enforce: "pre",
@@ -36,11 +35,21 @@ module.exports = {
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        use: [
-          {loader: "style-loader"},
-          {loader: "css-loader", options: {modules: true}},
-          {loader: "postcss-loader"},
-          {loader: "sass-loader"}
+        use: [{
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader",
+            options: {
+              modules: true
+            }
+          },
+          {
+            loader: "postcss-loader"
+          },
+          {
+            loader: "sass-loader"
+          }
         ]
       },
       {
@@ -56,17 +65,15 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options:{
-              fallback: "file-loader",
-              name: "[name][md5:hash].[ext]",
-              outputPath: 'dist/assets/',
-              publicPath: '/dist/assets/'
-            }
+        use: [{
+          loader: 'url-loader',
+          options: {
+            fallback: "file-loader",
+            name: "[name][md5:hash].[ext]",
+            outputPath: 'dist/assets/',
+            publicPath: '/dist/assets/'
           }
-        ]
+        }]
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
