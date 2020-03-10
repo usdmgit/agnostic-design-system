@@ -9,9 +9,8 @@ import Col from '../../components/Grid/Col';
 import Container from '../../components/Grid/Container';
 import Input from '../../components/Input';
 import Row from '../../components/Grid/Row';
-import Text from '../../components/Text';
 
-import LogoImg from '../../assets/images/logo-90x48.png';
+import LogoImg from '../../assets/images/logo_avison-young.png';
 
 export { User } from '../../clients/userClient/models';
 
@@ -58,71 +57,52 @@ const Login: React.FC<LoginProps> = (props: LoginProps) => {
   };
 
   return (
-    <div className={styles['login-background']}>
-      <Container>
-        <Row wrapperClassName={styles['logo-container']}>
-          <Col>
-            <img className={styles.logo} src={LogoImg} alt="Avison Young" />
-          </Col>
-        </Row>
+    <div className={styles['login-container']}>
+      <div className={styles['login-form']}>
+        <Container>
+          <Row wrapperClassName={styles.header}>
+            <Col wrapperClassName={styles['logo-container']}>
+              <img className={styles.logo} src={LogoImg} alt="Avison Young" />
+            </Col>
+          </Row>
 
-        <Row wrapperClassName={styles['login-form']}>
-          <Col>
-            <Container>
-              <Row wrapperClassName={styles.header}>
-                <Col>
-                  <Text
-                    wrapperClassName={styles['header-text']}
-                    type="heading"
-                    headingSize={5}
-                    value="Nice to see you"
-                  />
-                  <Text
-                    wrapperClassName={styles['header-text']}
-                    value="Please, enter your credentials"
-                  />
-                </Col>
-              </Row>
+          <Row>
+            <Col>
+              <form>
+                <Input
+                  type="text"
+                  placeholder="Email"
+                  status={errors.email ? 'error' : undefined}
+                  statusText={errors.email}
+                  value={email}
+                  onChange={validateEmail}
+                  wrapperClassName={styles['login-input']}
+                />
 
-              <Row>
-                <Col>
-                  <form>
-                    <Input
-                      type="text"
-                      placeholder="Email"
-                      status={errors.email ? 'error' : undefined}
-                      statusText={errors.email}
-                      value={email}
-                      onChange={validateEmail}
-                      wrapperClassName={styles['login-input']}
-                    />
+                <Input
+                  type="password"
+                  placeholder="Password"
+                  status={errors.password ? 'error' : undefined}
+                  statusText={errors.password}
+                  value={password}
+                  onChange={setPassword}
+                  wrapperClassName={styles['login-input']}
+                />
 
-                    <Input
-                      type="password"
-                      placeholder="Password"
-                      status={errors.password ? 'error' : undefined}
-                      statusText={errors.password}
-                      value={password}
-                      onChange={setPassword}
-                      wrapperClassName={styles['login-input']}
-                    />
-
-                    <Button
-                      wrapperClassName={styles['sign-me-in-button']}
-                      iconPosition="right"
-                      isDisabled={isSubmitDisabled()}
-                      label="Sign me in"
-                      onClick={login}
-                      size="small"
-                      type="main"
-                    />
-                  </form>
-                </Col>
-              </Row>
-            </Container>
-          </Col>
-        </Row>
-      </Container>
+                <Button
+                  wrapperClassName={styles['sign-me-in-button']}
+                  iconPosition="right"
+                  isDisabled={isSubmitDisabled()}
+                  label="Sign me in"
+                  onClick={login}
+                  size="small"
+                  type="main"
+                />
+              </form>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </div>
   );
 };
