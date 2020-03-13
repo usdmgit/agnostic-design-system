@@ -6,110 +6,84 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="login-background"
+        class="login-container"
       >
         <div
-          class="ay-container"
+          class="login-form"
         >
           <div
-            class="ay-row logo-container"
+            class="ay-container"
           >
             <div
-              class="ay-col-xs-4"
-            >
-              <img
-                alt="Avison Young"
-                class="logo"
-                src=""
-              />
-            </div>
-          </div>
-          <div
-            class="ay-row login-form"
-          >
-            <div
-              class="ay-col-xs-4"
+              class="ay-row header"
             >
               <div
-                class="ay-container"
+                class="ay-col-xs-4 logo-container"
               >
-                <div
-                  class="ay-row header"
-                >
+                <img
+                  alt="Avison Young"
+                  class="logo"
+                  src=""
+                />
+              </div>
+            </div>
+            <div
+              class="ay-row"
+            >
+              <div
+                class="ay-col-xs-4"
+              >
+                <form>
                   <div
-                    class="ay-col-xs-4"
+                    class="wrapper login-input"
                   >
-                    <h5
-                      class="heading header-text"
+                    <div
+                      class="input-container"
                     >
-                      Nice to see you
-                    </h5>
-                    <span
-                      class="body-content header-text"
-                    >
-                      Please, enter your credentials
-                    </span>
+                      <div
+                        class="container"
+                      >
+                        <input
+                          class="input-right undefined-status"
+                          placeholder="Email"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div
-                  class="ay-row"
-                >
                   <div
-                    class="ay-col-xs-4"
+                    class="wrapper login-input"
                   >
-                    <form>
+                    <div
+                      class="input-container"
+                    >
                       <div
-                        class="wrapper login-input"
+                        class="container"
                       >
-                        <div
-                          class="input-container"
-                        >
-                          <div
-                            class="container"
-                          >
-                            <input
-                              class="input-right undefined-status"
-                              placeholder="Email"
-                              type="text"
-                              value=""
-                            />
-                          </div>
-                        </div>
+                        <input
+                          class="input undefined-status"
+                          placeholder="Password"
+                          type="password"
+                          value=""
+                        />
+                        <button
+                          aria-label="Reveal Password"
+                          class="button password"
+                          id="btn-undefined"
+                          type="button"
+                        />
                       </div>
-                      <div
-                        class="wrapper login-input"
-                      >
-                        <div
-                          class="input-container"
-                        >
-                          <div
-                            class="container"
-                          >
-                            <input
-                              class="input undefined-status"
-                              placeholder="Password"
-                              type="password"
-                              value=""
-                            />
-                            <button
-                              aria-label="Reveal Password"
-                              class="button password"
-                              id="btn-undefined"
-                              type="button"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <button
-                        class="button main right-icon small-size sign-me-in-button"
-                        disabled=""
-                        type="button"
-                      >
-                        Sign me in
-                      </button>
-                    </form>
+                    </div>
                   </div>
-                </div>
+                  <button
+                    class="button main right-icon small-size sign-me-in-button"
+                    disabled=""
+                    type="button"
+                  >
+                    Sign me in
+                  </button>
+                </form>
               </div>
             </div>
           </div>
@@ -119,110 +93,84 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="login-background"
+      class="login-container"
     >
       <div
-        class="ay-container"
+        class="login-form"
       >
         <div
-          class="ay-row logo-container"
+          class="ay-container"
         >
           <div
-            class="ay-col-xs-4"
-          >
-            <img
-              alt="Avison Young"
-              class="logo"
-              src=""
-            />
-          </div>
-        </div>
-        <div
-          class="ay-row login-form"
-        >
-          <div
-            class="ay-col-xs-4"
+            class="ay-row header"
           >
             <div
-              class="ay-container"
+              class="ay-col-xs-4 logo-container"
             >
-              <div
-                class="ay-row header"
-              >
+              <img
+                alt="Avison Young"
+                class="logo"
+                src=""
+              />
+            </div>
+          </div>
+          <div
+            class="ay-row"
+          >
+            <div
+              class="ay-col-xs-4"
+            >
+              <form>
                 <div
-                  class="ay-col-xs-4"
+                  class="wrapper login-input"
                 >
-                  <h5
-                    class="heading header-text"
+                  <div
+                    class="input-container"
                   >
-                    Nice to see you
-                  </h5>
-                  <span
-                    class="body-content header-text"
-                  >
-                    Please, enter your credentials
-                  </span>
+                    <div
+                      class="container"
+                    >
+                      <input
+                        class="input-right undefined-status"
+                        placeholder="Email"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div
-                class="ay-row"
-              >
                 <div
-                  class="ay-col-xs-4"
+                  class="wrapper login-input"
                 >
-                  <form>
+                  <div
+                    class="input-container"
+                  >
                     <div
-                      class="wrapper login-input"
+                      class="container"
                     >
-                      <div
-                        class="input-container"
-                      >
-                        <div
-                          class="container"
-                        >
-                          <input
-                            class="input-right undefined-status"
-                            placeholder="Email"
-                            type="text"
-                            value=""
-                          />
-                        </div>
-                      </div>
+                      <input
+                        class="input undefined-status"
+                        placeholder="Password"
+                        type="password"
+                        value=""
+                      />
+                      <button
+                        aria-label="Reveal Password"
+                        class="button password"
+                        id="btn-undefined"
+                        type="button"
+                      />
                     </div>
-                    <div
-                      class="wrapper login-input"
-                    >
-                      <div
-                        class="input-container"
-                      >
-                        <div
-                          class="container"
-                        >
-                          <input
-                            class="input undefined-status"
-                            placeholder="Password"
-                            type="password"
-                            value=""
-                          />
-                          <button
-                            aria-label="Reveal Password"
-                            class="button password"
-                            id="btn-undefined"
-                            type="button"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <button
-                      class="button main right-icon small-size sign-me-in-button"
-                      disabled=""
-                      type="button"
-                    >
-                      Sign me in
-                    </button>
-                  </form>
+                  </div>
                 </div>
-              </div>
+                <button
+                  class="button main right-icon small-size sign-me-in-button"
+                  disabled=""
+                  type="button"
+                >
+                  Sign me in
+                </button>
+              </form>
             </div>
           </div>
         </div>
