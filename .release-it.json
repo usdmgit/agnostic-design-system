@@ -6,7 +6,8 @@
     "tag": false,
     "push": false,
     "commitMessage": "Release v${version}",
-    "requireUpstream": false
+    "requireUpstream": false,
+    "requireCleanWorkingDir": false
   },
   "hooks": {
     "after:bump": "npm run prod:build",
