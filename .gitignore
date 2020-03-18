@@ -18,6 +18,7 @@
 .DS_Store
 
 .env
+.npmrc
 
 # logs
 npm-debug.log*

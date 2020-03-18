@@ -10,9 +10,11 @@ RUN apt-get update
 RUN mkdir -p /app
 WORKDIR /app
 
+COPY --chown=node .npmrc.example ./.npmrc
+COPY --chown=node package*.json ./
+
 ADD ./ /app
 
-RUN sh ./scripts/writeAzureRegistry.sh
 RUN npm install
 
 RUN npm run docs:prod:build

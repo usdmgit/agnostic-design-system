@@ -32,21 +32,17 @@ See the [authentication](./docs/AUTHENTICATION.md) instructions before you conti
 
 #### With Docker  
 
-1. Clone the project.
-2. Run `cp .env.example .env` and add the environment variables to it
-3. Run `sh scripts/dev.sh` to start the Docker container
-4. Access http://localhost:6060
+1. Copy the `.env.example` file into an `.env` file with your ENV variables (check 1password).
+2. run `npm run docker:start:dev`
+3. run `npm install`
+4. run `npm start`
+
+5. Access http://localhost:6060
 
 #### Without Docker
 
 1. Clone the project
-2. Define all environment variables from the `.env.example` file in your local profile file:
-   Example:
-   ```
-   echo 'export AZURE_REGISTRY_USERNAME=<your value>' >> ~/.bashrc 
-   echo 'export AZURE_REGISTRY_PASSWORD=<your value>' >> ~/.bashrc 
-   source ~/.bashrc 
-   ```
+2. Copy the `.npmrc.example` to `.npmrc` and add the Azure credentials in the `.npmrc` file.
 2. Run `npm install` to install all dependencies
 3. Start the dev server `npm run start:dev`  
 4. Access http://localhost:6060
