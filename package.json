@@ -19,6 +19,7 @@
     "test:updateSnapshot": "jest -c jest.config.js --updateSnapshot",
     "test:watch": "jest -c jest.config.js --watch",
     "release": "release-it",
+    "heroku-prebuild": "cp .npmrc.example .npmrc",
     "heroku-postbuild": "npm run docs:prod:build"
   },
   "repository": {
