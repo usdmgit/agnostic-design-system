@@ -1,6 +1,0 @@
-dist/
-storybook-static/
-scripts/
-
-# Ignore Storybook files
-**/*.stories.tsx
