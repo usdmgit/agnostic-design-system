@@ -11,6 +11,12 @@ you are importing a specific version!
 
 ### How to install
 
+Getting your Github Token
+
+1. Access your [tokens page](https://github.com/settings/tokens)
+2. Create a token that can read registry packages
+3. npm set //npm.pkg.github.com/:_authToken YOUR TOKEN
+
 Inside the project folder:
 
 1. run `echo "registry=https://npm.pkg.github.com/codelittinc" >> .npmrc`
