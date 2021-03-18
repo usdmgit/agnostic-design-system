@@ -8,9 +8,6 @@
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
-  "engines": {
-    "node": ">=10"
-  },
   "scripts": {
     "build": "build-storybook",
     "build-package": "rm -rf dist; webpack --mode=production",
