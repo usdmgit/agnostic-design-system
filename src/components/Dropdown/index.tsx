@@ -50,6 +50,4 @@ Dropdown.defaultProps = {
   validations: []
 };
 
-Dropdown.displayName = 'Dropdown';
-
 export default Dropdown;
