@@ -35,6 +35,9 @@ export interface Props<T> {
   variablesClassName?: string;
 }
 
+const VALID = 'valid';
+const INVALID = 'invalid';
+
 const InputDropdown = <T extends {}>(props: Props<T>) => {
   const {
     selected,
@@ -59,6 +62,9 @@ const InputDropdown = <T extends {}>(props: Props<T>) => {
   const defaultFilter = options =>
     options.filter(item => getItemLabel(item).toLowerCase().includes(listTitle.toLowerCase()));
 
+  const [validationState, setValidationState] = useState('');
+  const hasValidationState = validationState !== '';
+  const messageValidateClass = hasValidationState ? `dropdown--message-${validationState}` : '';
   const [listTitle, setListTitle] = useState(selected ? getListTitle(selected) : '');
   const listRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -69,6 +75,7 @@ const InputDropdown = <T extends {}>(props: Props<T>) => {
   const hasSuggestions = filteredOptions.length > 0;
   const iconCategory = 'icon';
   const autoComplete = 'off';
+  const requiredMessage = 'This field is required.';
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -101,10 +108,29 @@ const InputDropdown = <T extends {}>(props: Props<T>) => {
     }
   };
 
+  const handleValidation = (item?: T | T[]) => {
+    const valid = !required || !isEmpty(item);
+    onStateChange(valid);
+    setValidationState(valid ? VALID : INVALID);
+  };
+
   const handleClick = (options: T | T[]) => {
     onChange(options);
     setListTitle(isEmpty(options) ? '' : getListTitle(options));
     setIsListOpen(!!multiselect);
+    handleValidation(options);
+  };
+
+  const handleDropdownChange = (item?: T | T[]) => {
+    if (item) {
+      handleClick(item);
+    } else {
+      handleValidation(item);
+    }
+  };
+
+  const getMessage = () => {
+    return validationState === INVALID ? requiredMessage : '';
   };
 
   const handleIconCategory = () => {
@@ -127,45 +153,47 @@ const InputDropdown = <T extends {}>(props: Props<T>) => {
   };
 
   return (
-    <div className={classnames(variablesClassName, styles['dropdown-container'])}>
-      <Input
-        ref={inputRef}
-        id={id}
-        size={size}
-        placeholder={selectorText}
-        disabled={disabled}
-        label={label}
-        value={listTitle}
-        onChange={handleChangeInput}
-        onFocus={() => setIsListOpen(hasSuggestions)}
-        onMouseEnter={() => setIsInputHovered(true)}
-        onMouseLeave={() => setIsInputHovered(false)}
-        variablesClassName={classnames(styles['dropdown-input'], variablesClassName)}
-        actionIcon={getArrowIcon(isListOpen, size)}
-        withActionIcon
-        onClickActionIcon={() => setIsListOpen(!isListOpen)}
-        prepend={handleIconCategory()}
-        onStateChange={onStateChange}
-        required={required}
-        autoComplete={autoComplete}
-      />
-      {isListOpen && (
-        <RenderOptions<T>
-          {...props}
-          ref={listRef}
-          onChange={item => {
-            item && handleClick(item);
-          }}
-          options={filteredOptions}
-          variablesClassName={classnames(
-            {
-              [styles.hover]: isInputHovered
-            },
-            variablesClassName
-          )}
+    <>
+      <div className={classnames(variablesClassName, styles['dropdown-container'])}>
+        <Input
+          ref={inputRef}
+          id={id}
+          size={size}
+          placeholder={selectorText}
+          disabled={disabled}
+          label={label}
+          value={listTitle}
+          onChange={handleChangeInput}
+          onFocus={() => setIsListOpen(hasSuggestions)}
+          onMouseEnter={() => setIsInputHovered(true)}
+          onMouseLeave={() => setIsInputHovered(false)}
+          variablesClassName={classnames(styles['dropdown-input'], variablesClassName)}
+          actionIcon={getArrowIcon(isListOpen, size)}
+          withActionIcon
+          onClickActionIcon={() => setIsListOpen(!isListOpen)}
+          prepend={handleIconCategory()}
+          onStateChange={onStateChange}
+          autoComplete={autoComplete}
         />
-      )}
-    </div>
+        {isListOpen && (
+          <RenderOptions<T>
+            {...props}
+            ref={listRef}
+            onChange={handleDropdownChange}
+            options={filteredOptions}
+            variablesClassName={classnames(
+              {
+                [styles.hover]: isInputHovered
+              },
+              variablesClassName
+            )}
+          />
+        )}
+      </div>
+      <span className={classnames(styles['dropdown--message'], styles[messageValidateClass])}>
+        {getMessage()}
+      </span>
+    </>
   );
 };
 
