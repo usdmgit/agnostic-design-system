@@ -11,9 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: setup npmrc
-      run: cp .npmrc.example .npmrc
-
     - name: authenticate npm
       run: npm set //npm.pkg.github.com/:_authToken ${{ secrets.PACKAGING_TOKEN }}
 
@@ -34,6 +31,9 @@ jobs:
 
     - name: clear env
       run: git reset --hard
+
+    - name: setup npmrc
+      run: cp .npmrc.example .npmrc
 
     - name: release
       run: npm run release
