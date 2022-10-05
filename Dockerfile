@@ -23,3 +23,5 @@ WORKDIR /usr/share/nginx/html/
 RUN rm -fr * .??*
 
 COPY --from=builder /shared/storybook-static /usr/share/nginx/html
+
+CMD sed -i -e 's/$PORT/'"$PORT"'/g' /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
