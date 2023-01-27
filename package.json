@@ -1,10 +1,10 @@
 {
-  "name": "@codelittinc/agnostic-design-system",
+  "name": "@usdmgit/agnostic-design-system",
   "version": "1.2.10",
   "description": "Made with create-react-library",
-  "author": "codelittinc",
+  "author": "usdmgit",
   "license": "MIT",
-  "repository": "codelittinc/agnostic-design-system",
+  "repository": "usdmgit/agnostic-design-system",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
