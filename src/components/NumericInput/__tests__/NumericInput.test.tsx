@@ -9,9 +9,9 @@ const getNumericInputWrapperComponent = (max?: number, radix?: string, scale: nu
     return (
       <NumericInput
         id='numeric-input-test'
-        onChange={e => onChange(e || '')}
+        onChange={e => onChange(e.target.value)}
         onFocus={jest.fn}
-        onValidationChange={jest.fn}
+        onStateChange={jest.fn}
         max={max}
         placeholder='Enter Number'
         radix={radix}
