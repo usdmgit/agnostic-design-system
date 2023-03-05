@@ -3,6 +3,7 @@ FROM node:16.17-bullseye as builder
 
 # This is optional. Sets the level of logging that you see
 ENV NPM_CONFIG_LOGLEVEL warn
+ENV NODE_OPTIONS="--openssl-legacy-provider"
 ARG STORYBOOK_GOOGLE_API_KEY
 
 # Create app directory
