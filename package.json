@@ -82,8 +82,8 @@
     "ts-jest": "^26.4.4",
     "typescript": "^3.9.10",
     "url-loader": "^4.1.1",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
   },
   "files": [
     "dist"
