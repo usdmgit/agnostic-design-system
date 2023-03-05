@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import styles from '@/components/Dropdown/Dropdown.css';
-import { Props as DropdownProps } from '@/components/Dropdown';
+import { Props as DropdownProps } from '@/components/Dropdown'; // eslint-disable-line no-unused-vars
 import List from '@/components/List';
 import classnames from 'classnames';
 import { groupBy as groupByLodash } from 'lodash';
@@ -12,7 +12,7 @@ const RenderOptions = <T extends {}>(props: DropdownProps<T>, ref?: React.Ref<HT
     collapsibleGroupsButtonItems,
     disabledOptionsList,
     hideGroupByTitle,
-    value,
+    selected,
     size,
     getItemKey,
     getItemLabel,
@@ -30,7 +30,6 @@ const RenderOptions = <T extends {}>(props: DropdownProps<T>, ref?: React.Ref<HT
     sort,
     groupBy
   } = props;
-
   const listRef = useRef<HTMLDivElement>(null);
   const customSort = sort;
 
@@ -89,7 +88,7 @@ const RenderOptions = <T extends {}>(props: DropdownProps<T>, ref?: React.Ref<HT
             : styles['dropdown-list-positioned-bottom']
         )}
         listItemCategory={listItemCategory}
-        value={value}
+        selected={selected}
         multiselect={multiselect}
         id={`${id}-list`}
         nodeAfterItems={nodeAfterItems}
@@ -124,7 +123,7 @@ const RenderOptions = <T extends {}>(props: DropdownProps<T>, ref?: React.Ref<HT
           nodeBeforeItems={!hideGroupByTitle && buildAppendList(item, index)}
           onChange={onChange}
           options={groupedOptions[item]}
-          value={value}
+          selected={selected}
           size={size}
           variablesClassName={classnames(
             styles['dropdown-list'],

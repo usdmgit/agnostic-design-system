@@ -5,7 +5,7 @@ import mdx from './SelectItemsList.stories.mdx';
 import TestSearchIcon from '@/assets/images/icons/web/search-simple.svg';
 
 export default {
-  title: 'Components/Forms/Select Items List',
+  title: 'Components/Select Items List',
   component: SelectItemsList,
   parameters: {
     docs: {
@@ -17,7 +17,7 @@ export default {
 const Template = args => {
   const [selectedItem, setSelectedItem] = useState(args.selected);
 
-  return <SelectItemsList {...args} value={selectedItem} onChange={setSelectedItem} />;
+  return <SelectItemsList {...args} selected={selectedItem} onChange={setSelectedItem} />;
 };
 
 const options = [

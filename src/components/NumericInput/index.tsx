@@ -1,12 +1,40 @@
 import React from 'react';
-import Input, { InputProps } from '../Input';
+// @TODO: Discover how to disable the no-unused-vars verification for ts interfaces
+/* eslint-disable */
+import Input, { Filter, Size, Validation, Props as InputProps } from '../Input';
+  /* eslint-enable */
 
-type Props = {
+interface Props {
+  actionIcon?: React.ReactNode;
+  description?: string;
+  disabled?: boolean;
+  filters?: Filter[];
+  id: string;
+  label?: string | React.ReactNode;
+  limit?: number;
   max?: number;
+  message?: string;
+  onBlur?: () => void;
+  onChange: (e: any) => void;
+  onClickActionIcon?: () => void;
+  onFocus: () => void;
+  onKeyDown?: () => void;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+  onStateChange: (state: boolean) => void;
+  placeholder?: string;
+  prepend?: React.ReactNode;
   positive?: boolean;
   radix?: string;
-  scale?: number;
-} & InputProps;
+  required?: boolean;
+  scale: number;
+  size: Size;
+  value?: string;
+  validations?: Validation[];
+  variablesClassName?: string;
+  withActionIcon?: boolean;
+  withPrependSeparator?: boolean;
+}
 
 const NON_DIGITS_REGEX = new RegExp(/\D+/, 'g');
 
@@ -25,7 +53,7 @@ const isNumberBiggerThanMax = (radix, num, max) => {
 
 const NumericInput = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
   const { value, scale, max, radix, positive, ...inputProps } = props;
-  const SCALE_REGEX = new RegExp(`^.+${radix}\\d{${(scale || 0) + 1}}`);
+  const SCALE_REGEX = new RegExp(`^.+${radix}\\d{${scale + 1}}`);
 
   const filters = [
     {

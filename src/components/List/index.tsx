@@ -5,9 +5,6 @@ import { isArray, isEqual } from 'lodash';
 import styles from '@/components/List/List.css';
 
 import ListItem from '@/components/ListItem';
-/* eslint-disable */
-import { ControlledInputProps } from '../Input';
-/* eslint-enable */
 
 type ListItemCategory = 'simple' | 'icon' | 'checkbox' | 'radio' | 'checkmark';
 type Size = 'large' | 'medium';
@@ -21,7 +18,7 @@ const SIMPLE_CATEGORY = 'simple';
 const RADIO_CATEGORY = 'radio';
 const CHECKBOX_CATEGORY = 'checkbox';
 
-type Props<T> = {
+interface Props<T> {
   disabledOptionsList?: string[];
   getItemLabel: (item: T) => React.ReactNode;
   getItemIcon?: (item?: T) => React.ReactNode;
@@ -35,12 +32,14 @@ type Props<T> = {
   multiselect?: boolean;
   nodeAfterItems?: React.ReactNode;
   nodeBeforeItems?: React.ReactNode;
+  onChange?: (item?: T | T[]) => void;
   options?: T[];
+  selected?: T[] | T;
   size?: Size;
   showSelectAll?: boolean;
   selectAllLabel?: string | React.ReactNode;
   variablesClassName?: string;
-} & ControlledInputProps<T | T[]>;
+}
 
 const List = <T extends {}>(props: Props<T>, ref?: React.Ref<HTMLDivElement>) => {
   const {
@@ -55,7 +54,7 @@ const List = <T extends {}>(props: Props<T>, ref?: React.Ref<HTMLDivElement>) =>
     id,
     onChange = () => {},
     options = [],
-    value,
+    selected,
     getItemValue,
     variablesClassName,
     listItemCategory = SIMPLE_CATEGORY,
@@ -70,7 +69,9 @@ const List = <T extends {}>(props: Props<T>, ref?: React.Ref<HTMLDivElement>) =>
   const currentRef = ref || defaultRef;
 
   const selectedItemsList =
-    !multiselect || (multiselect && !Array.isArray(value)) ? [value].filter(v => v) : value;
+    !multiselect || (multiselect && !Array.isArray(selected))
+      ? [selected].filter(v => v)
+      : selected;
 
   const getSelectedItems = item => {
     if (multiselect && Array.isArray(selectedItemsList)) {
@@ -85,7 +86,7 @@ const List = <T extends {}>(props: Props<T>, ref?: React.Ref<HTMLDivElement>) =>
 
     if (listItemCategory !== RADIO_CATEGORY) {
       // @ts-expect-error
-      return isEqual(item.value, value?.value) ? {} : item;
+      return isEqual(item.value, selected?.value) ? {} : item;
     }
 
     return item;
@@ -113,18 +114,18 @@ const List = <T extends {}>(props: Props<T>, ref?: React.Ref<HTMLDivElement>) =>
 
   const isAllOptionsSelected =
     Array.isArray(options) &&
-    Array.isArray(value) &&
+    Array.isArray(selected) &&
     options?.every((element: any) => {
-      return value?.some((op: any) => op.value === element.value);
+      return selected?.some((op: any) => op.value === element.value);
     });
 
   const handleSelectAllClick = event => {
-    if (Array.isArray(value) && event.target.checked) {
-      onChange([...options, ...value]);
+    if (Array.isArray(selected) && event.target.checked) {
+      onChange([...options, ...selected]);
     } else if (event.target.checked) {
       onChange(options);
-    } else if (Array.isArray(value)) {
-      onChange(value.filter((s: any) => !options.some((op: any) => op.value === s.value)));
+    } else if (Array.isArray(selected)) {
+      onChange(selected.filter((s: any) => !options.some((op: any) => op.value === s.value)));
     } else {
       onChange([]);
     }
@@ -150,7 +151,7 @@ const List = <T extends {}>(props: Props<T>, ref?: React.Ref<HTMLDivElement>) =>
                 <div className={styles['list-select-all-checkbox-wrapper']}>
                   <input
                     className={classNames(styles['list-select-all-checkbox'])}
-                    checked={isArray(value) && isAllOptionsSelected}
+                    checked={isArray(selected) && isAllOptionsSelected}
                     onClick={event => handleSelectAllClick(event)}
                     onChange={() => {}}
                     tabIndex={-1}

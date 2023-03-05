@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import styles from './Table.stories.css';
 
 export default {
-  title: 'Components/Content/Table',
+  title: 'Components/Table',
   component: Table,
   parameters: {
     docs: {
