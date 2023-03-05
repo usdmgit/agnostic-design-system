@@ -1,0 +1,20 @@
+@import '../../../styles/theme/index.css';
+
+.toast--warning {
+  --toast-background-color: var(--warning-color);
+  --toast-border: none;
+  --toast-title-color: var(--structure-color-white);
+  --toast-message-color: var(--structure-color-white);
+  --toast-background-color-hover: var(--warning-color);
+  --toast-background-color-active: var(--warning-color);
+  --toast-background-color-focus: var(--warning-color);
+  --toast-border-hover: none;
+  --toast-border-active: none;
+  --toast-border-focus: none;
+  --toast-button-icon-color: var(--structure-color-white);
+  --toast-body-padding: 0 0 0 19px;
+}
+
+.toast-warning-icon {
+  fill: var(--toast-icon-color, var(--structure-color-white));
+}
