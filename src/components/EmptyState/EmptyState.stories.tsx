@@ -5,7 +5,7 @@ import mdx from './EmptyState.stories.mdx';
 import { Meta } from '@storybook/react';
 
 export default {
-  title: 'Components/Content/EmptyState',
+  title: 'Components/EmptyState',
   component: EmptyState,
   parameters: {
     docs: {

@@ -5,7 +5,7 @@ import mdx from './BreadCrumb.stories.mdx';
 import ArrowRight from '@/assets/images/icons/web/arrow-right.svg';
 
 export default {
-  title: 'Components/Helpers/BreadCrumb',
+  title: 'Components/BreadCrumb',
   component: BreadCrumb,
   parameters: {
     docs: {

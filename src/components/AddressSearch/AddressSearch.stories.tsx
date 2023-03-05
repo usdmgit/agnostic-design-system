@@ -5,7 +5,7 @@ import MapsProvider from '@/components/MapsProvider';
 import mdx from './AddressSearch.stories.mdx';
 
 export default {
-  title: 'Components/Forms/Address Search',
+  title: 'Components/Address Search',
   component: AddressSearch,
   parameters: {
     docs: {

@@ -5,7 +5,7 @@ import styles from './SpinnerStories.css';
 import mdx from './Spinner.stories.mdx';
 
 export default {
-  title: 'Components/Helpers/Spinner',
+  title: 'Components/Spinner',
   component: Spinner,
   parameters: {
     docs: {

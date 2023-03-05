@@ -28,7 +28,7 @@ const SimpleNumericInput = () => {
   return (
     <NumericInput
       label='Numeric Input'
-      onChange={e => setValue(value)}
+      onChange={e => setValue(e.target.value)}
       max={15}
       positive={true}
       radix={','}

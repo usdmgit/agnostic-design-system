@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import styles from './PhoneInputTest.css';
 
 export default {
-  title: 'Components/Forms/Phone Input',
+  title: 'Components/Phone Input',
   component: PhoneInput,
   parameters: {
     docs: {

@@ -4,7 +4,7 @@ import EmailInput from '@/components/EmailInput';
 import mdx from './EmailInput.stories.mdx';
 
 export default {
-  title: 'Components/Forms/Email Input',
+  title: 'Components/Email Input',
   component: EmailInput,
   parameters: {
     docs: {
@@ -16,7 +16,7 @@ export default {
 const Template = args => {
   const [value, setValue] = useState('');
 
-  return <EmailInput {...args} value={value} onChange={e => setValue(e)} />;
+  return <EmailInput {...args} value={value} onChange={e => setValue(e.target.value)} />;
 };
 
 export const Default = Template.bind({});
