@@ -24,7 +24,7 @@ export default (child, key, values, setValues, updateValidationState) => {
       };
       setValues(result);
     },
-    onValidationChange: state => {
+    onStateChange: state => {
       updateValidationState(name, state);
     },
     key

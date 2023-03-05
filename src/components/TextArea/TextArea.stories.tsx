@@ -4,7 +4,7 @@ import TextArea from '@/components/TextArea';
 import mdx from './TextArea.stories.mdx';
 
 export default {
-  title: 'Components/Forms/TextArea',
+  title: 'Components/TextArea',
   component: TextArea,
   parameters: {
     docs: {
@@ -15,7 +15,7 @@ export default {
 
 const Template = args => {
   const [value, setValue] = useState('');
-  return <TextArea {...args} value={value} onChange={value => setValue(value)} />;
+  return <TextArea {...args} value={value} onChange={e => setValue(e.target.value)} />;
 };
 
 export const Default = Template.bind({});

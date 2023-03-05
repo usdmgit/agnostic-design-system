@@ -1,5 +1,5 @@
 import React from 'react';
-import DefaultListItem, { Props } from '@/components/ListItem/DefaultListItem';
+import DefaultListItem, { Props } from '@/components/ListItem/DefaultListItem'; // eslint-disable-line no-unused-vars
 import classNames from 'classnames';
 
 import styles from '@/components/ListItem/CheckMarkListItem/CheckMarkListItem.css';
