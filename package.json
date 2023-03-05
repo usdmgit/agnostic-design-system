@@ -12,7 +12,7 @@
   "scripts": {
     "build": "build-storybook",
     "build:types": "tsc --emitDeclarationOnly",
-    "build-package": "NODE_OPTIONS=--openssl-legacy-provider; rm -rf dist; npm run build:types; webpack --mode=production",
+    "build-package": "NODE_OPTIONS=--openssl-legacy-provider && next build && next export; rm -rf dist; npm run build:types; webpack --mode=production",
     "publish-storybook": "build-storybook -s public",
     "lint": "eslint '*/**/*.{js,ts,tsx}'",
     "lint:fix": "eslint --fix '*/**/*.{js,ts,tsx}'",
