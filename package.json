@@ -12,7 +12,7 @@
   "scripts": {
     "build": "build-storybook",
     "build:types": "tsc --emitDeclarationOnly",
-    "build-package": "delete -rf dist; npm run build:types; webpack --mode=production",
+    "build-package": "rm -rf dist; npm run build:types; webpack --mode=production",
     "publish-storybook": "build-storybook -s public",
     "lint": "eslint '*/**/*.{js,ts,tsx}'",
     "lint:fix": "eslint --fix '*/**/*.{js,ts,tsx}'",
