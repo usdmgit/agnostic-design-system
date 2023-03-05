@@ -1,0 +1,106 @@
+.dropdown {
+  --dropdown-list-top: 70px;
+}
+
+.custom-styled-dropdown {
+  --button-color: var(--structure-color-900);
+  --button-color-hover: var(--structure-color-900);
+  --button-background-color: var(--structure-color-200);
+  --button-background-color-hover: var(--structure-color-300);
+  --button-border-hover: none;
+  --button-font-size: 16px;
+  --button-height: 40px;
+  --dropdown-selected-title-overflow: hidden;
+  --dropdown-selected-title-text-overflow: ellipsis;
+  --dropdown-selected-title-white-space: nowrap;
+  --dropdown-width: 140px;
+  --list-height: 188px;
+  --list-width: 240px;
+  --list-border: 1px solid var(--structure-color-300);
+  --list-border-radius: 8px;
+  --list-height: fit-content;
+  --list-overflow: hidden;
+  --list-padding: 8px;
+  --list-padding-inline-start: 8px;
+  --list-item-background-color: var(--structure-color-white);
+  --list-item-background-color-active: var(--structure-color-white);
+  --list-item-background-color-focus: var(--structure-color-white);
+  --list-item-background-color-hover: var(--structure-color-100);
+  --list-item-border-radius: 4px;
+  --list-item-border-bottom: none;
+  --list-item-border-bottom-hover: none;
+  --list-item-color-active: var(--structure-color-900);
+  --list-item-color-focus: var(--structure-color-900);
+  --list-item-font-size: 14px;
+  --list-item-min-height: 37px;
+  --list-item-padding: 8px;
+  --list-item-width: 224px;
+  --list-item-label-color: var(--structure-color-900);
+  --list-item-label-color-active: var(--structure-color-900);
+  --list-item-label-color-focus: var(--structure-color-900);
+  --list-item-label-font-size: 14px;
+  --list-item-label-margin: 0;
+  --list-item-radio-display: none;
+  --list-item-selected-background-color: var(--structure-color-200);
+  --list-item-selected-background-color-hover: var(--structure-color-200);
+  --list-item-selected-border-bottom: none;
+  --list-item-selected-border-left: none;
+  --list-item-selected-border-right: none;
+  --list-item-selected-border-top: none;
+  --list-item-selected-font-weight: 500;
+}
+
+.custom-styled-collapsible-dropdown {
+  --button-height: 40px;
+  --dropdown-group-font-size: 14px;
+  --dropdown-group-font-weight: 500;
+  --dropdown-group-div-border-radius: 8px;
+  --dropdown-group-div-max-height: 400px;
+  --dropdown-group-div-margin: 50px 0 0;
+  --dropdown-group-div-overflow-x: hidden;
+  --dropdown-group-div-overflow-y: auto;
+  --dropdown-group-div-padding: 16px 16px 0;
+  --dropdown-group-div-position: absolute;
+  --dropdown-group-div-width: auto;
+  --dropdown-width: 195px;
+  --list-border-bottom: none;
+  --list-border-left: none;
+  --list-border-right: none;
+  --list-border-top: none;
+  --list-border-radius: 8px;
+  --list-margin: 0 0 16px;
+  --list-width: 400px;
+  --list-item-background-color-focus: transparent;
+  --list-item-border-radius: 8px;
+  --list-item-checkbox-height: 24px;
+  --list-item-checkbox-width: 24px;
+  --list-item-font-weight: 500;
+  --list-item-selected-border-bottom: none;
+  --list-item-selected-border-left: none;
+  --list-item-selected-border-right: none;
+  --list-item-selected-border-top: none;
+  --list-item-border-bottom: none;
+  --list-item-border-left: none;
+  --list-item-border-right: none;
+  --list-item-border-top: none;
+  --list-item-border-bottom-hover: none;
+  --list-item-border-left-hover: none;
+  --list-item-border-right-hover: none;
+  --list-item-border-top-hover: none;
+  --list-item-padding: 20px;
+  --list-item-label-font-family: 'Roboto', sans-serif;
+  --list-item-label-font-size: 14px;
+  --list-item-label-font-weight: 500;
+  --list-item-label-margin: 0 0 0 8px;
+}
+
+.collapsible-button-icon-wrapper {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  border-radius: 8px;
+  height: 32px;
+  justify-content: center;
+  margin-right: 8px;
+  width: 32px;
+}

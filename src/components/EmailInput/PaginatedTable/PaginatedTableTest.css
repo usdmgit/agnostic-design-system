@@ -1,0 +1,15 @@
+@import '../../styles/theme/index.css';
+
+.custom-table {
+  --button-background-color: red;
+  --button-color: black;
+  --button-width: 69px;
+  --button-height: 32px;
+  --paginated-table-footer-wrapper-flex-direction: column;
+  --paginated-table-page-number-text-align: normal;
+  --paginated-table-footer-font-size: 12px;
+  --paginated-table-total-number-items-margin: 0 0 10px 0;
+  --table-padding: 15px;
+  --table-cell-padding: 10px;
+  --table-footer-padding: 20px;
+}

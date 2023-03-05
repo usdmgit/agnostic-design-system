@@ -1,0 +1,20 @@
+@import '../../../styles/theme/index.css';
+
+.toast--success {
+  --toast-background-color: var(--success-color);
+  --toast-border: none;
+  --toast-title-color: var(--structure-color-white);
+  --toast-message-color: var(--structure-color-white);
+  --toast-background-color-hover: var(--success-color);
+  --toast-background-color-active: var(--success-color);
+  --toast-background-color-focus: var(--success-color);
+  --toast-border-hover: none;
+  --toast-border-active: none;
+  --toast-border-focus: none;
+  --toast-button-icon-color: var(--structure-color-white);
+  --toast-body-padding: 0 0 0 19px;
+}
+
+.toast-success-icon {
+  fill: var(--toast-icon-color, var(--structure-color-white));
+}

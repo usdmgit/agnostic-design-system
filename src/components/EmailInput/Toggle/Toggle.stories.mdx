@@ -1,0 +1,73 @@
+# Toggle Component
+
+## Type: Simple
+
+## Toggle Props
+
+|        Prop        |        Type         |                             Description                             | Default | Mandatory |
+| :----------------: | :-----------------: | :-----------------------------------------------------------------: | :-----: | :-------: |
+|     activeItem     |          T          |              Specifies which item is currently active.              |    -    |   true    |
+|       items        |        T[ ]         |    Specifies all the items that should be present on the toggle.    |    -    |   true    |
+| variablesClassName |       string        | Receives the class name to add custom styles to the Toggle element. |    -    |   false   |
+|      getLabel      | (item: T) => string |               Returns the label for a specific item.                |    -    |   true    |
+|      getValue      | (item: T) => string |               Returns the valude for a specific item.               |    -    |   true    |
+|      onChange      | (item?: T) => void  |   Specifies what should happen when the toggle option is clicked.   |    -    |   true    |
+
+## Getting Started
+
+```javascript
+import React, { useState } from 'react';
+import { Toggle } from '@codelittinc/agnostic-design-system';
+
+const Toggle = args => {
+  const [active, setActive] = useState(args.activeItem);
+
+  return <Toggle {...args} activeItem={active} onChange={setActive} />;
+};
+
+export default Toggle;
+```
+
+## CSS Variables Available
+
+The component toggle is accepting style customization through its `variablesClassName` property
+`<Toggle variablesClassName={styles['my-toggle-css']} />`
+
+Apart from this, we are also using the component Button, and its style can be changed just as we do on the original component.
+
+### Toggle variables available
+
+|     Property      |    Attribute     |     State     |
+| :---------------: | :--------------: | :-----------: |
+|       item        | background-color |               |
+|      toggle       | background-color | hover, active |
+|      toggle       |  border-radius   |               |
+|      toggle       |      color       | hover, active |
+|      toggle       |     display      |               |
+|      toggle       |      height      |               |
+|      toggle       |     padding      |               |
+|      toggle       |     position     |               |
+|      toggle       |    white-space   |               |
+|      toggle       |      width       |               |
+| toggle-active-btn |  border-radius   |               |
+| toggle-active-btn |      height      |               |
+| toggle-active-btn |     padding      |               |
+| toggle active-btn |     position     |               |
+| toggle active-btn | background-color |               |
+| toggle active-btn |    box-shadow    |               |
+| toggle active-btn |    transition    |               |
+| toggle active-btn |      cursor      |               |
+| toggle active-btn |     display      |               |
+| toggle active-btn |     z-index      |               |
+|   toggle-button   |    transform     |               |
+|   toggle-button   |    transition    |               |
+|   toggle-label    |   align-items    |               |
+|   toggle-label    |     display      |               |
+|   toggle-label    |  flex-direction  |               |
+|   toggle-label    |      height      |               |
+|   toggle-label    |      margin      |               |
+|   toggle-label    |     position     |               |
+|    toggle-span    |     z-index      |               |
+|  toggle-wrapper   | background-color |               |
+|  toggle-wrapper   |  border-radius   |               |
+|  toggle-wrapper   |      height      |               |

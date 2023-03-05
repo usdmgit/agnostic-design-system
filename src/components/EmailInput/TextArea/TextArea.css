@@ -1,0 +1,119 @@
+@import '../../styles/theme/index.css';
+
+:root {
+  --textarea-background-color: var(--structure-color-100);
+  --textarea-border: 1px solid var(--structure-color-300);
+  --textarea-font-family: 'Inter';
+}
+
+.textarea {
+  border: var(--textarea-border);
+  background-color: var(--textarea-background-color);
+  box-sizing: border-box;
+  color: var(--textarea-color, var(--structure-color-900));
+  display: flex;
+  font-family: var(--textarea-font-family);
+  margin: var(--textarea-margin, 0);
+  overflow-x: var(--textarea-overflow-x, hidden);
+  overflow-y: var(--textarea-overflow-y, hidden);
+  resize: none;
+  width: var(--textarea-width, 100%);
+}
+
+.textarea:active {
+  background-color: var(--textarea-background-color-active, var(--textarea-background-color));
+  border: var(--textarea-border-active, 1px solid var(--primary-color-500));
+}
+
+.textarea:disabled {
+  background-color: var(--textarea-background-color-disabled, var(--textarea-background-color));
+  color: var(--textarea-color-disabled, var(--structure-color-600));
+  border: var(--textarea-border-disabled, var(--textarea-border));
+}
+
+.textarea:focus {
+  background-color: var(--textarea-background-color-focus, var(--textarea-background-color));
+  border: var(--textarea-border-focus, var(--textarea-border));
+  outline: var(--textarea-outline-focus, none);
+}
+
+.textarea:hover {
+  background-color: var(--textarea-background-color-hover, var(--textarea-background-color));
+  border: var(--textarea-border-hover, var(--textarea-border));
+}
+
+.textarea::placeholder {
+  color: var(--textarea-placeholder-color, var(--structure-color-700));
+  font-family: var(--textarea-placeholder-font-family, var(--textarea-font-family));
+  font-size: var(--textarea-placeholder-font-size, var(--paragraph-xl));
+  font-weight: var(--textarea-placeholder-font-weight, var(--paragraph-font-weight-normal));
+}
+
+.textarea:disabled::placeholder {
+  color: var(--textarea-placeholder-color-disabled, var(--structure-color-600));
+}
+
+.textarea.textarea--medium {
+  border-radius: var(--textarea-border-radius, var(--round-m));
+  font-size: var(--textarea-font-size, var(--paragraph-m));
+  font-weight: var(--textarea-font-weight, var(--paragraph-font-weight-bold));
+  height: var(--textarea-height, var(--height-l));
+  line-height: var(--textarea-line-height, var(--paragraph-m-line-height));
+  padding: var(
+    --textarea-padding,
+    var(--spacing-vertical-s) var(--spacing-horizontal-m) var(--spacing-horizontal-s)
+      var(--spacing-vertical-s)
+  );
+}
+
+.textarea.textarea--large {
+  border-radius: var(--textarea-border-radius, var(--round-m));
+  font-size: var(--textarea-font-size, var(--paragraph-l));
+  font-weight: var(--textarea-font-weight, var(--paragraph-font-weight-bold));
+  height: var(--textarea-height, var(--height-xxl));
+  line-height: var(--textarea-line-height, var(--paragraph-xl-line-height));
+  padding: var(--textarea-padding, var(--spacing-vertical-s) var(--spacing-horizontal-m));
+}
+
+.textarea--label {
+  font-family: var(--textarea-label-font-family, var(--textarea-font-family));
+  font-size: var(--textarea-label-font-size, var(--paragraph-l));
+  font-weight: var(--textarea-label-font-weight, var(--paragraph-font-weight-normal));
+  line-height: var(--textarea-label-line-height, var(--paragraph-l-line-height));
+  height: var(--textarea-label-height, var(--height-s));
+  color: var(--textarea-label-color, var(--structure-color-800));
+  display: flex;
+  width: 100%;
+}
+
+.textarea--description {
+  font-family: var(--textarea-description-font-family, var(--textarea-font-family));
+  font-size: var(--textarea-description-font-size, var(--paragraph-m));
+  font-weight: var(--textarea-description-font-weight, var(--paragraph-font-weight-normal));
+  line-height: var(--textarea-description-line-height, var(--paragraph-m-line-height));
+  height: var(--textarea-description-height, var(--height-xs));
+  color: var(--textarea-description-color, var(--structure-color-700));
+  width: 100%;
+}
+
+.textarea--message {
+  font-family: var(--textarea-message-font-family, var(--textarea-font-family));
+  font-size: var(--textarea-message-font-size, var(--paragraph-m));
+  font-weight: var(--textarea-message-font-weight, var(--paragraph-font-weight-normal));
+  line-height: var(--textarea-message-line-height, var(--paragraph-m-line-height));
+  height: var(--textarea-message-height, var(--height-xs));
+  color: var(--textarea-message-color, var(--structure-color-700));
+  width: 100%;
+}
+
+.textarea--message-invalid {
+  color: var(--textarea-message-color-invalid, var(--error-color));
+}
+
+.textarea.textarea--valid {
+  border: var(--textarea-border-valid, 1px solid var(--success-color));
+}
+
+.textarea.textarea--invalid {
+  border: var(--textarea-border-invalid, 1px solid var(--error-color));
+}
