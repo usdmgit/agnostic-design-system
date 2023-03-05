@@ -5,7 +5,7 @@ import mdx from './List.stories.mdx';
 import styles from './List.stories.css';
 
 export default {
-  title: 'Components/Content/List',
+  title: 'Components/List',
   component: List,
   parameters: {
     docs: {
@@ -17,7 +17,7 @@ export default {
 const Template = args => {
   const [selectedItem, setSelectedItem] = useState(undefined);
 
-  return <List {...args} value={selectedItem} onChange={setSelectedItem} />;
+  return <List {...args} selected={selectedItem} onChange={setSelectedItem} />;
 };
 
 export const SimpleList = Template.bind({});
@@ -156,7 +156,7 @@ export const CustomStyledRadioList = () => {
           value: '2'
         }
       ]}
-      value={selectedItem}
+      selected={selectedItem}
       size='large'
       variablesClassName={styles['custom-list']}
     />
@@ -189,7 +189,7 @@ export const CustomStyledSelectAllList = () => {
           value: '3'
         }
       ]}
-      value={selectedItem}
+      selected={selectedItem}
       showSelectAll
       size='medium'
       variablesClassName={styles['custom-select-all-list']}

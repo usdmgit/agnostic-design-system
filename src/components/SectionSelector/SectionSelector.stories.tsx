@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import styles from './SectionSelector.stories.css';
 
 export default {
-  title: 'Components/Forms/Section Selector',
+  title: 'Components/Section Selector',
   component: SectionSelector,
   parameters: {
     docs: {

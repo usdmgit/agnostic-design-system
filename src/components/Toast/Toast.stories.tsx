@@ -4,7 +4,7 @@ import Toast from '@/components/Toast';
 import mdx from './Toast.stories.mdx';
 
 export default {
-  title: 'Components/Helpers/Toast',
+  title: 'Components/Toast',
   component: Toast,
   parameters: {
     docs: {

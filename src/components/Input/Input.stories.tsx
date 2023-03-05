@@ -5,7 +5,7 @@ import TestSearchIcon from '@/assets/images/icons/web/search-simple.svg';
 import mdx from './Input.stories.mdx';
 
 export default {
-  title: 'Components/Forms/Input',
+  title: 'Components/Input',
   component: Input,
   parameters: {
     docs: {
@@ -17,7 +17,7 @@ export default {
 const Template = args => {
   const [value, setValue] = useState('');
 
-  return <Input id='input-id' {...args} value={value} onChange={e => setValue(e)} />;
+  return <Input id='input-id' {...args} value={value} onChange={e => setValue(e.target.value)} />;
 };
 
 export const Default = Template.bind({});

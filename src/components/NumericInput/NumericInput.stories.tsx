@@ -4,7 +4,7 @@ import NumericInput from '@/components/NumericInput';
 import mdx from './NumericInput.stories.mdx';
 
 export default {
-  title: 'Components/Forms/Numeric Input',
+  title: 'Components/Numeric Input',
   component: NumericInput,
   parameters: {
     docs: {
@@ -26,7 +26,14 @@ export default {
 const Template = args => {
   const [value, setValue] = useState('');
 
-  return <NumericInput id='numeric-input' {...args} value={value} onChange={e => setValue(e)} />;
+  return (
+    <NumericInput
+      id='numeric-input'
+      {...args}
+      value={value}
+      onChange={e => setValue(e.target.value)}
+    />
+  );
 };
 
 export const Default = Template.bind({});
