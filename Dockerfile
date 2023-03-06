@@ -1,5 +1,5 @@
 # Select reference image node
-FROM node:16.17-bullseye as builder
+FROM node:16.17.0-bullseye-slim as builder
 
 # This is optional. Sets the level of logging that you see
 ENV NPM_CONFIG_LOGLEVEL warn
