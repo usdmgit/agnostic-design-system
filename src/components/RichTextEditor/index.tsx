@@ -8,6 +8,7 @@ import TableCell from '@tiptap/extension-table-cell';
 import TableHeader from '@tiptap/extension-table-header';
 import Underline from '@tiptap/extension-underline';
 import Placeholder from '@tiptap/extension-placeholder';
+import Link from '@tiptap/extension-link';
 import styles from './RichTextEditor.css';
 import classNames from 'classnames';
 import MenuBar from './MenuBar';
@@ -87,6 +88,7 @@ const RichTextEditor: React.FC<Props> = props => {
     TableRow,
     TableHeader,
     Underline,
+    Link,
     TableCell,
     Placeholder.configure({
       placeholder: placeholderText,
