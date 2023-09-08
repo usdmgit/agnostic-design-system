@@ -42,11 +42,21 @@ const MenuBar = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
     }
   };
 
+  const getButtonText = (obj, name) => {
+    if (obj) {
+      const iconObject = obj.find(element => {
+        return element.buttonName === name;
+      });
+      return iconObject?.buttonName;
+    }
+  };
+
   return (
     <div className={classNames(styles['menu-bar-container'], variablesClassName)} ref={ref}>
       {renderMenuOptions(
         buttonIcons,
         getButtonIcon,
+        getButtonText,
         editor,
         variablesClassName,
         menuEditOptions,
@@ -59,6 +69,7 @@ const MenuBar = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
           text={getButtonIcon(buttonIcons, 'image') ? '' : 'image'}
           category='neutral'
           key='image'
+          title='image'
           onClick={() => addImage()}
           variablesClassName={classNames(variablesClassName)}
           withAppendIcon={!!getButtonIcon(buttonIcons, 'image')}
@@ -70,6 +81,7 @@ const MenuBar = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
           text={getButtonIcon(buttonIcons, 'horizontal rule') ? '' : 'horizontal rule'}
           category='neutral'
           key='horizontal rule'
+          title='horizontal rule'
           onClick={() => editor.chain().focus().setHorizontalRule().run()}
           variablesClassName={classNames(variablesClassName)}
           withAppendIcon={!!getButtonIcon(buttonIcons, 'horizontal rule')}
@@ -81,6 +93,7 @@ const MenuBar = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
           text={getButtonIcon(buttonIcons, 'hard break') ? '' : 'hard break'}
           category='neutral'
           key='hard break'
+          title='hard break'
           onClick={() => editor.chain().focus().setHardBreak().run()}
           variablesClassName={classNames(variablesClassName)}
           withAppendIcon={!!getButtonIcon(buttonIcons, 'hard break')}
@@ -92,6 +105,7 @@ const MenuBar = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
           text={getButtonIcon(buttonIcons, 'clear marks') ? '' : 'clear marks'}
           category='neutral'
           key='clear marks'
+          title='clear marks'
           onClick={() => editor.chain().focus().unsetAllMarks().run()}
           variablesClassName={classNames(variablesClassName)}
           withAppendIcon={!!getButtonIcon(buttonIcons, 'clear marks')}
@@ -103,6 +117,7 @@ const MenuBar = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
           text={getButtonIcon(buttonIcons, 'clear nodes') ? '' : 'clear nodes'}
           category='neutral'
           key='clear nodes'
+          title='clear nodes'
           onClick={() => editor.chain().focus().clearNodes().run()}
           variablesClassName={classNames(variablesClassName)}
           withAppendIcon={!!getButtonIcon(buttonIcons, 'clear nodes')}
@@ -116,6 +131,7 @@ const MenuBar = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
           text={getButtonIcon(buttonIcons, 'undo') ? '' : 'undo'}
           category='neutral'
           key='undo'
+          title='undo'
           onClick={() => editor.chain().focus().undo().run()}
           variablesClassName={classNames(variablesClassName)}
           withAppendIcon={!!getButtonIcon(buttonIcons, 'undo')}
@@ -127,6 +143,7 @@ const MenuBar = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
           text={getButtonIcon(buttonIcons, 'redo') ? '' : 'redo'}
           category='neutral'
           key='redo'
+          title='redo'
           onClick={() => editor.chain().focus().redo().run()}
           variablesClassName={classNames(variablesClassName)}
           withAppendIcon={!!getButtonIcon(buttonIcons, 'redo')}

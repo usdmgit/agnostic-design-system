@@ -7,6 +7,7 @@ import Button from '@/components/Button';
 export default function renderMenuOptions(
   buttonIcons,
   getButtonIcon,
+  getButtonText,
   editor,
   variablesClassName,
   menuEditOptions,
@@ -44,6 +45,7 @@ export default function renderMenuOptions(
             text={getButtonIcon(buttonIcons, buttonName) ? '' : buttonName}
             category='neutral'
             key={buttonName}
+            title={getButtonText(buttonIcons, buttonName) ?? ''}
             onClick={() => onClickAction()}
             variablesClassName={classNames(className, variablesClassName)}
             withAppendIcon={!!getButtonIcon(buttonIcons, buttonName)}

@@ -26,6 +26,7 @@ interface Props {
   size?: Size;
   type?: 'button' | 'submit' | 'reset' | undefined;
   variablesClassName?: string;
+  title?: string;
   withAppendIcon?: boolean;
 }
 
