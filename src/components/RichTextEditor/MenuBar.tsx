@@ -124,7 +124,14 @@ const MenuBar = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
         />
       )}
       {!!menuEditOptions?.includes('table') &&
-        renderTableOptions(buttonIcons, getButtonIcon, editor, variablesClassName, TABLE_OPTIONS)}
+        renderTableOptions(
+          buttonIcons,
+          getButtonIcon,
+          getButtonText,
+          editor,
+          variablesClassName,
+          TABLE_OPTIONS
+        )}
       {!!menuEditOptions?.includes('undo') && (
         <Button
           appendIcon={getButtonIcon(buttonIcons, 'undo') ?? ''}
