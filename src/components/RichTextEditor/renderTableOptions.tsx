@@ -12,6 +12,7 @@ function tableButtonNameFormatter(str) {
 export default function renderTableOptions(
   buttonIcons,
   getButtonIcon,
+  getButtonText,
   editor,
   variablesClassName,
   tableOptions
@@ -35,6 +36,7 @@ export default function renderTableOptions(
             text={getButtonIcon(buttonIcons, buttonName) ? '' : buttonName}
             category='neutral'
             key={buttonName}
+            title={getButtonText(buttonIcons, buttonName) ?? ''}
             onClick={() => onClickAction()}
             variablesClassName={classNames(variablesClassName)}
             withAppendIcon={!!getButtonIcon(buttonIcons, buttonName)}
